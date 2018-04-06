@@ -1,0 +1,52 @@
+# Created by EPD v1.36.1.0, Playfield Version: 7.0.0 [1294] (Alpha 7.0.0)
+TemperatureDay: -130
+Music: moonstone
+Radiation: 30.219999999999999
+PlanetType: Space
+PvP: True
+UseRandom: True
+AllowCV: True
+Difficulty: 2
+PlayfieldType: Space
+Description: ' The space around a Sun has large Radiation. Only some Prometium resource. '
+SunFlare: EnvironmentalEffects/SunFlareWhite4Space
+Stars: SkyboxStarsCyan
+Nebula: PrefabNebulaBlueYellow
+AtmosphereEnabled: False
+DroneBaseSetup:
+  Fixed: []
+POIs:
+  Fixed:
+  - Type: AsteroidVoxel01Promethium
+    Prefab: AsteroidVoxel01Promethium
+    Name: Promethium Asteroid
+    Pos: [318, 51, 6607]
+    Rot: [0, 0, 0]
+    Properties: []
+    SpawnResource: []
+  - Type: AsteroidVoxel01Promethium
+    Prefab: AsteroidVoxel01Promethium
+    Name: Promethium Asteroid
+    Pos: [3180, 51, 5207]
+    Rot: [0, 0, 0]
+    Properties:
+    - Key: RegenAfter
+      Value: 180
+    SpawnResource: []
+  - Type: AsteroidFieldRing
+    Name: Asteroid Field
+    Pos: [0, 0, 0]
+    Rot: [0, 0, 0]
+    Properties: []
+    SpawnResource: []
+  - Type: AsteroidField
+    Prefab: BA_Outpost-AkuaV2
+    Name: Outpost Akua
+    Pos: [0, 0, 0]
+    Rot: [0, -42, 0]
+    Properties: []
+    SpawnResource: []
+  FixedPlayerStart:
+  - Mode: Debug
+    Pos: [-5000, 0, 5000]
+    Items: [CrushedStone, CrushedStone, CrushedStone]

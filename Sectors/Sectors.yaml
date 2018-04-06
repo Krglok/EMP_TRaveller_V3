@@ -1,0 +1,182 @@
+---
+#------------------------------------------
+# Traveller V3  fuer Empyrion Update 8.0
+# Traveller Sektor Spinward Marches Subsektor Regina
+#
+# Weiterentwicklung von Stargate Next V3
+# Basierend auf Multiplayer und Voodoo
+#-------------------------------------------
+#Sectors:
+#-------------------------------------------
+#  Sonne / zentrale Lichtquelle
+- Coordinates:
+  - 0
+  - 0
+  - 0
+  Color: 0, 0, 0
+  Icon: No
+  Playfields:
+  - ['0, 0, 0', Sun, Sun]
+  Allow: []
+  Deny: []
+#-------------------------------------------
+#-------------------------------------------
+# Dentus  System #32
+# Starport C  , Temperate
+# liegt am Corewad Rand 
+- Coordinates:
+  - 10000
+  - 0
+  - 4000
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - ['0, 0, 0', Dentus System, SpaceSystemCenter]
+  Allow: []
+  Deny: []
+#-------------------------------------------
+# Dentus  Planet
+# Starport C  , Temperate
+# 
+- Coordinates:
+  - 10007
+  - 0
+  - 3992
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: false
+  Playfields:
+  - ['0, 0, 0', Dentus Orbit, DentusSpaceAsteroidFieldRing]
+  - ['0, 0, 0', Dentus, Dentus, 'Human:1']
+  - ['6000, 0, -6567', Dentus Moon, DentusNewMoon2]
+  Allow: []
+  Deny: []
+#-------------------------------------------
+# Dentus-A Planet
+# Lava
+# 
+- Coordinates:
+  - 10003
+  - 0
+  - 4003
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: false
+  Playfields:
+  - ['0, 0, 0', Dentus-A Orbit, SpaceEmpty]
+  - ['0, 0, 0', Dentus-A, Dentus-A, '']
+  Allow: []
+  Deny: []
+#-------------------------------------------
+# Dentus-B Planet
+# Dessert
+# 
+- Coordinates:
+  - 9995
+  - 0
+  - 4005
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: false
+  Playfields:
+  - ['0, 0, 0', Dentus-B Orbit, SpaceEmpty]
+  - ['0, 0, 0', Dentus-B, Dentus-B, '']
+  Allow: []
+  Deny: []
+#-------------------------------------------
+# Dentus-D Planet
+# Barren
+# 
+- Coordinates:
+  - 9989
+  - 0
+  - 3989
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: false
+  Playfields:
+  - ['0, 0, 0', Dentus-D Orbit, SpaceEmpty]
+  - ['0, 0, 0', Dentus-D, Dentus-D, '']
+  Allow: []
+  Deny: []
+#-------------------------------------------
+# Dentus-E Planet
+# Snow
+# 
+- Coordinates:
+  - 10020
+  - 0
+  - 4019
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: false
+  Playfields:
+  - ['0, 0, 0', Dentus-E Orbit, SpaceEmpty]
+  - ['0, 0, 0', Dentus-E, Dentus-E, '']
+  Allow: []
+  Deny: []
+#-------------------------------------------
+# Dentus-F Asteroid
+# Asteroid
+# 
+- Coordinates:
+  - 9980
+  - 0
+  - 4019
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: false
+  Playfields:
+  - ['0, 0, 0', Dentus-F, Dentus-F, '']
+  Allow: []
+  Deny: []
+#-------------------------------------------
+# Dentus-G Asteroid
+# Asteroid
+# 
+- Coordinates:
+  - 9980
+  - 0
+  - 3981
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: false
+  Playfields:
+  - ['0, 0, 0', Dentus-G, Dentus-G, '']
+  Allow: []
+  Deny: []
+#-------------------------------------------
+# Dentus-H Asteroid
+# Asteroid
+# 
+- Coordinates:
+  - 10027
+  - 0
+  - 4000
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: false
+  Playfields:
+  - ['0, 0, 0', Dentus-H Orbit, SpaceEmpty]
+  - ['0, 0, 0', Dentus-H, Dentus-H, '']
+  Allow: []
+  Deny: []
+#-------------------------------------------
+# Dentus-I Planet
+# Gasriese
+# 
+- Coordinates:
+  - 10037
+  - 0
+  - 4037
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: false
+  Playfields:
+  - ['0, 0, 0', Dentus-I Orbit, SpaceEmpty]
+  - ['0, 0, 0', Dentus-I, Dentus-I, '']
+  - ['-4500, 0, 4500', Dentus-I-A, Dentus-I-A, '']
+  - ['7200, 0, -7200', Dentus-I-B, Dentus-I-B, '']
+  Allow: []
+  Deny: []

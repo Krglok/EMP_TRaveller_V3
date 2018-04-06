@@ -1,0 +1,1153 @@
+Creator: Eleon Game Studios
+Chapters:
+  - ChapterTitle: The Robinson Protocol Dentus
+    Preamble: "Willkommen im Traveller Universum!\n\n
+    Dies ist ein spezielles Szenarion auf dem Hintergrund des Traveller RPG.\n\n
+    [ffff00]Fuer vollkommen unerfahrene Spieler empfehlen wir das Tutorial bevor man in diesem Multiplayer Spiel startet![-]\n\n
+    Das ROBINSON PROTOKOLL soll den Spieler in das Szenario einfuehren. Es liefert Hintergrundinformationen.\n\n
+    Du solltest es nicht ueberspringen.[-]"
+    Description: "[fff400]Handling Tips[-]\n1. [fff400]Wird eine wichtige Information vermisst. Bitte an den Admin oder Spieler Lucius wenden?[-]\n
+    Oeffne das PDA mit [ff2400]F1[-], und lese das entsprechende Kapitel der aktuellen Mission in der Liste und wechsle mit dem linken Button in das [ff2400]PDA LOG[-] mit dem oberen rechten Button.\n\n
+    [fff400]2. Wenn du nicht sicher bist was als naechstes zu tun ist[-]\nCheck die TASK liste auf dem rechten Fenster oder suche nach [fff400]gelben Marker[-] auf dem Bildschirm. Sie zeigen eventuell eine interessante Position!\n\n
+    [ff2400]Hinweis:[-]\n
+    - Die gelben Screen Marker beenden eine Task , wenn man bis auf 4 m herangeht.\n
+    - Wenn eine Task, die erfordert Gegenstaende von A nach B zu bewegen, nicht beendet wird, dann lege sie zurueck und wiederhole das Ganze.\n
+    - Die Info Message zeigt nur die Tasten fuer die Default Einstellung ."
+  #  PictureFile: WelcomeBack.jpg
+    Category: SoloMission
+    PlayerLevel: 1 # (default: 1)
+    VisibleOnStartPlayfield: Akua
+    Visibility: Always    # or ByLevel, WhenRewarded (default: Always)
+    # Activatable: Always   # same settings as Visibility (default: Always)
+    # RewardedChapters: [ chptitleBuildBase ]
+   # ActivateChapterOnCompletion: chptitleMrsSmith
+    NoSkip: True
+    AutoActivateOnGameStart: True
+    CompletedMessage: "Robinson Protocol completed! Now you are good to go!\n\n
+    * * *\n\n
+    Was ist als naechstes zu tun?\n\n
+    1. [ffff00]Du startest auf einem Starport auf einem entlegenen Planeten in den Spinward Marches. Du kannst sie nicht ausbauen aber sie ist sicher. Du must den Planeten sowieso verlassen. Nichts hat hier Bestand ! (Wipe).\n\n
+    2. Erkunde den Planeten und die vorhandenen Siedlunge. Baue eine eigene kleine Basis. \n\n
+    3. Du must ein kleines Raumschiff mit Warp bauen um an ausreichend Rohstoffe fuer ein grosses Raumschiff zu kommen.[-]\n\n
+    4. Lese das PDA! Nutze den Handel um Ausrüstung und REsourcen zu kaufen!\n\n
+    5. [ffff00]Fundstuecke[-] [ff4444] Manchmal findet man alte Raumschiffe.[-]\n\n
+    6. [ff4444]Im Orbit ist eine Raumstation. Das Gegenstueck zum Raumhafen auf dem Planeten!\n\n
+    7. Die algeimen Verkehrssprache ist denglisch\n\n
+    Du bist hier gestrandet. Dein Raumschiffticket ist verloren. Du must dich allein durchschlagen .\n\n
+    Lese das PDA fuer den Hintergrund und interessante Auftraege.\n\n
+    Viel Glueck, Traveller!
+    "
+    CompletedSound: Sounds/Misc/DroneSignalBad
+    Rewards:
+      - Item: IronIngot
+        Count: 120
+      - Item: MagnesiumPowder
+        Count: 120
+      - Item: PromethiumPellets
+        Count: 150
+    #------------------------------------------------------------------------------------
+    Tasks:
+      - TaskTitle: Personal Container
+        PictureFile: Hideout2.jpg
+        StartMessage: "norm;35|Open the [ffff00]Personal Container[-] in der Basis."
+        Rewards:
+          - Item: MoneyCard
+            Count: 1000 
+        Actions:            
+          - ActionTitle: Go to Personal Container
+            Description: ===
+            Check: NearUnit
+            Names: [ Wreckage, ContainerPersonal ]
+            Guiding: TempIndoor
+            AllowManualCompletion: true
+            CompletedMessage: ""
+
+          - ActionTitle: Open Personal Container
+            Description: ===
+            Check: InventoryOpened
+            Names: [ ContainerPersonal ]
+            AllowManualCompletion: true
+            CompletedMessage: "norm;35|Move all the stuff to your inventory."
+
+          - ActionTitle: Empty Personal Container
+            Description: ===
+            Check: InventoryEmptied
+            Names: [ ContainerPersonal ]
+            AllowManualCompletion: true
+            CompletedMessage: "norm;35|Exit the Personal Container."
+
+          - ActionTitle: Exit Personal Container
+            Description: ===
+            Check: InventoryClosed
+            Names: [ ContainerPersonal ]
+            AllowManualCompletion: true
+            CompletedMessage: ""
+
+#----------------------------------------------------------------------------------------------------
+# Robinson Protocol Explorer
+ 
+  - ChapterTitle: Das Robinson Protocol COPIL # OMICRON
+    Preamble: "Willkommen im Stargate Universum!\n\n
+    Dies ist ein spezielles Szenarion auf dem Hintergrund der Stargate Story.\n\n
+    [ffff00]Für vollkommen unerfahrene Spieler empfehlen wir das Tutorial bevor man in diesem Multiplayer Spiel startet![-]\n\n
+    Das ROBINSON PROTOKOLL soll den Spieler in das Szenario einfuehren. Es liefert Hintergrundinformationen.\n\n
+    Du solltest es nicht ueberspringen.[-]"
+    Description: "[fff400]Handling Tips[-]\n1. [fff400]Wird eine wichtige Information vermisst. Bitte an den Admin oder Spieler Lucius wenden?[-]\n
+    Oeffne das PDA mit [ff2400]F1[-], und lese das entsprechnde Kapitel der aktuelle Mission in der Liste und wechsle mit dem linken Button in das [ff2400]PDA LOG[-] mit dem oberen rechten Button.\n\n
+    [fff400]2. Wenn du nicht sicher bist was als naechstes zu tun ist[-]\nCheck die TASK liste auf dem rechten Fenster oder suche nach [fff400]gelben Marker[-] auf dem Bildschirm. Sie zeigen eventuell eine interessante Position!\n\n
+    [ff2400]Hinweis:[-]\n
+    - Die gelben Screen Marker beenden eine Task , wenn man bis auf 4 m herangeht.\n
+    - Wenn eine Task, die erfordert Gegenstaende von A nach B zu bewegen, nicht beendet wird, dann lege sie zurueck und wiederhole das Ganze.\n
+    - Die Info Message zeigt nur die Tasten fuer die Default Einstellung .
+    "
+    Description: "[fff400]Handling Tips[-]\n
+     1. [fff400]Wird eine wichtige Information vermisst. Bitte an den Admin oder Spieler Lucius wenden?[-]\n
+     Oeffne das PDA mit [ff2400]F1[-], und lese das entsprechnde Kapitel der aktuellen Mission in der Liste und wechsle mit dem linken Button in das [ff2400]PDA LOG[-] mit dem oberen rechten Button.\n\n
+    [fff400]2. Wenn du nicht sicher bist was als naechstes zu tun ist[-]\nCheck die TASK liste auf dem rechten Fenster oder suche nach [fff400]gelben Marker[-] auf dem Bildschirm. Sie zeigen eventuell eine interessante Position!\n\n
+    "
+  #  PictureFile: WelcomeBack.jpg
+    Category: SoloMission
+    PlayerLevel: 1 # (default: 1)
+    VisibleOnStartPlayfield: Copil  #Omicron
+    Visibility: Always    # or ByLevel, WhenRewarded (default: Always)
+    # Activatable: Always   # same settings as Visibility (default: Always)
+    # RewardedChapters: [ chptitleBuildBase ]
+   # ActivateChapterOnCompletion: chptitleMrsSmith
+    NoSkip: True
+    AutoActivateOnGameStart: True
+    CompletedSound: Sounds/Misc/DroneSignalBad
+    Rewards:
+  #    - Item: IronIngot
+  #      Count: 20
+  #    - Item: MagnesiumPowder
+  #      Count: 20
+      - Item: PromethiumPellets
+        Count: 50
+    Tasks:
+      - TaskTitle: Personal Container
+        StartDelay: 5
+        PictureFile: Hideout2.jpg
+        StartMessage: "norm;35|Gehe in die Basis und oeffne  [ffff00]Personal Container[-]."
+        Rewards:
+          - Item: EmergencyRations
+            Count: 1 
+        Actions:            
+          - ActionTitle: Go to Personal Container
+            Description: ===
+            Check: NearUnit
+            Names: [ Wreckage, ContainerPersonal ]
+            Guiding: TempIndoor
+            AllowManualCompletion: true
+            CompletedMessage: ""
+
+          - ActionTitle: Exit Personal Container
+            Description: ===
+            Check: InventoryClosed
+            Names: [ ContainerPersonal ]
+            AllowManualCompletion: true
+            CompletedMessage: ""
+
+      - TaskTitle: Aktivate Base
+        PictureFile: Hideout2.jpg
+        StartMessage: "norm;35|Benutze den [c][ff4444]Y[-][/c] Button um die Baiss zu aktivieren.\n\n
+                       Note: Die Basis hat einen  [ffff00]Capacitor (Solar) + mehrere Solar Panels[-] fuer Energy production. Bedenke das Drohnen die Basis angreifen werden.
+                      "
+        Actions:
+          - ActionTitle: Y to activate
+            Description: ===
+            Check: MainPowerSwitched
+            Names: [ Base ]
+            AllowManualCompletion: true
+            CompletedMessage: ""
+
+      - TaskTitle: Basic Farming
+        StartMessage: "norm;35|Kuemmere dich um die Nahrungsversorgung mit den Pflanzbeeten. Es sind bereits welche vorhanden!"
+        Actions:
+          - ActionTitle: Place Sprouts
+            Description: ===
+            Check: BlocksPlaced
+            Types: [ AlienPalmTreeStage1, AlienPlantTube2Stage1, AlienplantWormStage1, BulbShroomYoungStage1, CornStage1, DesertPlant20Stage1, ElderberryStage1, InsanityPepperStage1, PearthingStage1, PumpkinStage1, SnakeweedStage1, TomatoStage1, WheatStage1 ]
+            Amount: 1
+            AllowManualCompletion: true
+            CompletedMessage: ""
+
+      - TaskTitle: Activate Growlight
+        StartMessage: "norm;35|Finde den Schalter fuer das Pflanzenlicht."
+        Actions:
+          - ActionTitle: Use Lever
+            Description: === 
+            Check: DeviceNamePowered
+            Names: [ LightPlant01 ]
+            AllowManualCompletion: true
+            CompletedMessage: ""
+
+#------------------------------------------------------------------------
+# Robinson Protocol VULCA
+ 
+  - ChapterTitle: Das Robinson Protocol VULCA # OMICRON
+    Preamble: "Willkommen im Stargate Universum!\n\n
+    Dies ist ein spezielles Szenarion auf dem Hintergrund der Stargate Story.\n\n
+    [ffff00]Für vollkommen unerfahrene Spieler empfehlen wir das Tutorial bevor man in diesem Multiplayer Spiel startet![-]\n\n
+    Das ROBINSON PROTOKOLL soll den Spieler in das Szenario einfuehren. Es liefert Hintergrundinformationen.\n\n
+    Du solltest es nicht ueberspringen.[-]"
+    Description: "[fff400]Handling Tips[-]\n1. [fff400]Wird eine wichtige Information vermisst. Bitte an den Admin oder Spieler Lucius wenden?[-]\n
+    Oeffne das PDA mit [ff2400]F1[-], und lese das entsprechnde Kapitel der aktuelle Mission in der Liste und wechsle mit dem linken Button in das [ff2400]PDA LOG[-] mit dem oberen rechten Button.\n\n
+    [fff400]2. Wenn du nicht sicher bist was als naechstes zu tun ist[-]\nCheck die TASK liste auf dem rechten Fenster oder suche nach [fff400]gelben Marker[-] auf dem Bildschirm. Sie zeigen eventuell eine interessante Position!\n\n
+    [ff2400]Hinweis:[-]\n
+    - Die gelben Screen Marker beenden eine Task , wenn man bis auf 4 m herangeht.\n
+    - Wenn eine Task, die erfordert Gegenstaende von A nach B zu bewegen, nicht beendet wird, dann lege sie zurueck und wiederhole das Ganze.\n
+    - Die Info Message zeigt nur die Tasten fuer die Default Einstellung ."
+    Description: "[fff400]Handling Tips[-]\n1. [fff400]Wird eine wichtige Information vermisst. Bitte an den Admin oder Spieler Lucius wenden?[-]\n
+    Oeffne das PDA mit [ff2400]F1[-], und lese das entsprechnde Kapitel der aktuelle Mission in der Liste und wechsle mit dem linken Button in das [ff2400]PDA LOG[-] mit dem oberen rechten Button.\n\n
+    [fff400]2. Wenn du nicht sicher bist was als naechstes zu tun ist[-]\nCheck die TASK liste auf dem rechten Fenster oder suche nach [fff400]gelben Marker[-] auf dem Bildschirm. Sie zeigen eventuell eine interessante Position!\n\n
+    [ff2400]Hinweis:[-]\n
+    - Die gelben Screen Marker beenden eine Task , wenn man ihnen bis auf 4m herangeht\n
+    - Wenn eine Task erfordert Gegenstaende von A nach B zu bewegen nicht beendet wird, dann lege sie zurueck und weiderhole das ganze.\n
+    - Die Info Message zeigt nur die Tasten fuer die Default Einstellung .
+    "
+  #  PictureFile: WelcomeBack.jpg
+    Category: SoloMission
+    PlayerLevel: 1 # (default: 1)
+    VisibleOnStartPlayfield: Vulca  #Omicron
+    Visibility: Always    # or ByLevel, WhenRewarded (default: Always)
+    # Activatable: Always   # same settings as Visibility (default: Always)
+    # RewardedChapters: [ chptitleBuildBase ]
+   # ActivateChapterOnCompletion: chptitleMrsSmith
+    NoSkip: True
+    AutoActivateOnGameStart: True
+    CompletedMessage: "Robinson Protocol completed! Now you are good to go!\n\n* * *\n\nWhat to do next?\n\n
+    1. [ffff00]Expand your base[-] with wood, concrete or steel building blocks.\n\n
+    2. Build a [ffff00]Large Constructor[-] for crafting more advanced devices.\n\n 
+    3. Build a real [ffff00]OXYGEN GENERATOR[-] and place it in a Lake to create large Oxygen Bottles\n\n
+    4. Gather [ffff00]Promethium ore[-] and create [ffff00]Fuel Packs[-] as power source for your O2 generator!\n\n
+    5. Unlock and build better weapons from the [ffff00]Techtree (F3)[-]\n\n
+    6. Build a [ffff00]Minigun- or Cannon Turret[-] to defend against critters and enemy drones!\n\n
+    7. If you are not feeling creative, just make use of the prefabricated bases and ships in the [ffff00]Blueprint Factory[-] [ff4444](F2)[-]\n\n[ff4444]
+    8. PLAY THE TUTORIAL (Main Menu) for MORE details on basic and advanced game mechanics![-]\n\n
+    9.Play the 'Multiplayer Default Scenario' (New Game Menu) if you want more of a challenge without protective shelters at game start!\n\nGood luck, Survivor!
+    "
+    CompletedSound: Sounds/Misc/DroneSignalBad
+    Rewards:
+      - Item: Medikit03
+        Count: 3
+      - Item: 5.8mmBullet
+        Count: 500
+      - Item: AssaultRifle
+        Count: 1
+    Tasks:
+      - TaskTitle: Personal Container
+        PictureFile: Hideout2.jpg
+        StartMessage: "norm;35|Gehe in die Basis und oeffne den  [ffff00]Personal Container[-]."
+        Rewards:
+          - Item: EmergencyRations
+            Count: 1 
+        Actions:            
+          - ActionTitle: Go to Personal Container
+            Description: ===
+            Check: NearUnit
+            Names: [ Wreckage, ContainerPersonal ]
+            Guiding: TempIndoor
+            AllowManualCompletion: true
+            CompletedMessage: ""
+
+          - ActionTitle: Exit Personal Container
+            Description: ===
+            Check: InventoryClosed
+            Names: [ ContainerPersonal ]
+            AllowManualCompletion: true
+            CompletedMessage: ""
+
+      - TaskTitle: Aktivate Base
+        PictureFile: Hideout2.jpg
+        StartMessage: "norm;35|Benutze den [c][ff4444]Y[-][/c] Button um die Baiss zu aktivieren.\n\n
+        Note: Die Basis hat einen  [ffff00]Capacitor (Solar) + mehrere Solar Panels[-] fuer Energy production. Bedenke das Drohnen die Basis angreifen werden.
+        "
+        Actions:
+          - ActionTitle: Y to activate
+            Description: ===
+            Check: MainPowerSwitched
+            Names: [ Base ]
+            AllowManualCompletion: true
+            CompletedMessage: ""
+
+      - TaskTitle: Basic Farming
+        StartMessage: "norm;35|Kuemmer dich um die Nahrungsversorgung mit den Pflanzbeeten. Es sind bereits welche vorhanden!"
+        Actions:
+          - ActionTitle: Place Sprouts
+            Description: ===
+            Check: BlocksPlaced
+            Types: [ AlienPalmTreeStage1, AlienPlantTube2Stage1, AlienplantWormStage1, BulbShroomYoungStage1, CornStage1, DesertPlant20Stage1, ElderberryStage1, InsanityPepperStage1, PearthingStage1, PumpkinStage1, SnakeweedStage1, TomatoStage1, WheatStage1 ]
+            Amount: 1
+            AllowManualCompletion: true
+            CompletedMessage: ""
+
+      - TaskTitle: Activate Growlight
+        StartMessage: "norm;35|Finde den Schalter fuer das Pflanzenlicht."
+        Actions:
+          - ActionTitle: Use Lever
+            Description: === 
+            Check: DeviceNamePowered
+            Names: [ LightPlant01 ]
+            AllowManualCompletion: true
+            CompletedMessage: ""
+
+#===============================================================
+# SINGLE PLAYER MISSIONS
+  - ChapterTitle: chptitleDeliciousA
+    Category: SoloMission 
+    Description: chpdescDeliciousA
+    PictureFile: DeliciousA.jpg
+    PlayerLevel: 1
+    Visibility: Always    # or ByLevel, WhenRewarded
+    RewardedChapters: [ chptitleDeliciousO ]
+    ActivateChapterOnCompletion: chptitleDeliciousO
+    Rewards:
+      - Item: GoldCoins
+        Count: 10
+    Tasks:
+      - TaskTitle: tasktitleGEakua
+        PictureFile: DeliciousA.jpg
+        Actions:
+          - ActionTitle: acttitleElderB
+            Description: actdescElderB
+            Check: ItemsPickedUp
+            Types: [ AkuaBerry ] 
+            CompletedMessage: $
+
+          - ActionTitle: acttitleCornD
+            Description: actdescCornD
+            Check: ItemsPickedUp
+            Types: [ CornDogFruit ]  
+            CompletedMessage: $
+
+          - ActionTitle: acttitleAlienH
+            Description: actdescAlienH
+            Check: ItemsPickedUp
+            Types: [ AlienHoney ]  
+            CompletedMessage: $
+
+          - ActionTitle: acttitleTPP
+            Description: actdescTPP
+            Check: ItemsPickedUp
+            Types: [ TexturedPlantProtein ]  
+            CompletedMessage: $  
+
+  - ChapterTitle: chptitleDeliciousO
+    Category: SoloMission 
+    Description: chpdescDeliciousO
+    PictureFile: DeliciousO.jpg
+    PlayerLevel: 1
+    Visibility: WhenRewarded    # or ByLevel, WhenRewarded
+    Rewards:
+      - Item: GoldCoins
+        Count: 20
+    Tasks:
+      - TaskTitle: tasktitleGEomicron
+        PictureFile: DeliciousO.jpg
+        Actions:
+          - ActionTitle: acttitleOpun
+            Description: actdescOpun
+            Check: ItemsPickedUp
+            Types: [ OpuntiaCactusSpears ]
+            CompletedMessage: $
+          - ActionTitle: acttitleSpaceO
+            Description: actdescSpaceO
+            Check: ItemsPickedUp
+            Types: [ SpaceOrange ] 
+            CompletedMessage: $
+          - ActionTitle: acttitleAhax
+            Description: actdescAhax
+            Check: ItemsPickedUp
+            Types: [ AkuaFruit ]  
+            CompletedMessage: $
+
+  - ChapterTitle: chptitleDinnerFT
+    Category: SoloMission
+    Description: chpdescDinnerFT
+    PictureFile: Dinner42.jpg
+    PlayerLevel: 1
+    Visibility: Always    # or ByLevel, WhenRewarded    
+    Rewards:
+      - Item: GoldCoins
+        Count: 20
+      - Item: EmergencyRations
+        Count: 2
+    Tasks:
+      - TaskTitle: tasktitleDforT
+        PictureFile: Dinner42.jpg
+        Actions:
+          - ActionTitle: acttitlePizza
+            Description: actdescPizza
+            Check: ItemsCrafted
+            Types: [ Pizza ]
+            CompletedMessage: $
+          - ActionTitle: acttitleRatat
+            Description: actdescRatat
+            Check: ItemsCrafted
+            Types: [ Ratatouille ]
+            CompletedMessage: $
+          - ActionTitle: acttitleFruitP
+            Description: actdescFruitP
+            Check: ItemsCrafted
+            Types: [ FruitPie ]
+            CompletedMessage: $
+          - ActionTitle: acttitlePumpC
+            Description: actdescPumpC
+            Check: ItemsCrafted
+            Types: [ PumpkinCookie ]
+            CompletedMessage: $
+          - ActionTitle: acttitleKCof
+            Description: actdescKCof
+            Check: ItemsCrafted
+            Types: [ KavaeCoffee ]
+            Amount: 2
+            CompletedMessage: $
+
+  - ChapterTitle: chptitleCloA
+    Category: SoloMission
+    Description: chpdescCloA
+    PictureFile: CloA.jpg
+    PlayerLevel: 1
+    Visibility: Always    # or ByLevel, WhenRewarded  
+    RewardedChapters: [ chptitleBaK ]  
+    ActivateChapterOnCompletion: chptitleBaK 
+    Rewards:
+      - Item: GoldCoins
+        Count: 5
+    Tasks:
+      - TaskTitle: tasktitleCloAk
+        PictureFile: CloA.jpg
+        Actions:
+          - ActionTitle: acttitleTSet
+            Description: actdescTSet
+            Check: NearPoi
+            Names: [ TribalVillage ]
+            CompletedMessage: $ 
+
+  - ChapterTitle: chptitleBaK
+    Category: SoloMission
+    Description: chpdescBaK
+    PictureFile: bak.jpg
+    PlayerLevel: 1
+    Visibility: WhenRewarded    # or ByLevel, WhenRewarded
+    Rewards:
+      - Item: GoldCoins
+        Count: 25
+    Tasks:
+      - TaskTitle: tasktitleRbK
+        PictureFile: bak.jpg
+        Actions:
+          - ActionTitle: acttitleKillT
+            Description: actdescKillT
+            Check: SubjectKilled
+            Names: [ TalonGuardian, TalonGuardianGroup, TalonGuardianLeader ]
+            NamesRequired: NeedOne
+            Amount: 3
+            CompletedMessage: $    
+
+  - ChapterTitle: chptitleHuntsmenA
+    Category: SoloMission
+    Description: chpdescHuntsmenA
+    PictureFile: huntsmenA.jpg
+    PlayerLevel: 1
+    Visibility: Always    # or ByLevel, WhenRewarded
+    Rewards:
+      - Item: GoldCoins
+        Count: 10
+      - Item: PistolT2
+        Count: 1
+      - Item: 50Caliber
+        Count: 100      
+    Tasks:
+      - TaskTitle: tasktitleHuntsmenAk
+        PictureFile: huntsmenA.jpg
+        Actions:
+          - ActionTitle: acttitleAinsect
+            Description: actdescAinsect
+            Check: SubjectKilled
+            Names: [ AlienBug01 ]
+            CompletedMessage: $
+          - ActionTitle: acttitleSlime
+            Description: actdescSlime
+            Check: SubjectKilled
+            Names: [ Slime ]
+            CompletedMessage: $
+          - ActionTitle: acttitleTric
+            Description: actdescTric
+            Check: SubjectKilled
+            Names: [ Triceratops, TriceratopsBaby ]
+            NamesRequired: NeedOne
+            CompletedMessage: $
+          - ActionTitle: acttitleLizM
+            Description: actdescLizM
+            Check: SubjectKilled
+            Names: [ LizardMuleGroup, LizardMuleLeader, LizardMuleBaby ]
+            NamesRequired: NeedOne
+            CompletedMessage: $    
+          - ActionTitle: acttitleRaptD
+            Description: actdescRaptD
+            Check: SubjectKilled
+            Names: [ RaptorLeader, RaptorGroup ]
+            NamesRequired: NeedOne
+            CompletedMessage: $    
+          - ActionTitle: acttitleHMakSpider01
+            Description: actdescHMakSpider01
+            Check: SubjectKilled
+            Names: [ Spider01 ]
+            NamesRequired: NeedOne
+            CompletedMessage: $    
+
+  - ChapterTitle: chptitleElem
+    Category: SoloMission
+    Description: chpdescElem
+    PictureFile: Elem.jpg
+    PlayerLevel: 1
+    Visibility: Always    # or ByLevel, WhenRewarded
+    Rewards:
+      - Item: GoldCoins
+        Count: 50
+      - Item: PentaxidOre
+        Count: 10
+    Tasks:
+      - TaskTitle: tasktitleElemFK
+        PictureFile: Elem.jpg
+        Actions:
+          - ActionTitle: acttitleDGo
+            Description: actdescDGo
+            Check: SubjectKilled
+            Names: [ GolemDesert ]
+            CompletedMessage: $    
+          - ActionTitle: acttitleIceGo        #Not in Gamescom version
+            Description: actdescIceGo
+            Check: SubjectKilled
+            Names: [ GolemIce ]
+            CompletedMessage: $    
+          - ActionTitle: acttitleSwGo
+            Description: actdescSwGo
+            Check: SubjectKilled
+            Names: [ GolemSwamp ]
+            CompletedMessage: $
+
+  - ChapterTitle: chptitleAfraidA
+    Category: SoloMission
+    Description: chpdescAfraidA
+    PictureFile: AfraidA.jpg
+    PlayerLevel: 1
+    Visibility: Always    # or ByLevel, WhenRewarded
+    RewardedChapters: [ chptitleAfraidO ]
+    ActivateChapterOnCompletion: chptitleAfraidO
+    Rewards:
+      - Item: GoldCoins
+        Count: 25
+      - Item: PulseRifle
+        Count: 1
+      - Item: 5.8mmBullet
+        Count: 200
+    Tasks:
+      - TaskTitle: tasktitleAfraidA
+        PictureFile: AfraidA.jpg
+        Actions:
+          - ActionTitle: acttitleNightR
+            Description: actdescNightR
+            Check: SubjectKilled
+            Names: [ RaptorNight ]
+            CompletedMessage: $    
+          - ActionTitle: acttitlePlMon
+            Description: actdescPlMon
+            Check: SubjectKilled
+            Names: [ PlantMonster ]
+            CompletedMessage: $    
+          - ActionTitle: acttitleHAins
+            Description: actdescHAins
+            Check: SubjectKilled
+            Names: [ Hexapod ]
+            CompletedMessage: $    
+          - ActionTitle: acttitleSpAkua
+            Description: actdescSpAkua
+            Check: SubjectKilled
+            Names: [ Spider01 ]
+            CompletedMessage: $    
+
+  - ChapterTitle: chptitleAfraidO
+    Category: SoloMission
+    Description: chpdescAfraidO
+    PictureFile: AfraidO.jpg
+    PlayerLevel: 1
+    Visibility: WhenRewarded    # or ByLevel, WhenRewarded
+    RewardedChapters: [ chptitleAfraidM ]
+    ActivateChapterOnCompletion: chptitleAfraidM
+    Rewards:
+      - Item: GoldCoins
+        Count: 30
+      - Item: Minigun
+        Count: 1
+      - Item: 8.3mmBullet
+        Count: 500
+    Tasks:
+      - TaskTitle: tasktitleAfraidO
+        PictureFile: AfraidO.jpg
+        Actions:
+          - ActionTitle: acttitleSpOmic
+            Description: actdescSpOmic
+            Check: SubjectKilled
+            Names: [ Spider02 ]
+            Amount: 2
+            CompletedMessage: $ 
+          - ActionTitle: acttitleOty
+            Description: actdescOty
+            Check: SubjectKilled
+            Names: [ Otyugh ]
+            CompletedMessage: $ 
+          - ActionTitle: acttitleDesGO
+            Description: actdescDesGO
+            Check: SubjectKilled
+            Names: [ GolemDesert ]
+            CompletedMessage: $ 
+
+  - ChapterTitle: chptitleAfraidM
+    Category: SoloMission
+    Description: chpdescAfraidM
+    PictureFile: AfraidM.jpg
+    PlayerLevel: 1
+    Visibility: WhenRewarded    # or ByLevel, WhenRewarded
+    Rewards:
+      - Item: Sniper2
+        Count: 1
+      - Item: 12.7mmBullet
+        Count: 50
+      - Item: GoldCoins
+        Count: 50
+    Tasks:
+      - TaskTitle: tasktitleAfraidMa
+        PictureFile: AfraidM.jpg
+        Actions:
+          - ActionTitle: acttitleSpiMasp
+            Description: actdescSpiMasp
+            Check: SubjectKilled
+            Names: [ Spider03 ]
+            Amount: 3
+            CompletedMessage: $ 
+          - ActionTitle: acttitleOverS
+            Description: actdescOverS
+            Check: SubjectKilled
+            Names: [ Overseer ]
+            Amount: 2
+            CompletedMessage: $ 
+
+  - ChapterTitle: chptitleCustT
+    Category: SoloMission
+    Description: chpdescCustT
+    PictureFile: CuesT.jpg
+    PlayerLevel: 1
+    Visibility: Always    # or ByLevel, WhenRewarded
+    Rewards:
+      - Item: PistolEpic
+        Count: 1
+      - Item: 50Caliber
+        Count: 100      
+      - Item: GoldCoins
+        Count: 30
+    Tasks:
+      - TaskTitle: tasktitleFiSpPoi
+        PictureFile: CuesT.jpg
+        Actions:
+          - ActionTitle: acttitleAbandM
+            Description: actdescAbandM
+            Check: NearPoi
+            Names: [ AbandonedPOI ]
+            Guiding: Destination
+            CompletedMessage: $
+          - ActionTitle: acttitle3PoT
+            Description: actdesc3PoT
+            Check: NearPoi
+            Names: [ CrashedTalosBack, CrashedTalosMid, CrashedTalosFront ]
+            NamesRequired: NeedOne
+            CompletedMessage: $
+          - ActionTitle: acttitleAbandF
+            Description: actdescAbandF
+            Check: NearPoi
+            Names: [ AbandonedPOI ]
+            Guiding: Destination
+            CompletedMessage: $
+          # - ActionTitle: acttitleArtifO
+            # Description: actdescArtifO
+            # Check: NearPoi
+            # Names: [ Artifact ]
+            # CompletedMessage: $ 
+          - ActionTitle: acttitleCrShMoon
+            Description: actdescCrShMoon
+            Check: NearPoi
+            Names: [ CrashedShip ]
+            CompletedMessage: $
+#          - ActionTitle: acttitleMiningC       #Not in Gamescom Version
+#            Description: actdescMiningC
+#            Check: NearPoi
+#            Names: [ MiningComplex ]
+#            CompletedMessage: $
+
+  - ChapterTitle: chptitleDroneH
+    Category: SoloMission
+    Description: chpdescDroneH
+    PictureFile: DroneH.jpg
+    PlayerLevel: 1
+    Visibility: Always    # or ByLevel, WhenRewarded
+    Rewards:
+      - Item: MinigunEpic
+        Count: 1
+      - Item: 8.3mmBullet
+        Count: 250
+      - Item: GoldCoins
+        Count: 40
+    Tasks:
+      - TaskTitle: tasktitleDroneHunt
+        PictureFile: DroneH.jpg
+        Actions:
+          - ActionTitle: acttitleRocketD
+            Description: actdescRocketD
+            Check: SubjectKilled
+            Names: [ DroneSmallFast01Rocket ]
+            CompletedMessage: $
+          - ActionTitle: acttitleMinigunD
+            Description: actdescMinigunD
+            Check: SubjectKilled
+            Names: [ DroneSmallFast01Minigun, DroneLargeSlow01Minigun, DroneLargeSlow02Minigun, EnemyDroneV2Minigun, DroneSmallAttackBase ]
+            NamesRequired: NeedOne
+            CompletedMessage: $
+          - ActionTitle: acttitleCannonD
+            Description: actdescCannonD
+            Check: SubjectKilled
+            Names: [ DroneSmallSlow01Cannon, DroneLargeSlow02Cannon ]
+            NamesRequired: NeedOne
+            CompletedMessage: $
+          - ActionTitle: acttitlePlasmaD
+            Description: actdescPlasmaD
+            Check: SubjectKilled
+            Names: [ DroneLargeSlow01Plasma, DroneSmallFast01Plasma, EnemyDroneV2Plasma ]
+            NamesRequired: NeedOne
+            CompletedMessage: $
+          - ActionTitle: acttitleSpaceD
+            Description: actdescSpaceD
+            Check: SubjectKilled
+            Names: [ SpaceDroneLaser, SpaceDronePlasma]
+            NamesRequired: NeedOne
+            CompletedMessage: $
+
+  - ChapterTitle: chptitleDangerS   
+    Category: SoloMission
+    Description: chpdescDangerS
+    PictureFile: DangerousSpace.jpg
+    PlayerLevel: 1
+    Visibility: Always    # or ByLevel, WhenRewarded
+    Rewards:
+      - Item: CrystalWarp
+        Count: 5
+      - Item: CrystalWarp
+        Count: 5
+      - Item: CrystalWarp
+        Count: 5
+      - Item: CrystalWarp
+        Count: 5
+      - Item: GoldCoins
+        Count: 40
+    Tasks:
+      - TaskTitle: tasktitleDangerSp
+        PictureFile: DangerousSpace.jpg
+        Actions:
+          - ActionTitle: acttitleOmicronOrbit
+            Description: actdescOmicronOrbit
+            Check: NearPoi
+            Names: [ TSO_OmicronOrbit ]
+            CompletedMessage: $
+          - ActionTitle: acttitleAkuaOrbit
+            Description: actdescAkuaOrbit
+            Check: NearPoi
+            Names: [ TSO_AkuaOrbit ]
+            CompletedMessage: $
+          - ActionTitle: acttitleNinguesOrbit           
+            Description: actdescNinguesOrbit
+            Check: NearPoi
+            Names: [ TSO_NinguesOrbit ]
+            CompletedMessage: $
+          - ActionTitle: acttitleMasperonOrbit       
+            Description: actdescMasperonOrbit
+            Check: NearPoi
+            Names: [ TSO_MasperonOrbit ]
+            CompletedMessage: $
+          - ActionTitle: acttitleAestusOrbit     
+            Description: actdescAestusOrbit
+            Check: NearPoi
+            Names: [ TSO_AestusOrbit ]
+            CompletedMessage: $
+#----------------------------------------------
+  - ChapterTitle: "Besiedelung"
+    Category: SoloMission
+    Description: "Die Besiedelung von Limayos ist ein Projekt, das schon vor langer Zeit gestartet  wurde.\n
+                  Durch den Konflikt mit den GoaUld wurde das Projekt zurueckgestellt.\n
+                  Du kannst es nun beenden.
+                  "
+    PictureFile: Limayos.jpg
+    PlayerLevel: 10
+    Visibility: Always    # Always, ByLevel, WhenRewarded
+    Rewards:
+      - Item: GoldCoins
+        Count: 999
+    Tasks:
+      - TaskTitle: "Limayos Siedlung" 
+        PictureFile: miningcorp.jpg
+        Actions:
+          - ActionTitle: "Betten bauen"
+            Description: "Es muessen Betten fuer 50 Siedler gebaut werden.\n
+            Eine Basis auf Limayos muss die Anzahl Betten enthalten.\n
+            Der Spielleiter kontrolliert dies!
+            "
+            Check: ItemsCrafted	
+            Types: [ DecoBlocks ]
+            Amount: 50
+            CompletedMessage: $
+#-----------------------------------------------------------------
+#-----------------------------------------------------------------
+# FACTION MISSIONS
+# Rot [ff2400]   / Gelb [ffff00]  normal [-] #
+  - ChapterTitle: "VERY IMPORTANT - PLEASE READ FIRST"
+    Category: FactionMission
+    Description: "[b]VERY IMPORTANT - PLEASE READ FIRST[/b]"
+    PictureFile: readfirst.jpg
+    PlayerLevel: 1
+    Visibility: Always    # or ByLevel, WhenRewarded
+    Tasks:
+      - TaskTitle: "VERY IMPORTANT - PLEASE READ FIRST"
+        PictureFile: readfirst.jpg
+        Actions:
+          - ActionTitle: "How To FACTION MISSION"
+            Description: "Wenn irgendjemand aus der Fraktion die Mission startet, dann ist er der Leader. Dies wird neben dem Missionstitel angezeigt.\n
+            Dies ist wichtig, weil nur der Leader die Belohnung erhaelt.\n
+            Wenn die MIssion gestartet wurde sehen alle Mitglieder der Fraktion den Status [ffff00]RUNNING[-] neben der Mission in der Missionsliste.\n
+            Wenn man du teilnehmen willst, waehle die Mission aus und Klicke den [ffff00]Aktivieren[-] Button. Der Status wechselt dann auf [ffff00]Supperter[-]. Jetzt traegst du zum Fortschritt der Mission bei.
+            "
+          - ActionTitle: "Known issues and CONSTRAINT"
+            Description: "[b]Important Note:[/b] Faction Missions are still a work-in-progress feature with one important technical constraint:\n\n
+            [b]Mission Fortschritt wird nicht gespeichert[/b]\n
+            Das bedeutet: Anders als bei SinglePlayer Missionen muss eine Faction Mission  in einem Zug erledigt werden. Wenn die MIssion deaktiviert wird, dann geht der Fortschritt verloren.\n
+            Das gleiche passiert , wenn der Leiter der Mission den Server verlaesst.\n
+            Dieser Fehler wird in einer der naechsten Updates behoben.
+            "
+
+#-----------------------------------------------------------------
+
+  - ChapterTitle: "Bergbau Geschaeft"
+    Category: FactionMission
+    Description: "Ein lokaler Haendler sucht eine kleine Menge Erze. Er bietet eine Belohnung von 100 GoldCoin. (1 GoldCoin = 50 Credit)
+                  Dies ist eine gute Moeglichkeit um an Finanzen zu kommen fuer groesere Projekte oder Notlagen.
+                  "
+    PictureFile: miningcorp.jpg
+    PlayerLevel: 1
+    Visibility: Always    # or ByLevel, WhenRewarded
+    Rewards:
+      - Item: GoldCoins
+        Count: 100
+    Tasks:
+      - TaskTitle: "Erzabbau" 
+        PictureFile: miningcorp.jpg
+        Actions:
+          - ActionTitle: "500 Iron Erz"
+            Description: "Abbau von 500 Eisenerz.
+            Kaufen vom Markt oder nur im Inventory haben erledigt die Mission nicht !
+            "
+            Check: ItemsPickedUp
+            Types: [ IronOre ]
+            Amount: 500
+            CompletedMessage: $
+
+          - ActionTitle: "500 Promethium Erz"
+            Description: "Abbau von 500 Promethium Erz.
+            Kaufen vom Markt oder nur im Inventory haben erledigt die Mission nicht !
+            "
+            Check: ItemsPickedUp
+            Types: [ PromethiumOre ]
+            Amount: 500
+            CompletedMessage: $
+
+          - ActionTitle: "500 Magnesium Erz"
+            Description: "Abbau von 500 Magnesium Erz.
+            Kaufen vom Markt oder nur im Inventory haben erledigt die Mission nicht !
+            "
+            Check: ItemsPickedUp
+            Types: [ MagnesiumOre ]
+            Amount: 500
+            CompletedMessage: $
+
+          - ActionTitle: "1000 Cobalt Erz"
+            Description: "Abbau von 500 Cobalt Erz.
+            Kaufen vom Markt oder nur im Inventory haben erledigt die Mission nicht !
+            "
+            Check: ItemsPickedUp
+            Types: [ CobaltOre ]
+            Amount: 500
+            CompletedMessage: $
+#----------------------------------------------
+  - ChapterTitle: "Limayos Besiedelung"
+    Category: FactionMission
+    Description: "Die Besiedelung von Limayos ist ein Projekt, das schon vor langer Zeit gestartet  wurde.\n
+                  Durch den Konflikt mit den GoaUld wurde das Projekt zurueckgestellt.\n
+                  Du kannst es nun beenden.
+                  "
+    PictureFile: Limayos.jpg
+    PlayerLevel: 10
+    Visibility: Always    # Always, ByLevel, WhenRewarded
+    Rewards:
+      - Item: GoldCoins
+        Count: 999
+    Tasks:
+      - TaskTitle: "Limayos Siedlung" 
+        PictureFile: miningcorp.jpg
+        Actions:
+          - ActionTitle: "Betten bauen"
+            Description: "Es muessen Betten fuer 50 Siedler gebaut werden.\n
+            Eine Basis auf Limayos muss die Anzahl Betten enthalten.\n
+            Der Spielleiter kontrolliert dies!
+            "
+            Check: ItemsCrafted	
+            Types: [ DecoBlocks ]
+            Amount: 50
+            CompletedMessage: $
+
+#----------------------------------------------
+#-----------------------------------------------------------------
+# KNOWLEDGE BASE
+
+# ENZYCLOPEDIA
+# ENZYCLOPEDIA: Stargate
+# Rot [ff2400]   / Gelb [ffff00]  normal [-] #
+  - ChapterTitle: Stargate Universum 
+    Category: FAQ
+    Description: "Das Traveller Universum befindet sich in einer Zeit nach der Rebellion 1116.\n
+    Die alten Machtstrukuren sind zerfallen und neue auf den Thron des Third Imperium sind entstanden.\n
+    1117 Die Solomani Cofederation (Menschen Imperium) hat ihre Grenze verschoben und Terra zurueckerobert.\n\n
+    Nach 51 Wochen kommt die Nachricht per X-Boot in den Spinward Marches an.\n
+    Archduke Norris erklaert die Spinward Marches zu einer autonomen Region loyal zum Third Imperium.\n\n
+    1118 taucht ein Mann auf der behauptet der echte Strephon zu sein. Ermordet wurde ein Clon Double. So entsteht die Real Stephon Faction.\n\n
+    1119 es bilden alle moeglichen Fraktionen und das Third Imperium zerfaellt im Chaos.\n\n
+    Diese ENZYCLOPEDIE bietet dir Hintergrundinformationen. Der Inhalt wird in unregelmaessigen Abstaenden ergaenzt.\n
+    oder siehe auf http://wiki.travellerrpg.com/Rebellion#Rebellion_.28Background.29_Assassination
+    " 
+    PlayerLevel: 1
+    Visibility: Always    ## or ByLevel, WhenRewarded
+    Tasks:
+      - TaskTitle: X-Boote
+        PictureFile: stargatenextbasis.jpg
+#        PictureFile: stargate.jpg 
+        Actions:
+          - ActionTitle: "[ffff00]Express Boot Netztwerkes"
+            Description: "Das X-Boot Netzwerk wurde urspruenglich 624 1) eingerichtet und so erweitert das im Jahre 724 das gesamte Imperium abgedeckt wurde.\n
+                          Vor der Gruendung des Dienste waren die Spinward Marches 4 Jahre vom Zentrum des Imperiums entfernt. \n
+                          Es mussten Schiffe auf den Traderoutes benutzt werden um die Informationen zu transportieren. \n
+                          \n
+                          \n
+                          1)  Imperialer Kalender
+                          [ffff00]siehe auch Planetensysteme[-]\n
+                          \n
+                         "
+          - ActionTitle: "[ffff00]X-Boot Verbindung"
+            Description: "Die X-Boote verbinden zwei Planetensystem die 4 Parsec voneinander entfernt sind. Dies ist die normale Nachrictenverbindung.\n
+                          Jedes X-Boot Verbindung hat eine kleine Basis an der es anlegt. Die Basis enthaelt einfache Supporteinrichtungen.\n
+                          In wichtigen Systemen sind auch grosse Scoutbasen um die Schiffe zu warten und zu bauen.\n
+                          Auf wichtigen Strecken sind Verbindungen mit Entfernungen von 5 oder 6 Parsec verfuegbar!\n
+                          Die X-Boote nehmen auch ein begrenzte Anzahl von Reisenden mit. Dies ist der schnellste Weg durch die Spinward Marches bzw. das gesamte Imperium\n
+                          Die X-Boote koennen nicht auf Planeten landen !\n
+                          "
+          - ActionTitle: "[ffff00]Scoutdienst"
+            Description: "Der Scoutdienst ist eine der grossen Organisationen des Imperiums.\n
+                          Neben den X-Booten unterhaelt der Dient eine grosse Flotte von Scoutschiffen verschiedenen Typs.\n
+                          Das bekannteste ist das Scoutboot.\n
+                          Die Hauptaufgabe der Scoutdienstes ist die Erforschung der Welten im und ausserhalb des Imperiums.\n
+                          Die Mitglieder des Scoutdienstes bezeichnen sich auch als Explorer.\n
+                         "
+#
+#----------------------------------
+      - TaskTitle: Human
+        PictureFile: stargate1.jpg 
+        Actions:
+          - ActionTitle: "[ffff00]Human"
+            Description: "Der Begriff Human ist nicht mit Menschen im engeren Sinne zu verwechseln.\n 
+                          Die Nachkommen der Menschen von Terra nennen sich Solomani und haben ein Imperium am anderen Ende des Spiralarmes der Galaxis.\n
+                          Dies ist mehrere tausend Parsec entfernt!\n\n
+                          Gemeint sind die Nachlommen der Gruender der Imperien mit menschlichen Wurzeln. Das Third Imperium und andere.\n
+                          Terra selbst spielt derzeit keine wesentliche politische oder technologische Rolle. Das Third Imperium nimmt diesen Platz ein.
+                          Start auf Dentus.
+                          
+                         "
+#
+          - ActionTitle: "[ffff00]Explorer"
+            Description: "Die Explorer sind eine Gruppe von Menschen, die auf eigene Faust die Planeten und die Galaxis erforschen.\n
+                          Einige gehoeren auch zum Scoutdienst und sind im Auftrag des Imperiums unterwegs.\n
+                          Es geht das Geruecht der Scoutdienst hat sich Archduke Norris angeschlossen.\n\n
+                          
+                         "
+#
+          - ActionTitle: "[ffff00]Humanoide"
+            Description: "Die Humanoiden sind die Nachkommen von Nichtmenschen Siedlern.\n
+                          In einigen Bereichen des Imperriums werden sie diskreminiert.\n
+                          Sicher ist, dass im Humanoiden den groessten Anteil an Einwohnern des Imperiums stellen.\n
+                          \n
+                         "
+#----------------------------------
+#
+      - TaskTitle: Astrophysik
+        PictureFile: planetundmond.jpg 
+        Actions:
+          - ActionTitle: "[ffff00]Parsec[-]"
+            Description: "Ein Parsec ist eine Astronomische Entfernung.\n
+                          Die entspricht 3.261 Lichtjahren oder 206265 Astronomische Einheiten.\n
+                          Eine Astronomische Einheit (AE) entspricht 150 Millionen Kilometer.\n
+                          "
+          - ActionTitle: "[ffff00]Planetensystem[-]"
+            Description: "Ein Planetensystem besteht aus einer Ansammlung von Planeten, Monden und Asteroiden.\n
+                          Die einzelnen Planet sind im allgemeinen nicht weiter als 25 AE voneinander entfernt. (AE = Astronomische Einheiten)\n
+                          Die Planetensysteme sind mindestens 1 Parsec voneinander entfernt. Man kann diese Kluft nur mit einem Sprungtriebwerk ueberbruecken.\n
+                          Ueblicherweise werden die Entfernungen als ganze Zahlen dargestellt.
+                          "
+          - ActionTitle: "[ffff00]Umlaufbahn"
+            Description: "Eine Umlaufbahn bezeichnet einen Platz in einem Planetensystem, an dem ein Planet und seine Begleiter anzutreffen sind.\n
+                          Es gibt verschiedene Begleiter \n
+                          - einen oder mehrere Monde\n
+                          - Astroiden in unterschiedlicher Anordnung. Ringe, Felder, Wolken \n
+                          Eine besondere Form der Umlaufbahn sind die Austeroidenguertel. Hier liegen mehrere Asteroiden Formationen auf der gleichen Umlaufbahn im relativ geringen Abstand.
+                          Im Planetensystem von Terra ist dies der Fall.\n\n
+                          Die meisten Umlaufbahnen sind leer.
+                         "
+          - ActionTitle: "[ffff00]Planeten und Monde"
+            Description: "Die Planeten und Monde sind die massiven Himmelskoerper mit eigener Gravitation.\n
+                          Monde wie den Erdmond trifft man haeufiger an. Planetn mit atembarer Atmosphaere sind selten.\n
+                         "
+          - ActionTitle: "[ffff00]Wurmloch"
+            Description: "Ein Wurmloch ist eine Einstein-Rosen-Bruecke zwischen zwei entfernten Orten im Raum.\n
+                          Mit einem Warptriebwerk (Sprungtriebwerk) koennen damit grosse Entfernungen ueberbrueckt werden.\n
+                          Wurmloecher gelten als instabil und koennen entstehen und verschwinden.\n
+                         "
+#----------------------------------
+      - TaskTitle: Planetensysteme
+        PictureFile: planetundmond.jpg 
+        Actions:
+          - ActionTitle: "[ffff00]Regina System"
+            Description: "Das Regina System ist eines der ersten Planetensystem, dass in diesem Bereich der Galaxis besiedelt wurde.\n
+                          Es umfasst 8 Umlaufbahnen. Davon sind 3 Gasriesen\n
+                          Auf dem Planeten ist Starport Typ A. Der Planet hat eine Navybase und eine Scoutbase.\n
+                          Der Planet hat ca. 1 Millionen Einwohner unterschiedlicher Rassen.\n
+                          Der Planet ist der Sitz von mehreren Adligen (Noble) und der Sitz des Archduke der Spinward Marches.
+                          Das System ist Teil der X-Boot Verbindungen.
+                          "
+          - ActionTitle: "Roup System"
+            Description: "Das Roup System ist ein Nachbarsystem von Regina.\n
+                          Es umfasst 10 Umlaufbahnen. Davon sind 3 Gasriesen und 2 Asteroidenfelder\n
+                          Das System gehoert zu den X-Boot Verbindungen.\n
+                          Dies ist eine Wasserwelt.\n
+                          Es gibt ein Starport Typ C und eine Scout Base.\n
+                          Das System gehoert z
+                          "
+          - ActionTitle: "Boughene System"
+            Description: "Das Boughene System ist ein Nachbarsystem von Efate.\n
+                          Es umfasst 13 Umlaufbahnen. Davon ist 1 ein Gasriese.\n
+                          Auf dem Planeten ist ein Starport Typ A. Es gibt eine Navybase.\n
+                          Das System ist Teil der X-Boot Verbindungen.
+                          "
+          - ActionTitle: "Efate System"
+            Description: "Das Efate System ist ein Nachbarsystem von Akua.\n
+                          Es umfasst 8 Umlaufbahnen. \n
+                          Auf dem Planeten ist ein Starport Typ A. Es gibt eine Scoutbase.\n
+                          Das System ist Teil der X-Boot Verbindungen.
+                          "
+          - ActionTitle: "Pixie System"
+            Description: "Das Pixie System ist ein Nachbarsystem von Boughene.\n
+                          Es umfasst 15 Umlaufbahnen. Davon ist 1 ein Gasriese\n
+                          Der Hauptplanet Pixie ist eine Vakuum Welt !\n
+                          Auf dem Planeten ist ein Starport Typ A. Es gibt eine Scoutbase.\n
+                          Das System ist Teil der X-Boot Verbindungen.
+                          "
+          - ActionTitle: "Kinorb System"
+            Description: "Das Kinorb System ist ein Nachbarsystem von Dentus.\n
+                          Es umfasst 7 Umlaufbahnen. Davon ist 1 ein Gasriese\n
+                          Auf dem Planeten ist ein Starport Typ A. \n
+                          Das System ist Teil der X-Boot Verbindungen.
+                          "
+          - ActionTitle: "[ffff00]Planet Dentus"
+            Description: "Der Planet Dentus ist unbedeutender Planet am Rande der Spinward Marches.\n
+                          Der Planet dient als Ausgangspunkt fuer die Gruendung eines Konzern in diesem Sektor.\n
+                          Die Ureinwohner sind friedlich und neutral gegenueber den Buegern des Imperiums.\n
+                          Dies gilt nicht unbedingt fuer die Mitglieder anderer Konzerne oder MegaKonzerne .\n
+                          \n
+                          In frueheren Zeiten gab es hier einen Vargr Stuetzpunkt. Dieser wurde aber zertsoert.\n\n
+                          Der Begriff Human ist nicht mit Menschen im engeren Sinne zu verwechseln.\n 
+                          Die Nachkommen Menschen von Terra nennen sich Solomani und haben ein Imperium am anderen Ende des Spiralarmes der Galaxis.\n
+                          Dies ist mehrere tausend Parsec entfernt!
+                         "
+      - TaskTitle: Space Technology
+        PictureFile: Vessel2.jpg 
+        Actions:
+          - ActionTitle: "[ffff00]Starport"
+            Description: "Ein Starport ist nicht einfach ein Raumhafen auf einem Planeten. Es ist ein System, das aus einer Planeten und einer Orbit Komponente besteht.\n
+                          Der Planetenraumhafen wird als Lowport bezeichnet. Die Orbitstation als Highport.\n
+                          Die Starports sind in Klassen eingeteilt, von A-E. Ein X heisst kein Raumhafen.\n
+                          A = Raumhafen Qualitaet Excellent.\n
+                          B = Raumhafen Qualitaet Gut.\n
+                          C = Raumhafen Qualitaet Routine \n
+                          D = Raumhafen Qualitaet Schlecht \n
+                          E = Raumhafen Qualitaet Grenzland \n\n
+                          Als Spaceport wird ein Raumhafen fuer Innersystem Verkehr bezeichnet.\n
+                          Ein Starport unterliegt immer der Authoritaet des Imperiums. Die Authoritaet endet an der Grenze des Raumhafens !\n
+                          Soldaten und Wachmannschaften sind nur fuer die Sicherheit innerhalb des Starport verantwortlich.\n
+                          Innerhalb des Starport gelten die Gesetze des Imperiums!\n
+                          "
+#          - ActionTitle: "<>"
+#            Description: "Das <> System ist ein Nachbarsystem von [ffff00]Akua[-].\n
+#                          Es umfasst <> Umlaufbahnen. Davon sind <> Asteroidenfelder\n
+#                          Auf dem Planeten <> ist ein Stargate.\n
+#                          Der Planet <> ist als <> im Stargate Center verzeichnet.\n
+#                          "
+# hellblau f1faff / hellgrau [dfdfd6] / Rot [ff2400]   / Gelb [ffff00]  normal [-] #
+#----------------------------------
+#
+#-------------------------------------
+      - TaskTitle: Trade 
+        PictureFile: stargate.jpg 
+        Actions:
+          - ActionTitle: "[ffff00]Megacorporations"
+            Description: "Megacorporations are the largest of the millions of economic organizations do business within and without the Imperium proper and Charted Sapce.\n\n
+                          - Most of these are limited to one or two worlds. A few thousand trade over one or more subsectors, a few hundred cover one or more sectors.\n
+                          - Only a few firms are truly Imperial in scope, doing business throughout many sectors; these are known as Megacorporations.\n
+                          - Megacorporations have their own private military forces and wield powerful political influence.\n\n
+                          List of Megacorporations:\n
+                          1) Delgado Trading - Military hardware, miniaturization, minerals, publishing, trading, recreational products.\n
+                          2) GSbAG - Starships\n
+                          3) General Products - Heavy industry, starships, vehicles.\n
+                          4) Hortalez et Cie - Banking, investments, finance arrangements.\n
+                          5) Instellarms - Military hardware, military units, strategic planning.\n
+                          6) Ling-Standard Products - Mining, electronics, vehicles, weapons, consumer goods.\n
+                          7) Makhidkarun - Communications, computers, entertainment, recreation.\n
+                          8) Naasirka - Information retrieval hardware and software, robots, electronics.\n
+                          9) Sharurshid - Trade and speculation, luxury goods.\n
+                          10) Sternmetal Horizons - Mining, manufacturing, energy supplies, food synthesis.\n
+                          11) SuSAG - Chemicals, pharmaceuticals, geneering.\n
+                          12) Tukera Lines - Passenger and freight transport, trade and speculation.\n
+                          13) Zirunkariish - Capital investment, real estate, insurance.\n\n
+                          Neben den Imperielen Megacorporations sind noch andere vorhanden:
+                          - Aslan Megacorporations: 4\n
+                          - Hiver Megacorporations: 5\n
+                          - Solomani Megacorporations: 2\n
+                          -- Solomani Megacorporation #1 GenAssist\n
+                          -- Solomani Megacorporation #2 Transstar - Interstellar Shipping & Trade\n
+                          - Julian Protectorate Megacorporation: 1\n
+                          - Zhodani Megacorporations: 1\n
+                          \n
+                         "
+#
+#-------------------------------------
+#      - TaskTitle: Titel
+#        PictureFile: PlanetView.jpg 
+#        Actions:
+#          - ActionTitle: "[ffff00]Titel"
+#            Description: "Der Titel ist der Titel zu diesem Eintrag.\n\n
+#                          \n
+#                          \n
+#                          \n
+#                         "
+#

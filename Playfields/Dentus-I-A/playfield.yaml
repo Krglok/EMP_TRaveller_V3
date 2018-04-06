@@ -1,0 +1,126 @@
+# Created by EPD v1.36.1.0, Playfield Version: 7.0.0 [1294] (Alpha 7.0.0)
+RealRadius: 1303.797294
+ScaledRadius: 1300
+Gravity: -6.5
+AtmosphereDensity: 0.10000000000000001
+AtmosphereO2: 0.10000000000000001
+Temperature: -22
+TemperatureDay: 10
+TemperatureNight: -50
+Music: BarrenMoon
+Radiation: 9.6999999999999993
+DayLength: 24
+PlanetType: Barren
+PvP: True
+UseRandom: True
+AllowCV: True
+IndestructibleTerrain: True
+Difficulty: 3
+PlayfieldType: Moon
+SunFlare: EnvironmentalEffects/SunFlareWhiteMoon
+AtmosphereEnabled: False
+DayLightIntensity: 1.3
+NightLightIntensity: 0.55000000000000004
+DayShadowStrength: 0.94999999999999996
+RandomResources:
+- Name: SiliconResource
+  CountMinMax: [4, 12]
+  SizeMinMax: [4, 30]
+  DepthMinMax: [0, 1]
+  DroneProb: 0.10000000000000001
+  MaxDroneCount: 1
+FixedResources: []
+AsteroidResources:
+- Name: IronResource
+  Amount: 5000
+  InitialDelay: 1
+  Delay: 24
+Terrain:
+  Name: Moonstone
+  PoleLevel: 60
+  NoiseStrength: 0.80000000000000004
+  ColorChange:
+    YFadeCenter: 60
+    YFadeRange: 25
+    YFadeMin: 0.20000000000000001
+    YFadeMax: -0.10000000000000001
+MainBiome:
+  Textures:
+  - [RockBlack, 3]
+  - [RockGrey08, 0]
+  - [BedrockLava, 2]
+SubBiomes: []
+BiomeTextureReplacements: []
+Biome:
+- Altitude: [30, 55]
+  Slope: [0, 12]
+  BiomeClusterData:
+  - ClusterSize: 30
+    NbOfClusters: 4
+    Radiation: 5
+    Decorations:
+    - [CrystalStraight, 10]
+    Grass: []
+DroneBaseSetup:
+  Random:
+  - GroupName: DroneBaseAkua
+    DronesMinMax: [0, 0]
+    Stock:
+    - Name: DroneSmallFast01Rocket
+      Amount: 100
+    - Name: DroneSmallFast01Minigun
+      Amount: 200
+    - Name: DroneLargeSlow01Minigun
+      Amount: 100
+    - Name: DroneSmallSlow01Cannon
+      Amount: 200
+    - Name: DroneSmallAttackBase
+      Amount: 300
+      Extra: 1
+    - Name: DroneTroopsTransport
+      Amount: Infinite
+      Extra: 2
+    - Name: ZiraxMale
+      Amount: 500
+      Extra: 3
+    - Name: Crawler
+      Amount: 400
+      Extra: 3
+  Fixed: []
+POIs:
+  Random:
+  - GroupName: CrashedShip
+    CountMinMax: [1, 1]
+    DroneProb: 1
+    DronesMinMax: [1, 2]
+    ReserveCount: 4
+    SpawnPOINear: []
+    SpawnPOIAvoid: []
+    Properties:
+    - Key: MapMarker
+      Value: Neutral
+    Properties: []
+  - GroupName: CivilSettlement
+    CountMinMax: [1, 2]
+    DroneProb: 0.80000000000000004
+    DronesMinMax: [1, 2]
+    ReserveCount: 3
+    SpawnPOINear: []
+    SpawnPOIAvoid: []
+    SpawnResource: []
+    Properties:
+    - Key: MapMarker
+      Value: Neutral
+  Fixed: []
+  FixedPlayerStart:
+  - Mode: Debug
+    Pos: [-596, 104, -1063]
+    RotY: 125
+    Items: [CrushedStone, CrushedStone, CrushedStone]
+DroneSpawning:
+  Random:
+  - DronesMinMax: [5, 6]
+    CenterX: -2500
+  - DronesMinMax: [5, 6]
+    CenterX: 2500
+CreatureSpawning: []
