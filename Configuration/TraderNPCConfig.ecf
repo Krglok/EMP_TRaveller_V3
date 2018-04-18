@@ -494,3 +494,18 @@
   Item13: "PlasticMaterial, 1-2, 50-100, 1-1, 100-500"
   Item14: "NCPowder, 1-2, 50-100, 1-1, 100-500"
 }
+{ Trader Name: Fukura Products
+  SellingText: "Welcome bei Fukura Products Mining and Materials!"
+  SellingGoods: "trwResources"
+  Item1: "IronIngot, 6-9, 50-100, 5-6, 100-1500"
+  Item2: "CobaltIngot, 22-33, 50-100, 18-22, 100-1500"
+  Item3: "CopperIngot, 34-51, 50-100, 27-34, 100-1500"
+  Item4: "SiliconIngot, 20-30, 50-100, 16-20, 100-1500"
+  Item5: "NeodymiumIngot, 19-28, 50-100, 15-19, 100-1500 "
+  Item6: "MagnesiumPowder, 26-39, 50-100, 21-26, 100-1500"
+  Item7: "GoldIngot, 250, 1-100, 250, 100-500 "
+  Item8: "CrystalWarp, 269-403, 50-100, 215-269, 100-1500 "
+  Item9: "PromethiumPellets, 3-4, 50-100, 2-3, 100-1500"
+  Item10: "PlasticMaterial, 1-2, 50-100, 1-1, 100-500"
+  Item11: "NCPowder, 1-2, 50-100, 1-1, 100-1000"
+}

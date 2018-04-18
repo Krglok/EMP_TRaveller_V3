@@ -10,6 +10,7 @@ Music: moonstone
 Radiation: 16.699999999999999
 DayLength: 24
 PlanetType: Barren
+Emissive: True
 Water: ''
 PvP: True
 UseFixed: True
@@ -17,7 +18,7 @@ UseRandom: True
 AllowCV: True
 Difficulty: 5
 PlayfieldType: Planet
-Description: "Dentus-H ist ein Gasriese.\nAufgrund seiner chemischen. Es wird beszweifelt, das man dort mit einem Raumschiff landen kann. Aber die Monde gelten als moegliche Siedlungskandidaten. "
+Description: "Dentus-H ist ein Gasriese.\nAufgrund seiner chemischen Zusammensetzung gibt es kein Leben auf diesen Planeten.  Es wird bezweifelt, das man dort mit einem Raumschiff landen kann. Aber die Monde gelten als moegliche Siedlungskandidaten. "
 SunFlare: EnvironmentalEffects/SunFlareYellow
 SpecialEffectsLocal: []
 SpecialEffectsGlobal: []
@@ -43,7 +44,7 @@ WindSpeed: 20
 RandomResources:
 - Name: PromethiumResource
   CountMinMax: [2, 4]
-  SizeMinMax: [5, 8]
+  SizeMinMax: [5, 20]
   DepthMinMax: [0, 5]
   DroneProb: 0.69999999999999996
   MaxDroneCount: 2
@@ -52,10 +53,9 @@ RandomResources:
     YVariance: 10
 - Name: PentaxidResource
   CountMinMax: [4, 8]
-  SizeMinMax: [3, 5]
+  SizeMinMax: [3, 50]
   DepthMinMax: [0, 5]
-  DroneProb: 0.59999999999999998
-  MaxDroneCount: 2
+  DroneProb: 0.80000000000000004
   DistTypeCylinder:
     MaxRadius: 5
     YVariance: 10
@@ -75,7 +75,7 @@ AsteroidResources:
   Threshold: 0
 Terrain:
   Name: Desert
-  PoleLevel: 60
+  PoleLevel: 40
   NoiseStrength: 0.80000000000000004
   ColorChange:
     YFadeCenter: 60

@@ -33,7 +33,7 @@
   OrbitLine: true
   Playfields:
   - ['0, 0, 0', Dentus System, SpaceSystemCenter]
-  Allow: []
+  Allow: [Kinorb System]
   Deny: []
 #-------------------------------------------
 # Dentus  Planet
@@ -178,5 +178,137 @@
   - ['0, 0, 0', Dentus-I, Dentus-I, '']
   - ['-4500, 0, 4500', Dentus-I-A, Dentus-I-A, '']
   - ['7200, 0, -7200', Dentus-I-B, Dentus-I-B, '']
+  Allow: []
+  Deny: []
+#-------------------------------------------
+#-------------------------------------------
+# Kinorb  System #29
+# Starport A  , Temperate
+# liegt am Corewad Rand 
+- Coordinates:
+  - 9000
+  - 0
+  - 4000
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - ['0, 0, 0', Kinorb System, SpaceSystemCenter]
+  Allow: [Dentus System]
+  Deny: []
+#-------------------------------------------
+# Kinorb  Planet
+# Starport A  , Temperate
+# 
+- Coordinates:
+  - 9007
+  - 0
+  - 3992
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: false
+  Playfields:
+  - ['0, 0, 0', Kinorb Orbit, KinorbSpaceAsteroidFieldRing]
+  - ['0, 0, 0', Kinorb, Kinorb, '']
+  Allow: []
+  Deny: []
+#-------------------------------------------
+# Kinorb-A  Planet
+# Lava 
+# 
+- Coordinates:
+  - 8995
+  - 0
+  - 4005
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: false
+  Playfields:
+  - ['0, 0, 0', Kinorb-A Orbit, Kinorb-SpaceEmpty]
+  - ['0, 0, 0', Kinorb-A, Kinorb-A, '']
+  Allow: []
+  Deny: []
+#-------------------------------------------
+# Kinorb-C  Planet
+# Barren 
+# 
+- Coordinates:
+  - 9020
+  - 0
+  - 4019
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: false
+  Playfields:
+  - ['0, 0, 0', Kinorb-C Orbit, Kinorb-SpaceEmpty]
+  - ['0, 0, 0', Kinorb-C, Kinorb-C, '']
+  Allow: []
+  Deny: []
+#-------------------------------------------
+# Kinorb-D  Asteroid
+# Moon Planet 
+# 
+- Coordinates:
+  - 8980
+  - 0
+  - 4019
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: false
+  Playfields:
+  - ['0, 0, 0', Kinorb-D Orbit, Kinorb-D]
+  Allow: []
+  Deny: []
+#-------------------------------------------
+# Kinorb-E  Asteroid
+# Moon Planet 
+# 
+- Coordinates:
+  - 9020
+  - 0
+  - 3981
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: false
+  Playfields:
+  - ['0, 0, 0', Kinorb-E Orbit, Kinorb-E]
+  Allow: []
+  Deny: []
+#-------------------------------------------
+# Kinorb-F  Gasriese
+# Gasriese 
+# 
+- Coordinates:
+  - 9037
+  - 0
+  - 4037
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: false
+  Playfields:
+  - ['0, 0, 0', Kinorb-F Orbit, Kinorb-SpaceEmpty]
+  - ['0, 0, 0', Kinorb-F, Kinorb-F, '']
+  - ['-6100, 0, 0', Kinorb-F-A, NewMoon2Empty, '']
+  - ['3200, 0, 5100', Kinorb-F-B, NewMoon2Empty, '']
+  - ['-200, 0, -7600', Kinorb-F-C, NewMoonEmpty, '']
+  Allow: []
+  Deny: []
+#-------------------------------------------
+# Kinorb-G  Gasriese
+# Gasriese 
+# 
+- Coordinates:
+  - 8932
+  - 0
+  - 4068
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: false
+  Playfields:
+  - ['0, 0, 0', Kinorb-G Orbit, Kinorb-SpaceEmpty]
+  - ['0, 0, 0', Kinorb-G, Kinorb-G, '']
+  - ['-6100, 0, 0', Kinorb-G-A, NewMoon2Empty, '']
+  - ['3200, 0, 5100', Kinorb-G-B, NewMoon2Empty, '']
+  - ['-200, 0, -8600', Kinorb-G-C, Kinorb-G-C, '']
   Allow: []
   Deny: []

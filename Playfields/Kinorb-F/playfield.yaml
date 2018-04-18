@@ -1,0 +1,183 @@
+# Created by EPD v1.36.1.0, Playfield Version: 7.0.0 [1294] (Alpha 7.0.0)
+RealRadius: 1303.797294
+ScaledRadius: 1300
+Gravity: -65.5
+AtmosphereDensity: 2
+Temperature: 220
+TemperatureDay: 400
+TemperatureNight: 80
+Music: moonstone
+Radiation: 16.699999999999999
+DayLength: 24
+PlanetType: Barren
+Water: ''
+PvP: True
+UseRandom: False
+AllowCV: False
+Difficulty: 5
+PlayfieldType: Planet
+Description: "Kinorb-F ist der 5te Planet des Planetensystems.\n Aufgrund seiner chemischen Zusammensetzung zaehlt er zu den Gasplaneten (Gasriesen). Es wird beszweifelt, das man dort mit einem Raumschiff landen kann. Aber die Monde gelten als moegliche Siedlungskandidaten. "
+SunFlare: EnvironmentalEffects/SunFlareYellow
+SpecialEffectsLocal: []
+SpecialEffectsGlobal: []
+AtmosphereEnabled: True
+AtmosphereColor: 0.3,0.3,0.3
+SkyColor: 0.39,0.39,0.39
+SkyHorizonColor: 1, 0.3, 0
+LightHorizonColor: 1, 0.3, 0
+DayLightIntensity: 0.25
+NightLightIntensity: 0.34999999999999998
+DayShadowStrength: 0.45000000000000001
+AtmosphereFog: 0.69999999999999996
+FogCloudIntensity: 1
+FogIntensity: 0.69999999999999996
+FogStartDistance: 600
+GroundFogIntensity: 0.80000000000000004
+GroundFogHeight: 400
+RandomResources:
+- Name: PromethiumResource
+  CountMinMax: [2, 4]
+  SizeMinMax: [5, 8]
+  DepthMinMax: [0, 5]
+  DroneProb: 0.69999999999999996
+  MaxDroneCount: 2
+  DistTypeCylinder:
+    MaxRadius: 8
+    YVariance: 10
+- Name: PentaxidResource
+  CountMinMax: [4, 8]
+  SizeMinMax: [3, 5]
+  DepthMinMax: [0, 5]
+  DroneProb: 0.59999999999999998
+  MaxDroneCount: 2
+  DistTypeCylinder:
+    MaxRadius: 5
+    YVariance: 10
+- Name: SiliconResource
+  CountMinMax: [3, 5]
+  SizeMinMax: [9, 11]
+  DepthMinMax: [0, 5]
+  DroneProb: 0.40000000000000002
+  DistTypeWorm:
+    FreqDirChange: 0.5
+    DirChangeMagnitude: 0.29999999999999999
+    MaxLength: 50
+    DeepnessType: 1
+FixedResources: []
+AsteroidResources:
+- Name: PromethiumResource
+  Threshold: 0
+Terrain:
+  Name: Desert
+  PoleLevel: 60
+  NoiseStrength: 0.80000000000000004
+  ColorChange:
+    YFadeCenter: 60
+    YFadeRange: 120
+    YFadeMin: 0.20000000000000001
+    YFadeMax: -0.10000000000000001
+MainBiome:
+  Textures:
+  - [RockGrey08, 1]
+  - [BedrockLava, 0]
+SubBiomes:
+- Altitude: 255
+  Textures:
+  - [Cliff, 25]
+  - [Bedrock, 40]
+  Decorations:
+  - [RocksmallA02, 0.01]
+BiomeTextureReplacements: []
+Biome:
+- Altitude: [1, 80]
+  Slope: [0, 15]
+  BiomeClusterData:
+  - Name: Moon
+    Id: 1
+    ClusterSize: 30
+    NbOfClusters: 10
+    Radiation: 5
+    Decorations:
+    - [CoralStone01-05, 0.5]
+    - [CoralStone04-03, 0.2]
+    Grass: []
+  - Name: Moon
+    Id: 1
+    Radiation: 5
+    Decorations:
+    - [Boulder2, 5]
+    Grass: []
+- Altitude: [80, 12]
+  Slope: [0, 10]
+  BiomeClusterData:
+  - Name: Moon
+    Id: 1
+    ClusterSize: 30
+    NbOfClusters: 10
+    Radiation: 5
+    Decorations:
+    - [CoralStone03-05, 5]
+    Grass: []
+  - Name: Moon
+    Id: 2
+    Decorations:
+    - [CoralStone01-03, 0.3]
+    - [ClusterShroom, 0.15]
+    Grass: []
+DroneBaseSetup:
+  Random: []
+  Fixed: []
+POIs:
+  Random:
+  - GroupName: CrashedShip
+    CountMinMax: [1, 3]
+    DroneProb: 1
+    DronesMinMax: [1, 2]
+    ReserveCount: 4
+    SpawnPOINear: []
+    SpawnPOIAvoid: []
+    SpawnResource: []
+    Properties:
+    - Key: MapMarker
+      Value: Neutral
+    - Key: RegenAfter
+      Value: 720
+  - GroupName: CrashedShipOld
+    CountMinMax: [1, 3]
+    DroneProb: 0.10000000000000001
+    DronesMinMax: [1, 1]
+    ReserveCount: 1
+    SpawnPOINear: []
+    SpawnPOIAvoid: []
+    SpawnResource: []
+    Properties:
+    - Key: RegenAfter
+      Value: 720
+    - Key: MapMarker
+      Value: Neutral
+  - GroupName: Artifacts
+    CountMinMax: [1, 1]
+    DroneProb: 0.10000000000000001
+    DronesMinMax: [1, 1]
+    ReserveCount: 1
+    SpawnPOINear: []
+    SpawnPOIAvoid: []
+    SpawnResource: []
+    Properties:
+    - Key: RegenAfter
+      Value: 720
+    - Key: MapMarker
+      Value: Neutral
+  Fixed: []
+  FixedPlayerStart:
+  - Mode: Debug
+    Pos: [-596, 104, -1063]
+    RotY: 125
+    Items: [CrushedStone, CrushedStone, CrushedStone]
+DroneSpawning:
+  Random:
+  - DronesMinMax: [5, 10]
+    CenterX: -2500
+  - DronesMinMax: [5, 10]
+    CenterX: 2500
+CreatureSpawning: []

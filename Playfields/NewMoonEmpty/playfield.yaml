@@ -1,0 +1,176 @@
+# Created by EPD v1.36.1.0, Playfield Version: 7.0.0 [1294] (Alpha 7.0.0)
+RealRadius: 1303.797294
+ScaledRadius: 1300
+Gravity: -6.5
+AtmosphereDensity: 0.10000000000000001
+Temperature: -22
+TemperatureDay: 50
+TemperatureNight: -50
+Music: BarrenMoon
+Radiation: 5.6999999999999993
+DayLength: 24
+PlanetType: Barren
+PvP: True
+UseRandom: True
+AllowCV: True
+Difficulty: 3
+PlayfieldType: Moon
+Description: This moon is barren without any native life forms.
+SunFlare: EnvironmentalEffects/SunFlareWhiteMoon
+AtmosphereEnabled: False
+DayLightIntensity: 1.3
+NightLightIntensity: 0.80000000000000004
+NightLightColor: 0.82, 0.82, 1
+DayShadowStrength: 0.94999999999999996
+RandomResources:
+- Name: IronResource
+  CountMinMax: [3, 5]
+  SizeMinMax: [15, 16]
+  DepthMinMax: [0, 10]
+  DroneProb: 0.29999999999999999
+  MaxDroneCount: 1
+  DistTypeCylinder:
+    MaxRadius: 10
+    YVariance: 12
+- Name: SiliconResource
+  CountMinMax: [3, 5]
+  SizeMinMax: [9, 11]
+  DepthMinMax: [0, 5]
+  DroneProb: 0.40000000000000002
+  DistTypeWorm:
+    FreqDirChange: 0.5
+    DirChangeMagnitude: 0.29999999999999999
+    MaxLength: 50
+    DeepnessType: 1
+- Name: CobaltResource
+  CountMinMax: [2, 3]
+  SizeMinMax: [5, 8]
+  DepthMinMax: [0, 5]
+  DroneProb: 0.69999999999999996
+  MaxDroneCount: 1
+  DistTypeCylinder:
+    MaxRadius: 13
+    YVariance: 10
+FixedResources: []
+AsteroidResources:
+- Name: PentaxidResource
+  Threshold: 0.59999999999999998
+  Amount: 0.40000000000000002
+- Name: CobaltResource
+  Threshold: 0.59999999999999998
+  Amount: 0.40000000000000002
+Terrain:
+  Name: NewMoon
+  PoleLevel: 60
+  NoiseStrength: 0.80000000000000004
+  ColorChange:
+    YFadeCenter: 60
+    YFadeRange: 25
+    YFadeMin: 0.20000000000000001
+    YFadeMax: -0.10000000000000001
+MainBiome:
+  Textures:
+  - [RockBlack, 3]
+  - [RockGrey08, 0]
+  - [BedrockLava, 2]
+SubBiomes: []
+BiomeTextureReplacements: []
+Biome:
+- Altitude: [1, 80]
+  Slope: [0, 20]
+  BiomeClusterData:
+  - Name: Moon
+    Id: 1
+    ClusterSize: 30
+    NbOfClusters: 10
+    Radiation: 5
+    Decorations:
+    - [RockGrey01Large, 0.5]
+    - [RockGrey02Large, 0.2]
+    - [CrystalStraight, 2]
+    Grass: []
+  - Name: Moon
+    Id: 1
+    Radiation: 5
+    Decorations:
+    - [RockGrey01Large, 1]
+    - [RockGrey02Large, 1]
+    - [CrystalStraight, 0.1]
+    Grass: []
+- Altitude: [80, 250]
+  Slope: [0, 10]
+  BiomeClusterData:
+  - Name: Moon
+    Id: 1
+    ClusterSize: 30
+    NbOfClusters: 10
+    Radiation: 5
+    Decorations:
+    - [CrystalStraight, 5]
+    Grass: []
+  - Name: Moon
+    Id: 2
+    Decorations:
+    - [RockGrey01Large, 0.3]
+    - [RockGrey02Large, 0.15]
+    Grass: []
+- Altitude: [1, 350]
+  Slope: [0, 180]
+  BiomeClusterData:
+  - Name: Moon
+    Id: 2
+    Decorations:
+    - [RockGrey01Large, 0]
+    Grass: []
+DroneBaseSetup:
+  Random:
+  - GroupName: DroneBaseSetup
+    DronesMinMax: [0, 0]
+    Stock:
+    - Name: DroneSmallFast01Rocket
+      Amount: 100
+    - Name: DroneSmallFast01Minigun
+      Amount: 200
+    - Name: DroneLargeSlow01Minigun
+      Amount: 100
+    - Name: DroneSmallSlow01Cannon
+      Amount: 200
+    - Name: DroneSmallAttackBase
+      Amount: 300
+      Extra: 1
+    - Name: DroneTroopsTransport
+      Amount: Infinite
+      Extra: 2
+    - Name: ZiraxMale
+      Amount: 500
+      Extra: 3
+    - Name: Crawler
+      Amount: 400
+      Extra: 3
+  Fixed: []
+POIs:
+  Random:
+  - GroupName: CrashedShip
+    CountMinMax: [1, 1]
+    DroneProb: 1
+    DronesMinMax: [1, 2]
+    ReserveCount: 4
+    SpawnPOINear: []
+    SpawnPOIAvoid: []
+    SpawnResource: []
+    Properties:
+    - Key: MapMarker
+      Value: Neutral
+  Fixed: []
+  FixedPlayerStart:
+  - Mode: Debug
+    Pos: [-596, 104, -1063]
+    RotY: 125
+    Items: [CrushedStone, CrushedStone, CrushedStone]
+DroneSpawning:
+  Random:
+  - DronesMinMax: [5, 10]
+    CenterX: -2500
+  - DronesMinMax: [5, 10]
+    CenterX: 2500
+CreatureSpawning: []

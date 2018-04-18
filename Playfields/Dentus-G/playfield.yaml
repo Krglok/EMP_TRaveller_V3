@@ -9,7 +9,9 @@ UseRandom: True
 AllowCV: True
 Difficulty: 2
 PlayfieldType: Space
-Description: The space around the Trading Outpost features an asteroid field.
+Description: >-
+  Der Asteroidenring besteht aus vielen verteilten Asteroidenhaufen.
+   Die Asteroiden werden itensiv von lokalen Konzernen zur Rohstoffgewinnung genutzt. Sie verteidigen ihre Claims eifersüchtig mit Stationen und Drohnen.
 SunFlare: EnvironmentalEffects/SunFlareWhite4Space
 Stars: SkyboxStarsPurple
 Nebula: PrefabNebulaBluePinkPurple

@@ -94,7 +94,7 @@ RandomResources:
   DroneProb: 0.5
 - Name: MagnesiumResource
   CountMinMax: [2, 5]
-  SizeMinMax: [7, 9]
+  SizeMinMax: [7, 20]
   DepthMinMax: [0, 3]
   DroneProb: 0.29999999999999999
 FixedResources: []
@@ -459,7 +459,7 @@ POIs:
     ReserveCount: 3
     TroopTransport: True
     SpawnPOINear: []
-    SpawnPOIAvoid: [Wreckage]
+    SpawnPOIAvoid: []
     SpawnPOIAvoidDistance: 500
     SpawnResource: ['IronResource:0-1', 'SiliconResource:0-1', 'MagnesiumResource:0-1']
     ResourceDistance: 400
@@ -471,7 +471,7 @@ POIs:
     DroneProb: 0.80000000000000004
     DronesMinMax: [1, 2]
     ReserveCount: 4
-    SpawnPOINear: [Wreckage]
+    SpawnPOINear: []
     SpawnPOINearDistance: 200
     SpawnPOIAvoid: []
     SpawnResource: []

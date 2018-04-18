@@ -17,16 +17,13 @@ UseRandom: True
 AllowCV: True
 Difficulty: 4
 PlayfieldType: Planet
-Description: >-
+Description: >
   Difficulty:[c][FFFFFF] Hard[-][/c]    Origin:[c][FFFFFF] %Origin%[-][/c]
 
 
-  Dentus-Dis ist ein Eisplanet mit hohen Bergen und grossen, flachen Taelern. Es gibt keine atembare Atmosphaere, aber Sauerstoff can aus dem Schnee gewonnen werden.
+  Dentus-D ist ein Eisplanet mit hohen Bergen und grossen, flachen Taelern. Es gibt keine atembare Atmosphaere, aber Sauerstoff can aus dem Schnee gewonnen werden.
 
   Es hat sich nur eine Flora entwickelt.
-
-
-  Be warned, choosing this planet as the survival start is recommended for experienced players only.
 SunFlare: EnvironmentalEffects/SunFlareWhite3
 SpecialEffectsLocal: []
 SpecialEffectsGlobal:
@@ -125,7 +122,7 @@ RandomResources:
     YVariance: 10
 - Name: NeodymiumResource
   CountMinMax: [4, 6]
-  SizeMinMax: [6, 9]
+  SizeMinMax: [6, 20]
   DepthMinMax: [0, 5]
   DroneProb: 0.90000000000000002
   DistTypeCylinder:
