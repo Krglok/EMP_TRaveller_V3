@@ -10,5 +10,7 @@ It is planed to install a basic Background for a Roleplay server.
 For background infi see http://wiki.travellerrpg.com/Main_Page
 
 Alle Text sind in Deutsch, German.
+
 Step 1 : Dentus System, Starport-C, Startplanet Human
+
 Step 2 : Kinob System, Starport-A , Quests Dentus
