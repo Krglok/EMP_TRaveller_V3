@@ -101,13 +101,13 @@ FixedResources: []
 AsteroidResources:
 - Name: IronResource
   Threshold: 0.59999999999999998
-  Amount: 0.5
+  Amount: 300
 - Name: CobaltResource
   Threshold: 0.40000000000000002
-  Amount: 0.40000000000000002
+  Amount: 300
 - Name: SiliconResource
   Threshold: 0.40000000000000002
-  Amount: 0.40000000000000002
+  Amount: 300
 Terrain:
   Name: Desert
   PoleLevel: 38

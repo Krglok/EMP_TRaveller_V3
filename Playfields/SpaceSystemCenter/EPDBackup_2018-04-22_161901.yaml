@@ -41,5 +41,5 @@ POIs:
     SpawnResource: []
   FixedPlayerStart:
   - Mode: Debug
-    Pos: [-1000, 0, 1000]
+    Pos: [-5000, 0, 5000]
     Items: [CrushedStone, CrushedStone, CrushedStone]

@@ -45,7 +45,7 @@ RandomResources:
     YVariance: 10
 - Name: PentaxidResource
   CountMinMax: [2, 4]
-  SizeMinMax: [2, 2]
+  SizeMinMax: [5, 10]
   DepthMinMax: [0, 5]
   DroneProb: 0.59999999999999998
   MaxDroneCount: 2
@@ -75,7 +75,10 @@ FixedResources: []
 AsteroidResources:
 - Name: CobaltResource
   Threshold: 0.20000000000000001
-  Amount: 0.20000000000000001
+  Amount: 1
+- Name: PentaxidResource
+  Threshold: 0.20000000000000001
+  Amount: 1
 Terrain:
   Name: NewMoon2
   PoleLevel: 60

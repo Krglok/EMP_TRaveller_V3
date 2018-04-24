@@ -1,4 +1,7 @@
-Solar system to test. 
-Put together new maps to build a Traveller Szenarion.
-Only the startplanets are PVE.
-Go Explore!
+Dies ist ein spezielles Szenarion auf dem Hintergrund des Traveller RPG. 
+Die Planeten des Subsektors Regina werden nachgebildet.
+Nur die Startplaneten sind PVE.
+Es wurden neue Pois genaut und neue Haendler.
+
+Es gibt spezielle Quests. Lies das PDA!
+

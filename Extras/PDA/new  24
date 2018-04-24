@@ -1,0 +1,45 @@
+#----------------------------------------------------------------------------------------------------
+# Robinson Protocol Explorer
+
+#------------------------------------------------------------------------
+# Robinson Protocol VULCA
+
+
+#===============================================================
+# SINGLE PLAYER MISSIONS
+
+
+
+#-----------------------------------------------------------------
+#-----------------------------------------------------------------
+#  Eigene Missionen
+#-----------------------------------------------------------------
+  - ChapterTitle: "Auf zu den Sternen"
+    Category: SoloMission
+ 
+    Preamble: "Willkommen auf Dentus!\n"
+    Description: "[ff2400]NUR fuer Human. Planet Dentus\n
+    Begib dich zum High-Port des Raumhafen von Dentus.\n
+    Starte diese Quest nur wenn du bereits ein kleines Raumschiff besitzt.\n
+    Denke an ausreichend Sauerstoff, Nahrung und Energie.\n
+    Im Orbit kannst du ein grosses Raumschiff (CV) bauen und zu den Sternen fliegen.
+    "
+#    PictureFile: DangerousSpace.jpg
+    PlayerLevel: 1
+    Visibility: Always    # or Always, ByLevel, WhenRewarded
+    VisibleOnStartPlayfield: Dentus
+    Rewards:
+      - Item: GoldCoins
+        Count: 40
+    Tasks:
+      - TaskTitle: "Der erste Schritt"
+        PictureFile: DangerousSpace.jpg
+        #== Keine Description !!!!!!!!!!!!!
+        Actions:
+          - ActionTitle: "Suche den Spaceport im Orbit"
+            Description: "In der Umlauf um den Planeten muss das High-Port des Raumhafens sein.\n
+            Fliege es an!
+            "
+            Check: NearPoi
+            Names: [ Spaceport-C-High ]
+            CompletedMessage: "Du hast den High Port erreicht."

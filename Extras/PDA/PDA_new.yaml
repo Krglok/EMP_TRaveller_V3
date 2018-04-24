@@ -1,75 +1,142 @@
 Creator: Eleon Game Studios
+#---------------------------------------------------------------------
+#  Traveller V3 PDA / Questen und FAQ
+#---------------------------------------------------------------------
 Chapters:
   - ChapterTitle: Traveller Protocol Dentus
     Category: SoloMission
-    Preamble: "Willkommen im Traveller Universum!\n
+    Preamble: "Willkommen im Traveller Universum!\n\n
     Dies ist ein spezielles Szenarion auf dem Hintergrund des Traveller RPG.\n
     Dieses PROTOKOLL soll den Spieler in das Szenario einfuehren. Es liefert Zusatzinformationen.\n
-    Du solltest es nicht ueberspringen.\n
-    1. [ffff00]Du startest auf dem Raumhafen eines entlegenen Planeten in den Spinward Marches.\n
-    2. Du must den Planeten sowieso verlassen. Nichts hat hier Bestand ! (Wipe).\n
-    3. Erkunde den Planeten und die vorhandenen Siedlungen. \n
-    4. Nur im Orbit kannst du ein grosses Raumschiff (CV) bauen.[-]\n
-    5. Du kannst die Raumschiffkomponenten im Raumhafen kaufen!\n
-    6. [ffff00]Handeln[-] [ff4444] Nicht alle Resourcen sind abbaubar. Du brauchst Geld um seltene Resourcen zu kaufen.[-]\n
-    7. [ff4444]Im Orbit ist eine Raumstation.\n
-    8. Die allgemeine Verkehrssprache ist Denglisch\n
-    "
-    Description: "[fff400]Handling Tips[-]\n
-    1. Wird eine wichtige Information vermisst. Bitte an den [fff400]Admin[-] oder [fff400]Spieler Lucius[-] wenden?\n
-    2. Oeffne das PDA mit [ff2400]F1[-], und lese das entsprechende Kapitel der aktuellen Mission in der Liste und wechsle mit dem linken Button in das [ff2400]PDA LOG[-] mit dem oberen rechten Button.\n\n
-    3. [fff400]Wenn du nicht sicher bist was als naechstes zu tun ist[-] checke die TASK Liste auf dem rechten Fenster oder suche nach [fff400]gelben Marker[-] auf dem Bildschirm. Sie zeigen eventuell eine interessante Position!\n\n
-    4. Lies das PDA!\n 
-    5. Lies das PDA!\n
+    Du solltest es nicht ueberspringen.[-]"
+    Description: "[fff400]Handling Tips[-]\n1. [fff400]Wird eine wichtige Information vermisst. Bitte an den Admin oder Spieler Lucius wenden?[-]\n
+    Oeffne das PDA mit [ff2400]F1[-], und lese das entsprechende Kapitel der aktuellen Mission in der Liste und wechsle mit dem linken Button in das [ff2400]PDA LOG[-] mit dem oberen rechten Button.\n\n
+    [fff400]2. Wenn du nicht sicher bist was als naechstes zu tun ist[-]\n
+    Check die TASK liste auf dem rechten Fenster oder suche nach [fff400]gelben Marker[-] auf dem Bildschirm. Sie zeigen eventuell eine interessante Position!\n\n
+    [ff2400]Hinweis:[-]\n
+    - Die gelben Screen Marker beenden eine Task , wenn man bis auf 4 m herangeht.\n
+    - Wenn eine Task, die es erfordert Gegenstaende von A nach B zu bewegen, nicht beendet wird, dann lege die Gegenstaende zurueck und wiederhole das Ganze.\n
+    - Die Info Message zeigt nur die Tasten fuer die Default Einstellung .
     "
     PictureFile: Limayos.jpg
     PlayerLevel: 1 # (default: 1)
-    VisibleOnStartPlayfield: Dentus  
+    VisibleOnStartPlayfield: Dentus
     Visibility: Always    
     # or ByLevel, WhenRewarded (default: Always)
     # Activatable: Always   # same settings as Visibility (default: Always)
-    # RewardedChapters: [ "Personal Container" ]
+    # RewardedChapters: [ chptitleBuildBase ]
+   # ActivateChapterOnCompletion: chptitleMrsSmith
+    NoSkip: True
+    AutoActivateOnGameStart: True
+    CompletedMessage: "Traveller Protocol completed!\n\n
+    * * *\n\n
+    Was ist als naechstes zu tun?\n\n
+    0. Lies das PDA! Lies das PDA!\n
+    1. [ffff00]Du startest auf dem Raumhafen eines entlegenen Planeten in den Spinward Marches. 
+    Du kannst den Raumhafen nicht ausbauen aber er ist sicher. Du must den Planeten sowieso verlassen. Nichts hat hier Bestand ! (Wipe).\n
+    2. Erkunde den Planeten und die vorhandenen Siedlungen. Lies das PDA! Es gibt einige Quests.\n
+    3. Du must ein kleines Raumschiff bauen um in den Orbit zu kommen. Nur dort kannst du ein grosses Raumschiff (CV) bauen.[-]\n
+    4. Du kannst die Raumschiffkomponenten im Raumhafen kaufen!\n
+    5. [ffff00]Handeln[-] [ff4444] Nicht alle Resourcen sind abbaubar. Du brauchst Geld um seltene Resourcen zu kaufen.[-]\n
+    6. [ff4444]Im Orbit ist eine Raumstation. Das Gegenstueck zum Raumhafen auf dem Planeten!\n
+    7. Die allgemeine Verkehrssprache ist denglisch\n
+    Du bist hier gestrandet. Dein Raumschiffticket ist verloren. Du must dich allein durchschlagen .\n
+    Das toeten von Einheimischen gilt als Straftat.\n
+    Versuche Rollenspiel zu machen. Der Admin hat sich viel Muehe mit den Auftraegen gemacht.\n\n
+    Viel Glueck, Traveller!
+    "
+    CompletedSound: Sounds/Misc/DroneSignalBad
+    Rewards:
+      - Item: MoneyCard
+        Count: 1200
+      - Item: PromethiumPellets
+        Count: 150
+    #------------------------------------------------------------------------------------
+    Tasks:
+      - TaskTitle: Personal Container
+        PictureFile: Hideout2.jpg
+        StartMessage: "norm;35|Oeffne den [ffff00]Personal Container[-] in der Basis."
+        Rewards:
+          - Item: MoneyCard
+            Count: 1000 
+
+        Actions:            
+
+          - ActionTitle: Open Personal Container
+            Description: ===
+            Check: InventoryOpened
+            Names: [ ContainerPersonal ]
+            AllowManualCompletion: true
+            CompletedMessage: "norm;35|Nimm alles aus dem Personal Container."
+
+          - ActionTitle: Exit Personal Container
+            Description: ===
+            Check: InventoryClosed
+            Names: [ ContainerPersonal ]
+            AllowManualCompletion: true
+            CompletedMessage: ""
+
+#----------------------------------------------------------------------------------------------------
+# Robinson Protocol Explorer
+ 
+    Preamble: "Willkommen im Traveller Universum!\n\n
+    Dies ist ein spezielles Szenarion auf dem Hintergrund des Traveller RPG.\n\n
+    Dieses PROTOKOLL soll den Spieler in das Szenario einfuehren. Es liefert Zusatzinformationen.\n\n
+    Du solltest es nicht ueberspringen.[-]
+    "
+    Description: "[fff400]Handling Tips[-]\n1. [fff400]Wird eine wichtige Information vermisst. Bitte an den Admin oder Spieler Lucius wenden?[-]\n
+    Oeffne das PDA mit [ff2400]F1[-], und lese das entsprechende Kapitel der aktuellen Mission in der Liste und wechsle mit dem linken Button in das [ff2400]PDA LOG[-] mit dem oberen rechten Button.\n\n
+    [fff400]2. Wenn du nicht sicher bist was als naechstes zu tun ist[-]\n
+    Check die TASK liste auf dem rechten Fenster oder suche nach [fff400]gelben Marker[-] auf dem Bildschirm. Sie zeigen eventuell eine interessante Position!\n\n
+    [ff2400]Hinweis:[-]\n
+    - Die gelben Screen Marker beenden eine Task , wenn man bis auf 4 m herangeht.\n
+    - Wenn eine Task, die erfordert Gegenstaende von A nach B zu bewegen, nicht beendet wird, dann lege sie zurueck und wiederhole das Ganze.\n
+    - Die Info Message zeigt nur die Tasten fuer die Default Einstellung .
+    "
+    PictureFile: Limayos.jpg
+    PlayerLevel: 1 # (default: 1)
+    VisibleOnStartPlayfield: Keng  #Omicron
+    Visibility: Always    # or ByLevel, WhenRewarded (default: Always)
+    # Activatable: Always   # same settings as Visibility (default: Always)
+    # RewardedChapters: [ chptitleBuildBase ]
     # ActivateChapterOnCompletion: chptitleMrsSmith
     NoSkip: True
     AutoActivateOnGameStart: True
     CompletedSound: Sounds/Misc/DroneSignalBad
-    CompletedMessage: "Traveller Protocol completed!\n
-    * * *\n\n
-    Was ist als naechstes zu tun?\n\n
-    1. Lies das PDA! Lies das PDA!\n\n
-    2. Geld verdienen.\n\n
-    3. Du must ein kleines Raumschiff bauen um in den Orbit zu kommen. Nur dort kannst du ein grosses Raumschiff (CV) bauen.[-]\n\n
-    4. Du kannst die Raumschiffkomponenten im Raumhafen kaufen!\n\n
-    Du bist hier gestrandet. Dein Raumschiffticket ist verloren. Du must dich allein durchschlagen .\n\n
-    Das toeten von Einheimischen gilt als Straftat.\n\n
-    Versuche Rollenspiel zu machen. Der Admin hat sich viel Muehe mit den Auftraegen gemacht.\n\n
-    Viel Glueck, Traveller!
-    "
     Rewards:
       - Item: MoneyCard
         Count: 1200
     Tasks:
-      - TaskTitle: "Personal Container"
-        PictureFile: Hideout2b.jpg
-        StartMessage: "norm;35|Oeffne den  [ffff00]Personal Container[-]."
+      - TaskTitle: Personal Container
+        StartDelay: 5
+        PictureFile: Hideout2.jpg
+        StartMessage: "norm;35|Gehe in die Basis und oeffne  [ffff00]Personal Container[-]."
         Rewards:
           - Item: EmergencyRations
             Count: 1 
         Actions:            
-          - ActionTitle: "Go to Personal Container"
-            Description: "Du kannst alles herausnehmen. Du kannst es auch liegen lassen. Aber bedenke das es verschwindet bei einem Reset"
-            Check: InventoryOpened
-            Names: [ "ContainerPersonal" ]  # Typename
+          - ActionTitle: Go to Personal Container
+            Description: ===
+            Check: NearUnit
+            Names: [ Wreckage, ContainerPersonal ]
             Guiding: TempIndoor
             AllowManualCompletion: true
-            CompletedMessage: "Nimm alles heraus."
+            CompletedMessage: ""
 
-          - ActionTitle: "Exit Personal Container"
+          - ActionTitle: Exit Personal Container
             Description: ===
-            Check: InventoryEmptied
-            Names: [ "ContainerPersonal" ]  # Typename
+            Check: InventoryClosed
+            Names: [ ContainerPersonal ]
             AllowManualCompletion: true
-            CompletedMessage: "Zum Glueck ist deine Ausruestung noch da."
+            CompletedMessage: ""
+
+
+#------------------------------------------------------------------------
+# Robinson Protocol Humanoid
+
+
+#===============================================================
+# SINGLE PLAYER MISSIONS
 
 #-----------------------------------------------------------------
 #-----------------------------------------------------------------
@@ -78,7 +145,8 @@ Chapters:
   - ChapterTitle: "Auf zu den Sternen"
     Category: SoloMission
  
-    Description: "[ff2400]NUR fuer Human. Planet Dentus[-]\n
+    Preamble: "Willkommen auf Dentus!\n"
+    Description: "[ff2400]NUR fuer Human. Planet Dentus\n
     Begib dich zum High-Port des Raumhafen von Dentus.\n
     Starte diese Quest nur wenn du bereits ein kleines Raumschiff besitzt.\n
     Denke an ausreichend Sauerstoff, Nahrung und Energie.\n
@@ -87,7 +155,7 @@ Chapters:
     PictureFile: DangerousSpace.jpg
     PlayerLevel: 1
     Visibility: Always    # or Always, ByLevel, WhenRewarded
-    RewardedChapters: ["Der naechste Schritt"]
+    VisibleOnStartPlayfield: Dentus
     Rewards:
       - Item: GoldCoins
         Count: 40
@@ -100,10 +168,8 @@ Chapters:
             Fliege es an!
             "
             Check: NearPoi
-            Names: [Spaceport-C-Low]
-            AllowManualCompletion: true
+            Names: [ Spaceport-C-High ]
             CompletedMessage: "Du hast den High Port erreicht."
-
 #-----------------------------------------------------------
   - ChapterTitle: "Der naechste Schritt"   
     Category: SoloMission
@@ -116,7 +182,8 @@ Chapters:
     PictureFile: DangerousSpace.jpg
     PlayerLevel: 1
     Visibility: WhenRewarded    # or ByLevel, WhenRewarded
-    RewardedChapters: ["Der erste Sprung"]
+    RewardedChapters: ["Auf zu den Sternen"]
+    VisibleOnStartPlayField: "Dentus"
     Rewards:
       - Item: MoneyCard
         Count: 35000
@@ -130,7 +197,7 @@ Chapters:
             Die notwendigen Bauteile koennen im Raumhafen gekauft werden. Insbesondere die Sprungtriebwerke.\n
             "
             Check: NearPoi
-            Names: [UNSF-Loader]
+            Names: [ Wreckage ]
             CompletedMessage: "Du hast das Wrack gefunden. Von dem Prisengeld kannst du dein eigenes Raumschiff finanzieren."
 #----------------------------------------------------------------
   - ChapterTitle: "Der erste Sprung"   
@@ -144,6 +211,8 @@ Chapters:
     PictureFile: DangerousSpace.jpg
     PlayerLevel: 1
     Visibility: WhenRewarded    # or ByLevel, WhenRewarded
+    RewardedChapters: ["Der naechste Schritt"]
+    VisibleOnStartPlayField: "Dentus"
     Rewards:
       - Item: MoneyCard
         Count: 5000
@@ -163,7 +232,6 @@ Chapters:
             Achtung: Die Systemorbits sind gefaehrlich. Sehr hohe Radioaktitaet!
             "
             
-
 #-----------------------------------------------------------------
   - ChapterTitle: "Bergbau Geschaeft"
     Category: SoloMission
@@ -174,8 +242,8 @@ Chapters:
     "
     PictureFile: miningcorp.jpg
     PlayerLevel: 1
-    Visibility: Always    # or ByLevel, WhenRewarded
-#    RewardedChapters: [ "Auf zu den Sternen" ]
+    Visibility: WhenRewarded    # or ByLevel, WhenRewarded
+    RewardedChapters: [ Auf zu den Sternen ]
     Rewards:
       - Item: GoldCoins
         Count: 100
@@ -201,7 +269,7 @@ Chapters:
             Amount: 500
             CompletedMessage: $
 
-          - ActionTitle: "500 Pentaxid Erz"
+          - ActionTitle: "50 Pentaxid Erz"
             Description: "Abbau von 50 Pentaxid.
             Kaufen vom Markt oder nur im Inventory haben erledigt die Mission nicht !
             "
@@ -210,7 +278,7 @@ Chapters:
             Amount: 500
             CompletedMessage: $
 
-          - ActionTitle: "500 Cobalt Erz"
+          - ActionTitle: "1000 Cobalt Erz"
             Description: "Abbau von 500 Cobalt Erz.
             Kaufen vom Markt oder nur im Inventory haben erledigt die Mission nicht !
             "
@@ -231,8 +299,6 @@ Chapters:
     PictureFile: CloA.jpg
     PlayerLevel: 1
     Visibility: Always    # or ByLevel, WhenRewarded
-    RewardedChapters: [ "Konzernhandel" ]
-    CompletedMessage: "Du hast das Industriegelaende gefunden. In dem weissen Hochhaus ist Promotion."
     Rewards:
       - Item: GoldCoins
         Count: 10
@@ -247,8 +313,7 @@ Chapters:
             "
             Check: NearPoi
             Names: [Dentus Industry Complex]
-            CompletedMessage: "Du hast die Promotion Veranstaltung gefunden. Es gibt eine neue Quest fuer dich"
-#-----------------------------------------------------------------------
+            CompletedMessage: "Du hast die Promotion Veranstaltung gefunden."
   - ChapterTitle: "Konzernhandel"   
     Category: SoloMission
     Description: "[ff2400]NUR fuer Human.[-]\n
@@ -272,11 +337,8 @@ Chapters:
             Studiere die Preise und Mengen.
             "
             Check: NearUnit
-            Names: [Dentus Industry Complex, "TraderFukura"]
-            Guiding: TempIndoor
-            AllowManualCompletion: true
+            Names: [TraderFukura]
             CompletedMessage: "Du hast die Haendler gefunden. Viel Erfolg beim Verkauf"
-
 
 #-----------------------------------------------------------------
 #-----------------------------------------------------------------
@@ -372,8 +434,9 @@ Chapters:
                           Die Nachkommen der Menschen von Terra nennen sich Solomani und haben ein Imperium am anderen Ende des Spiralarmes der Galaxis.\n
                           Dies ist mehrere tausend Parsec entfernt!\n\n
                           Gemeint sind die Nachlommen der Gruender der Imperien mit menschlichen Wurzeln. Das Third Imperium und andere.\n
-                          Terra selbst spielt derzeit keine wesentliche politische oder technologische Rolle. Das Third Imperium nimmt diesen Platz ein.
-                          Start auf Dentus.
+                          Terra selbst spielt derzeit keine wesentliche politische oder technologische Rolle. Das Third Imperium nimmt diesen Platz ein.\n
+                          Die Mitglieder der Fraktion Human sind typischerweise Haendler oder Soeldner.\n
+                          Start auf Dentus.\n
                           
                          "
 #
@@ -381,14 +444,16 @@ Chapters:
             Description: "Die Explorer sind eine Gruppe von Menschen, die auf eigene Faust die Planeten und die Galaxis erforschen.\n
                           Einige gehoeren auch zum Scoutdienst und sind im Auftrag des Imperiums unterwegs.\n
                           Es geht das Geruecht der Scoutdienst hat sich Archduke Norris angeschlossen.\n\n
+                          Die Mitglieder der Fraktion Explorer sind typischerweise Scout und Militaerangehoerige.
                           
                          "
 #
           - ActionTitle: "[ffff00]Humanoide"
             Description: "Die Humanoiden sind die Nachkommen von Nichtmenschen Siedlern.\n
                           In einigen Bereichen des Imperriums werden sie diskreminiert.\n
-                          Sicher ist, dass im Humanoiden den groessten Anteil an Einwohnern des Imperiums stellen.\n
+                          Sicher ist, dass die Humanoiden den groessten Anteil an Einwohnern des Imperiums stellen.\n
                           \n
+                          [ff2400]Aktuell kein Startplanet[-]
                          "
 #----------------------------------
 #
@@ -409,7 +474,9 @@ Chapters:
           - ActionTitle: "[ffff00]Parsec[-]"
             Description: "Ein Parsec ist eine Astronomische Entfernung.\n
                           Die entspricht 3.261 Lichtjahren oder 206265 Astronomische Einheiten.\n
-                          Eine Astronomische Einheit (AE) entspricht 150 Millionen Kilometer.\n
+          - ActionTitle:Astronomische Einheit
+            Description: "Eine Astronomische Einheit (AE) entspricht 150 Millionen Kilometer.\n
+                          Dies ist die mittlere Enrfernung der Erde zur Sonne.
                           "
           - ActionTitle: "[ffff00]Planetensystem[-]"
             Description: "Ein Planetensystem besteht aus einer Ansammlung von Planeten, Monden und Asteroiden.\n
@@ -424,7 +491,7 @@ Chapters:
                           - Astroiden in unterschiedlicher Anordnung. Ringe, Felder, Wolken \n
                           Eine besondere Form der Umlaufbahn sind die Asteroidenguertel. Hier liegen mehrere Asteroiden Formationen auf der gleichen Umlaufbahn im relativ geringen Abstand.
                           Im Planetensystem von Terra ist dies der Fall.\n\n
-                          Die meisten Umlaufbahnen sind leer.
+                          Nicht auf allen Umlaufbahnen sind Planeten anzutreffen.
                          "
           - ActionTitle: "[ffff00]Planeten und Monde"
             Description: "Die Planeten und Monde sind die massiven Himmelskoerper mit eigener Gravitation.\n
@@ -436,6 +503,16 @@ Chapters:
                           Wurmloecher gelten als instabil und koennen entstehen und verschwinden.\n
                          "
 #----------------------------------
+  - ChapterTitle: Traveller Planeten
+    Category: FAQ
+    Description: "Das Traveller Universum besteht aus vielen Planeten.\n
+    Die wichtigsten sollen hier kurz beschrieben werden.\n
+    \n
+    Die Liste wird in unregelmaessigen Abstaenden erweitert.
+    " 
+    PlayerLevel: 1
+    Visibility: Always    ## or ByLevel, WhenRewarded
+    Tasks:
       - TaskTitle: Planetensysteme
         PictureFile: planetundmond.jpg 
         Actions:
@@ -474,13 +551,13 @@ Chapters:
                           Auf dem Planeten ist ein Starport Typ A. Es gibt eine Scoutbase.\n
                           Das System ist Teil der X-Boot Verbindungen.
                           "
-          - ActionTitle: "Kinorb System"
+          - ActionTitle: "[ffff00]Kinorb System[-]"
             Description: "Das Kinorb System ist ein Nachbarsystem von Dentus.\n
                           Es umfasst 7 Umlaufbahnen. Davon ist 1 ein Gasriese\n
                           Auf dem Planeten ist ein Starport Typ A. \n
                           Das System ist Teil der X-Boot Verbindungen.
                           "
-          - ActionTitle: "[ffff00]Planet Dentus"
+          - ActionTitle: "[ffff00]Planet Dentus[-]"
             Description: "Der Planet Dentus ist ein unbedeutender Planet am Rande der Spinward Marches.\n
                           Der Planet dient der Fraktion HUMAN als Ausgangspunkt fuer die Gruendung eine Firma in diesem Sektor.\n
                           Die Ureinwohner sind friedlich und neutral gegenueber den Buegern des Imperiums.\n
@@ -510,11 +587,11 @@ Chapters:
 #-------------------------------------
 #-------------------------------------
 #          - ActionTitle: "<>"
-#            Description: "Das <> System ist ein Nachbarsystem von [ffff00]Akua[-].\n
+#            Description: "Das <> System ist ein Nachbarsystem von [ffff00] [-].\n
 #                          "
 #-------------------------------------
 #          - ActionTitle: "<>"
-#            Description: "Das <> System ist ein Nachbarsystem von [ffff00]Akua[-].\n
+#            Description: "Das <> System ist ein Nachbarsystem von [ffff00] [-].\n
 #                          Es umfasst <> Umlaufbahnen. Davon sind <> Asteroidenfelder\n
 #                          Auf dem Planeten <> ist ein Stargate.\n
 #                          Der Planet <> ist als <> im Stargate Center verzeichnet.\n

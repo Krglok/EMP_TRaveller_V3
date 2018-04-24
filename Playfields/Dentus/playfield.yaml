@@ -153,16 +153,16 @@ FixedResources: []
 AsteroidResources:
 - Name: IronResource
   Threshold: 0.59999999999999998
-  Amount: 0.40000000000000002
+  Amount: 200
 - Name: CopperResource
-  Threshold: 0.59999999999999998
-  Amount: 0.40000000000000002
+  Threshold: 0.29999999999999999
+  Amount: 150
 - Name: SiliconResource
-  Threshold: 0.59999999999999998
-  Amount: 0.40000000000000002
+  Threshold: 0.10000000000000001
+  Amount: 200
 - Name: PromethiumResource
-  Threshold: 0.59999999999999998
-  Amount: 0.40000000000000002
+  Threshold: 0.10000000000000001
+  Amount: 150
 Terrain:
   Name: Temperate2b
   PoleLevel: 40
