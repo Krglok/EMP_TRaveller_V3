@@ -1,0 +1,111 @@
+# Shoolin
+  - Coordinates: [-104, 24, -124]
+    Color: 0.8, 0.8, 0.8
+    Icon: Circle
+    OrbitLine: true
+    SectorMapType: Planet
+    Allow: [Devesh Orbit, Mikelatur Lambda Station]
+    Deny: [Varonea Mu Station, Vibhav Orbit, Jaltur Orbit, Laenu Orbit, Ustia Orbit, Chartolis Orbit, Gogula Asteroid Field, Vetos Asteroid Field]
+    Playfields:
+      - ['0, 0, 0', Shoolin Orbit, Shoolin Orbit]
+      - ['0, 0, 0', Shoolin, Shoolin]
+      - ['-9825, 17497, -3846', Shoolin Moon, Shoolin Moon]
+# Varonea Mu Station
+  - Coordinates: [-77, -10, -74]
+    Color: 0.7, 0.5, 0
+    Icon: Kite
+    OrbitLine: false
+    SectorMapType: Station
+    Allow: [Chartolis Orbit, Vibhav Orbit, Devesh Orbit]
+    Deny: [Shoolin Orbit, Jaltur Orbit, Laenu Orbit, Ustia Orbit, Gogula Asteroid Field, Vetos Asteroid Field, Mikelatur Lambda Station]
+    Playfields:
+      - ['0, 0, 0', Varonea Mu Station, Varonea Mu Station]
+# Vibhav
+  - Coordinates: [-17, 26, -51]
+    Color: 0.4, 0.3, 0
+    Icon: Circle
+    OrbitLine: true
+    SectorMapType: Planet
+    Allow: [Varonea Mu Station, Vetos Asteroid Field]
+    Deny: [Devesh Orbit, Shoolin Orbit, Jaltur Orbit, Laenu Orbit, Ustia Orbit, Chartolis Orbit, Gogula Asteroid Field, Mikelatur Lambda Station]
+    Playfields:
+      - ['0, 0, 0', Vibhav Orbit, Vibhav Orbit]
+      - ['0, 0, 0', Vibhav, Vibhav]
+      - ['3982, 4521, 17040', Vibhav Moon, Vibhav Moon]
+# Jaltur
+  - Coordinates: [-29, -24, 61]
+    Color: 0.4, 0.3, 0
+    Icon: Circle
+    OrbitLine: true
+    SectorMapType: Planet
+    Allow: [Ustia Orbit, Mikelatur Lambda Station]
+    Deny: [Devesh Orbit, Shoolin Orbit, Varonea Mu Station, Vibhav Orbit, Laenu Orbit, Chartolis Orbit, Gogula Asteroid Field, Vetos Asteroid Field]
+    Playfields:
+      - ['0, 0, 0', Jaltur Orbit, Jaltur Orbit]
+      - ['0, 0, 0', Jaltur, Jaltur]
+      - ['853, -1585, 18999', Jaltur Moon, Jaltur Moon]
+# Laenu
+  - Coordinates: [-49, -18, 101]
+    Color: 0, 0.5, 0.1
+    Icon: Circle
+    OrbitLine: true
+    SectorMapType: Planet
+    Allow: [Gogula Asteroid Field, Devesh Orbit]
+    Deny: [Shoolin Orbit, Varonea Mu Station, Vibhav Orbit, Jaltur Orbit, Ustia Orbit, Chartolis Orbit, Vetos Asteroid Field, Mikelatur Lambda Station]
+    Playfields:
+      - ['0, 0, 0', Laenu Orbit, Laenu Orbit]
+      - ['0, 0, 0', Laenu, Laenu]
+      - ['3045, -2166, 14802', Laenu Moon, Laenu Moon]
+# Ustia
+  - Coordinates: [-45, -14, 17]
+    Color: 0.3, 0.1, 0
+    Icon: Circle
+    OrbitLine: true
+    SectorMapType: Planet
+    Allow: [Jaltur Orbit, Chartolis Orbit]
+    Deny: [Devesh Orbit, Shoolin Orbit, Varonea Mu Station, Vibhav Orbit, Laenu Orbit, Gogula Asteroid Field, Vetos Asteroid Field, Mikelatur Lambda Station]
+    Playfields:
+      - ['0, 0, 0', Ustia Orbit, Ustia Orbit]
+      - ['0, 0, 0', Ustia, Ustia]
+      - ['10608, -3695, 15497', Ustia Moon, Ustia Moon]
+# Chartolis
+  - Coordinates: [-100, 22, -76]
+    Color: 0.2, 0.3, 0
+    Icon: Circle
+    OrbitLine: true
+    SectorMapType: Planet
+    Allow: [Ustia Orbit, Varonea Mu Station]
+    Deny: [Devesh Orbit, Shoolin Orbit, Vibhav Orbit, Jaltur Orbit, Laenu Orbit, Gogula Asteroid Field, Vetos Asteroid Field, Mikelatur Lambda Station]
+    Playfields:
+      - ['0, 0, 0', Chartolis Orbit, Chartolis Orbit]
+      - ['0, 0, 0', Chartolis, Chartolis]
+# Gogula Asteroid Field
+  - Coordinates: [91, -14, -59]
+    Color: 0.3, 0.3, 0.3
+    Icon: Rhombus
+    OrbitLine: false
+    SectorMapType: AsteroidField
+    Allow: [Mikelatur Lambda Station]
+    Deny: [Devesh Orbit, Shoolin Orbit, Varonea Mu Station, Vibhav Orbit, Jaltur Orbit, Ustia Orbit, Chartolis Orbit, Vetos Asteroid Field, Laenu Orbit]
+    Playfields:
+      - ['0, 0, 0', Gogula Asteroid Field, Gogula Asteroid Field]
+# Vetos Asteroid Field
+  - Coordinates: [32, 7, -140]
+    Color: 0.3, 0.3, 0.3
+    Icon: Rhombus
+    OrbitLine: false
+    SectorMapType: AsteroidField
+    Allow: [Vibhav Orbit, Mikelatur Lambda Station]
+    Deny: [Devesh Orbit, Shoolin Orbit, Varonea Mu Station, Jaltur Orbit, Laenu Orbit, Ustia Orbit, Chartolis Orbit, Gogula Asteroid Field]
+    Playfields:
+      - ['0, 0, 0', Vetos Asteroid Field, Vetos Asteroid Field]
+# Mikelatur Lambda Station
+  - Coordinates: [41, -22, -209]
+    Color: 0.7, 0.5, 0
+    Icon: Kite
+    OrbitLine: false
+    SectorMapType: Station
+    Allow: [Gogula Asteroid Field, Shoolin Orbit, Vetos Asteroid Field, Jaltur Orbit]
+    Deny: [Devesh Orbit, Varonea Mu Station, Vibhav Orbit, Laenu Orbit, Ustia Orbit, Chartolis Orbit]
+    Playfields:
+      - ['0, 0, 0', Mikelatur Lambda Station, Mikelatur Lambda Station]

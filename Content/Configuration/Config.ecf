@@ -1,0 +1,59 @@
+# How it works:
+# - rename to 'Config.ecf' to activate
+# - change original values of parameters as desired
+# - listed parameters will overwrite the game's internal original values
+# - parameters not listed (commented out / removed) will cause the game to continue using the internal ORIGINAL values
+
+VERSION: 1
+
+
+# ==================== BLOCKS, DEVICES ==========================
+
+
+# Properties:
+# IsAccessible: shows up in Control Panel
+# O2Accept: "OxygenBottleLarge,OxygenBottleSmall" > items that can be used to fill a O2 tank. First item in list will be filled when O2 is withdrawn
+# FuelAccept: "EnergyCell, EnergyCellLarge, EnergyCellHydrogen, FusionCell, BioFuel" > items that can be used to fill a fuel tank. First item in list will be filled when fuel is withdrawn
+
+
+{ Block Id: 590, Name: ThrusterGVRoundNormal
+  Group: cpgThruster
+  Material: metalhard
+  ShowBlockName: true
+  BlockColor: "110,110,110"
+  StackSize: !=
+  TemplateRoot: ThrusterGVRoundBlocks
+  IsOxygenTight: true, display: true
+  IsIgnoreLC: true
+  Info: bkiThruster, display: true
+  Mass: 600, type: int, display: true, formatter: Kilogram
+  HitPoints: 150, type: int, display: true
+  ThrusterForce: 160, type: int, display: true, formatter: Newton
+  EnergyIn: 20, type: int, display: true, formatter: Watt
+  Category: Devices
+  BlastRadius: 3
+  BlastDamage: 100
+  Temperature: 90, display: true
+}
+{ Block Id: 589, Name: ThrusterGVDirectional
+  Group: cpgThruster
+  Material: metalhard
+  ShowBlockName: true
+  BlockColor: "110,110,110"
+  StackSize: 6
+  IsOxygenTight: true, display: true
+  IsIgnoreLC: true
+  Info: bkiThrusterDirectional, display: true
+  Mass: 300, type: int, display: true, formatter: Kilogram
+  HitPoints: 100, type: int, display: true
+  ThrusterForce: 80, type: int, display: true, formatter: Newton
+  EnergyIn: 12, type: int, display: true, formatter: Watt
+  Category: Devices
+  BlastRadius: 2
+  BlastDamage: 50
+  UnlockCost: 4, display: true
+  UnlockLevel: 3, display: true
+  TechTreeParent: RCSBlockGV
+  TechTreeNames: Hover Vessel
+  Temperature: 60, display: true
+}

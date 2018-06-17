@@ -1,0 +1,511 @@
+---
+Seed: 578068
+PlanetSize: 2
+PlanetAxis: -0.08277449
+TemperatureMinMax: [400, 1320]
+TemperatureNight: 400
+HumidityMinMax: [0.08073822, 0.3431849]
+SeaLevel: 80
+TerrainLevel: 80
+BaseLevel: 2
+LandWaterRatio: 0
+TemperatureHeightRange: [400, 1600]
+TemperatureGradientRange: [0.75, 0.1]
+TemperatureNoiseFac: 0.49
+HumidityHeightFac: [20, 325]
+HumidityNoiseFac: 0.54
+
+Gravity: -05.64
+Radiation: 190.70
+AtmosphereDensity: 0.0
+AtmosphereO2: 0.0
+AtmosphereBreathable: False
+PvP: True
+
+Water: RockLava03
+Music: Encryptor
+
+TerrainHeightMapMax: 80
+
+BiomeStampTries: 20
+
+Biome:
+   - BiomeClusterData:
+         - Name: Pole
+           IgnoreForcedBiome: True
+           Weather: PoleFog
+           Texture: [9, 11, 0.2]
+           SelectionCriteria:
+               - "+Lat > 0.975"
+           Color: [0.2, 0.4, 0.2]
+           StampProb: 1
+           Stamps:
+           Decorations:
+           Grass:
+
+         - Name: MetalVeins
+           IgnoreForcedBiome: True
+           Texture: [7, 8, 0.9, 8, 7, 0.9, 0.1]
+           UndergroundLayers:
+               - [11, 2]
+               - [9, 7]
+               - [11, 7]
+               - [12, 1]
+               - [11, 50]
+               - [13, 1]
+               - [15, 5]
+               - [12, 2]
+               - [15, -1]
+               - [15, 1]
+           SelectionCriteria:
+               - "Height > 225"
+           Color: [1, 1, 1]
+           StampProb: 1
+           Stamps:
+           Decorations:
+               - [RealRock1Dark, 0.002]
+               - [RealRock2Dark, 0.0005]
+               - [RealRock3Dark, 0.003]
+               - [RealRock4Dark, 0.003]
+               - [RealRock8Dark, 0.003]
+               - [RealRock10Dark, 0.003]
+           Grass:
+
+         - Name: Mountains
+           IgnoreForcedBiome: True
+           Texture: [8, 11, 0.3]
+           UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]
+               - [15, -1]
+               - [15, 1]
+           SelectionCriteria:
+               - "Height > 150"
+           Color: [0.4, 0.4, 0.6]
+           StampProb: 1
+           Stamps:
+           Decorations:
+               - [RockGrey01Large, 0.007]
+               - [RockGrey02Large, 0.007]
+           Grass:
+
+         - Name: LowMountains
+           IgnoreForcedBiome: True
+           Texture: [8, 5, 0.5, 11, 11, 0.5, 0.2]
+           UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 60]
+               - [15, -1]
+               - [15, 1]
+           SelectionCriteria:
+               - "Height > 130"
+           Color: [0.2, 0.2, 0.3]
+           StampProb: 1
+           StampForcesBiome: True
+           StampTries: 50
+           Stamps:
+               - Mountain_10_BM, 1
+               - Mountain_11_BM, 1
+           Decorations:
+               - [RockGrey01Large, 0.007]
+               - [RockGrey02Large, 0.007]
+           Grass:
+
+         - Name: CrystallizedRocks
+           IgnoreForcedBiome: True
+           Texture: [10, 10, 0.2]
+           UndergroundLayers:
+               - [10, 2]
+               - [14, 1]
+               - [10, 1]
+               - [14, 5]
+               - [15, -1]
+               - [15, 1]
+           SelectionCriteria:
+               - "Humidity < 0.25"
+               - "Humidity > 0.17"
+               - "Temperature > 75"
+               - "Temperature < 90"
+           Color: [0.3, 0.3, 1]
+           StampProb: 0.5
+           Stamps:
+               - HillsLava_1, 0.9
+           Temperature: 5
+           Decorations:
+               - [GasEmitter2, 0.001]
+               - [CrystalsPyramidBlue, 0.01]
+           Grass:
+
+         - Name: Lava
+           IgnoreForcedBiome: True
+           Texture: [0, 0, 0.25]
+           UndergroundLayers:
+               - [15, 1]
+               - [15, -1]
+               - [15, 1]
+           SelectionCriteria:
+               - "Height < SeaLevel"
+           Color: [1, 0, 0]
+           StampProb: 1
+           Stamps:
+           Temperature: 140
+           Decorations:
+           Grass:
+
+         - Name: LavaEdge
+           IgnoreForcedBiome: True
+           Texture: [1, 0, 0.15]
+           UndergroundLayers:
+               - [15, -1]
+               - [15, 1]
+           SelectionCriteria:
+               - "Height < SeaLevel + 3"
+               - "Humidity > 0.1"
+               - "Temperature > 0"
+           Color: [0.9, 0.9, 0]
+           StampProb: 1
+           StampForcesBiome: True
+           StampTries: 5
+           Stamps:
+               - PlainsLava_1, 0.15
+               - PlainsLava_1b, 0.03
+           Temperature: 70
+           Decorations:
+           Grass:
+
+         - Name: Hotspot
+           IgnoreForcedBiome: True
+           Texture: [1, 0, 0.15]
+           UndergroundLayers:
+               - [14, 1]
+               - [15, -1]
+               - [15, 1]
+           SelectionCriteria:
+               - "Height > 500"
+           Color: [1, 0, 0.3]
+           StampProb: 1
+           StampForcesBiome: True
+           StampTries: 80
+           Stamps:
+               - CraterMoon_1, 0.9
+               - CraterMoon_3, 0.4
+               - CraterLava_3, 0.05
+           Temperature: 90
+           Decorations:
+           Grass:
+
+         - Name: LavaEdgeCold
+           Texture: [2, 1, 0.15]
+           UndergroundLayers:
+               - [10, 3]
+               - [15, -1]
+               - [15, 1]
+           SelectionCriteria:
+               - "Height < SeaLevel + 5"
+               - "Height > SeaLevel"
+           Color: [0.7, 0.7, 0]
+           StampProb: 1
+           StampForcesBiome: True
+           StampTries: 35
+           Stamps:
+               - RiftLava_2, 0.4
+               - RiftLava_1, 0.8
+               - RiftLava_2b, 0.5
+               - RiftLava_1b, 0.5
+               - CraterLava_1, 0.2
+               - CraterLava_2, 0.1
+           Temperature: 30
+           Decorations:
+           Grass:
+
+         - Name: LavaPlains
+           Texture: [3, 2, 0.01]
+           UndergroundLayers:
+               - [11, 1]
+               - [14, 5]
+               - [15, -1]
+               - [15, 1]
+           SelectionCriteria:
+               - "Humidity > 0.32"
+               - "Height < SeaLevel + 15"
+           Color: [0.4, 0.4, 0.015]
+           StampProb: 1
+           Stamps:
+           Decorations:
+               - [RealRock4Dark, 0.015]
+               - [RealRock3Dark, 0.015]
+               - [RealRock1Dark, 0.015]
+           Grass:
+
+         - Name: AshDunes
+           IgnoreForcedBiome: True
+           Texture: [5, 11, 0.25]
+           UndergroundLayers:
+               - [11, 8]
+               - [14, 5]
+               - [15, -1]
+               - [15, 1]
+           SelectionCriteria:
+               - "Humidity < 0.19"
+               - "Temperature > 30"
+           Color: [0.55, 0.45, 0.45]
+           StampProb: 1
+           Stamps:
+           Temperature: -5
+           Decorations:
+               - [RealRock4Dark, 0.01]
+               - [RealRock3Dark, 0.01]
+               - [RealRock1Dark, 0.01]
+           Grass:
+
+         - Name: ShoveRocks
+           Texture: [9, 11, 0.2]
+           UndergroundLayers:
+               - [11, 1]
+               - [10, 8]
+               - [14, 5]
+               - [15, -1]
+               - [15, 1]
+           SelectionCriteria:
+               - "Height < SeaLevel + 28"
+               - "Humidity > 0.25"
+               - "Temperature > 30"
+           Color: [0.2, 0.4, 0.2]
+           StampProb: 1
+           Stamps:
+           Decorations:
+               - [AridRock01, 0.02]
+               - [AridRock02, 0.015]
+               - [AridRock03, 0.02]
+               - [GasEmitter1, 0.015]
+               - [RealRock1Dark, 0.03]
+               - [RealRock2Dark, 0.01]
+               - [RealRock3Dark, 0.03]
+               - [RealRock4Dark, 0.03]
+               - [RealRock8Dark, 0.03]
+               - [RealRock10Dark, 0.05]
+           Grass:
+
+         - Name: BarrenRocks
+           Texture: [4, 6, 0.55, 11, 11, 0.5, 0.2]
+           UndergroundLayers:
+               - [11, 12]
+               - [14, 5]
+               - [15, -1]
+               - [15, 1]
+           Color: [0.6, 0.4, 0.4]
+           StampProb: 1
+           Stamps:
+           Decorations:
+               - [RealRock4Dark, 0.01]
+           Grass:
+
+
+
+
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+
+# ==============================================================
+# Playfield Characteristics
+
+# # ==============================================================
+# # DELETE 
+# # ==============================================================
+# RealRadius: 1303.797294            # DELETE
+# ScaledRadius: 1300                 # DELETE
+# DayLength: 24                      # DELETE
+# Moons: 1                           # DELETE
+
+# # ==============================================================
+
+PlanetType: Lava               
+Emissive: True
+PlayfieldType: Planet               
+# AtmosphereEnabled: True              # WILL BE SET BY SSG dependent on AtmoBreathableProb
+Difficulty: 2                        # WE HAVE TO GIVE IT A NEW MEANING
+
+# # ==============================================================
+# # WHAT TO DO?
+Description: "Dentus-A is a Laveplanet. Mit grossen Lavaseen. Haesslich, Heiss und gefaehrlich.\n Ohne die Rohstoffe wuerde sich niemand fuer den Planeten interessieren.\n Die vielen Wracks und zerstoerten Basen sprechen eine deutliche Sprache."
+
+# ==============================================================
+# ==============================================================
+# # Special parameters:
+# AllowSV: True                      # Set to False to dis-allow SVs in this playfield, default is True
+# AllowCV: True                      # Set to False to dis-allow CVs in this playfield, default is True
+# #Seed: 123456                      # Integer [1, 999999] If set overwrites main Seed 
+# #UseFixed: True  			   	     # If set to True uses fixed POIs + resources in Survival mode (per default set to False). Can be used together with UseRandom
+# #UseRandom: True				     # If set to True uses random POIs + resources in Survival mode (per default set to True). Can be used together with UseFixed
+# # IndestructibleTerrain: True      # If set to True terrain on this playfield will be indestructible
+# # Instance:
+  # # Time: 120                        # Minutes until this instance has to be completed and players are kicked
+  # # MaxPlayers: 4                    # Portal closes after this amount of players entered
+  # # PortalOpen: 60                   # Seconds the portal is open
+  # # Cooldown: 7200                   # Seconds the portal is closed after it was open (cooldown time)
+  # # DropInventory: True              # When you do not solve the instance within the given "Time", you will be kicked and your inventory stays behind
+  # # AllowBlueprints: True            # Allow to spawn blueprints in an instance
+  # # RestrictToOrigin: 3              # Only Origin with ID <xyz> can enter portal, see sectors.yaml origin ID
+  # # LockOnFaction: True              # Only members of the same faction can enter portal
+
+
+# # ==============================================================
+
+# Special effects around the player                 
+SpecialEffectsLocal:
+  - Name: Grime
+    MaxHeight: 200
+
+SpecialEffectsGlobal:
+# Weather
+    # Biome: [ Any ]     # NEW PARAM.   
+#  - Name: CloudsDark
+#    Type: Weather
+#    InitialDelay: 0 
+#    Delay: 2  
+#    Lifetime: 1500 
+#  - Name: CloudsMedium
+#    Type: Weather
+#    InitialDelay: 0   
+#    Delay: 2          
+#    Lifetime: 1200
+  - Name: CloudsLight
+    Type: Weather
+    InitialDelay: 0   
+    Delay: 10          
+    Lifetime: 600
+  - Name: HeatWave
+    Type: Weather
+    InitialDelay: 12   
+    Delay: 12          
+    Lifetime: 1200
+  - Name: MeteorFireRain
+    Type: Weather
+    InitialDelay: 48   
+    Delay: 24          
+    Lifetime: 300
+  - Name: FireRain
+    Type: Weather
+    InitialDelay: 48  
+    Delay: 24         
+    Lifetime: 300 
+    
+# Global Effect
+  - Name: MeteorShower       # Name of effect 
+#    Biome: [ Any ]           # Name of biome in which effect will spawn
+    Time: Day                # Choose from pre-selection: Day, Night, Always
+    InitialDelay: 1          # Initial delay, in game hours
+    Delay: 2			     # Delay between effect of the same type, in game hours
+    Lifetime: 60	         # Duration of effect, in realtime seconds
+    PlyDist: 200             # Distance from player at which effect will spawn
+    SpawnY: 100              # Height at which effect will spawn
+    Struct: Avoid            # If set to True, effect will not be spawned above player structures
+
+  - Name: ThunderAndLightningPurple
+#    Biome: [ Any ]
+    Time: Night
+    InitialDelay: 1.5   
+    Delay: 4
+    Lifetime: 300     
+    PlyDist: 100
+    SpawnY: 500
+    Struct: Avoid    
+
+# ==============================================================
+
+# TO DO: DEFINE PARAM RANGES 
+
+
+# Atmosphere and Sky
+AtmosphereEnabled: True              # Bool var [true, false]. Atmosphere True or False
+AtmosphereColor: "0.3, 0.3, 0.3"     # Color picker - Color of atmosphere seen in space (has not much impact) default is white "1,1,1"
+#SkyColor: "0.2, 0.01, 0.0"         # Color picker - Color of skybox if sun is in zenith, default is white "1,1,1"
+SkyColor: "0.1, 0.0, 0.0"         # Color picker - Color of skybox if sun is in zenith, default is white "1,1,1"
+
+#SkyHorizonColor: "1, 0.3, 0"         # Color picker - Color of skybox if sun is on horizon, default is white "1,1,1"
+SkyHorizonColor: "0.5, 0.01, 0"         # Color picker - Color of skybox if sun is on horizon, default is white "1,1,1"   
+
+# Light
+DayLightIntensity: 0.45              # Float [0, 2] - Larger values = brighter, default is 0.6
+NightLightIntensity: 0.55             # Float [0, 2]) - Larger values = brighter, default is 0.6
+LightZenithColor: "1, 0.95, 0.95"    # Color picker - Color of light if sun is in zenith, default is almost white "1,0.95,0.92"
+ 
+#LightHorizonColor: "1, 0.2, 0"       # Color picker - Color of light if sun is on horizon, default is orange "1,0.6,0"
+LightHorizonColor: "1, 0.5, 0"       # Color picker - Color of light if sun is on horizon, default is orange "1,0.6,0"
+
+NightLightColor: "1, 0.3, 0.3"     # Color picker - Color of moon light, default is blueish "0.67,0.65,0.99" 
+
+DayShadowStrength: 0.95              # Ignore (do not change) - Hardcoded to 1
+NightShadowStrength: 0.5             # Ignore (do not change) - Hardcoded to 1
+
+
+# >> MOVE TO HERE + predefine path + choose range 
+# Sun                              
+SunFlare: EnvironmentalEffects/SunFlareYellow         # Choose from pre-selection: SunFlareBlue, SunFlarePurple, SunFlareRed, SunFlareRedSpace, SunFlareWhite, SunFlareWhite2, SunFlareWhite3, SunFlareWhite3Space, SunFlareWhite4, SunFlareWhite4Space, SunFlareWhiteMoon, SunFlareWhiteSpace, SunFlareYellow, SunFlareYellow2, SunFlareYellow3
+
+# ==============================================================
+# ==============================================================
+
+# Fog
+#FogColor: "0.95, 0.54, 0.14"
+FogColor: "0.95, 0.50, 0.14"
+
+AtmosphereFog: 0.6                  # Float [0, 1] - Distant fog: larger values = stronger
+# AtmosphereFog: [0.5, 0.6]           # ADD TO DYNAMIC PARAMETERS. Float [0, 1] - Distant fog: larger values = stronger
+FogCloudIntensity: 0.8              # Float [0, 1] - Waft of mist in air: larger values = stronger
+# FogCloudIntensity: [0.8, 1]         # ADD TO DYNAMIC PARAMETERS. Float [0, 1] - Waft of mist in air: larger values = stronger
+FogIntensity: 0.85                   # CHECK IF NEEDED. Float [0, 1] - Near Fog/Atmospheric Scattering Intensity: larger values = stronger
+FogStartDistance: 400               # CHECK IF NEEDED. Float [0, 800] - Near Fog/Atmospheric Scattering Start Distance, in m
+GroundFogIntensity: 0.1               # NEW RANGE. Float [0, 1] - Ground Layer Fog: larger values = stronger
+GroundFogHeight: 35                  # DEPENDS ON WATER LEVEL. Float [0, 800] - Ground Layer Fog Height
+
+# DEPENDS ON WEATHER
+# Clouds
+CloudsDensity: 1                      # Float [0, 1] - Larger values = more clouds (coverage)
+#CloudsSharpness: 0.8                  # Float [0, 1] - Larger values = less dense clouds
+CloudsSharpness: 0.2                  # Float [0, 1] - Larger values = less dense clouds
+#CloudsBrightness: 0.5                  # Float [0, 1] - Larger values = brighter clouds
+CloudsBrightness: 0.3                  # Float [0, 1] - Larger values = brighter clouds
+CloudsOpacity: 0.7                     # Float [0, 1] - Larger values = more opaque, default is 0.9
+CloudsZenithColor: "1, 0.2, 0.2"     # Color picker - Color of clouds if sun is in zenith, default is light blue "0.87,0.92,1" 
+#CloudsHorizonColor: "0.5, 0.0, 0"    # Color picker - Color of clouds if sun is on horizon, default is light orange "1,0.76,0.56" 
+CloudsHorizonColor: "0.2, 0.0, 0.4"    # Color picker - Color of clouds if sun is on horizon, default is light orange "1,0.76,0.56" 
+
+
+# DEPENDS ON WEATHER
+# Wind Speed
+WindSpeed: 3                           # Float [0, 20] -  Larger values = faster moving clouds, grass and trees
+
+
+
+# ==============================================================
+# ==============================================================
+
+RandomResources:
+
+    - Name: PromethiumResource
+      IsScalingCount: True 
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 7, 11 ]
+      DepthMinMax: [ 0, 5 ]
+      DroneProb: 0.4
+      DistTypeCylinder:
+        MaxRadius: 8
+        YVariance: 15
+
+### Resource Asteroids
+AsteroidResources: []
+
+### POIs
+### FixedPlayerStart:
+
+### Drones
+# ==============================================================
+# ==============================================================
+
+### Creatures
+
+Build: 1648

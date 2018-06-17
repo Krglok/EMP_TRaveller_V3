@@ -1,0 +1,427 @@
+---
+# # ==============================================================
+
+PlanetSize: 
+  SizeRange: [3,4,5]
+  SizeProbs: [0.65,0.30,0.05]   
+TemperatureMin: [-20, -10]                         
+TemperatureMax: [40,46]    
+TemperatureNight: [10,15]
+PlanetAxis: [-20,20]                       
+HumidityMin: [0.16, 0.2]                  
+HumidityMax: [0.7, 0.75]                 
+Radiation: [10, 16]             
+LandWaterRatio: [0.00, 0.00]                   
+SeaLevel: [0, 0]     
+TerrainLevel: [140, 150]    
+BaseLevel: [0, 0]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [0, 107]
+TemperatureGradientRange: [0.65, 0]
+TemperatureNoiseFac: 0.85
+HumidityHeightFac: [35, 350]
+HumidityNoiseFac: 0.57
+
+GravityMinMax: [-6, -8]
+AtmosphereDensityMinMax: [1.1, 1.5]
+AtmosphereO2MinMax: [0.05, 0.12]
+AtmoBreathableProb: 0.2
+WaterProb: 0
+PvPProb: 0.6
+Water: [WaterGreen]
+Music: [StellarGrasp]
+# ==============================================================
+
+## Splatmaps:
+# Channel: 0 1 2 3
+# Splat 1: R G B A
+# Channel: 4 5 6 7
+# Splat 2: R G B A
+# Channel: 8 9 10 11
+# Splat 3: R G B A
+
+GroundShapes: 
+
+#  - GroundShape_2, 0.3
+
+BiomeStampTries: 20
+
+Biomes: 
+
+
+  # - Name: TerrainCloseToZero
+    # IgnoreForcedBiome: true      
+    # Texture: [0,1,0.5, 2,4,0.5, 0.20]   # ID Top Texture, ID Side Texture, Slope Side: low value, early     
+    # SelectionCriteria: 
+    # - Height <10
+    # Color: [1, 0, 0]
+   
+    
+    # Decorations: 
+
+
+# ==============================================================
+  - Name: Pole          # same as WindSweptPlains biome
+    Weather: PoleFog
+    IgnoreForcedBiome: true
+    Texture: [10,11,0.65, 4,11,0.5, 0.70]   # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+    SelectionCriteria:  
+    - +Lat > 0.975
+    Color: [0.7, 0.6, 0.0]  
+# ==============================================================        
+
+  - Name: ReactionVent
+    IgnoreForcedBiome: true      
+    StampForcesBiome: true    
+    StampForcesBiomeType: OverlapOwn
+    StampTries: 12  # number of tries to place the stamps for a class 2 planet with 100% land, more tries the more water and the bigger the planet	 
+    Texture: [0,0,0.5, 1,1,0.5, 0.20]   # ID Top Texture, ID Side Texture, Slope Side: low value, early     
+    SelectionCriteria: 
+    - Height <30
+    Color: [0.2, 1, 0.0]
+    
+    Radiation: 20
+    Temperature: 30
+    
+    UndergroundLayers:
+               # - [0, 1]   # This also works?! 
+               # - [0, -1]
+               # - [0, 1]
+               - [15, 1]  
+               - [15, -1]
+               - [15, 1]
+        
+        
+    
+    Stamps:
+    - Flats_1, 0.5    
+    - Flats_1b, 0.5    
+    
+    Decorations: 
+               - [CoralStone01-03, 0.005]
+               - [CoralStone01-05, 0.005]
+               - [CrystalsPyramidBlue, 0.01]
+               - [SkeletonWhalePart, 0.001]
+               - [ "GasEmitter2", 0.0001]
+#    Grass: 
+#               - Name: GrassGreen01
+#                 Density: 0.1
+#                 Preset: GrassDense
+
+
+# ==============================================================                 
+  - Name: RadiatedGas
+    IgnoreForcedBiome: true
+    Texture: [0,1,0.7, 0,1,0.5, 0.02]   # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+    SelectionCriteria: 
+    - Height < 35
+    Color: [0.2, 0.8, 0.3]
+    
+    Radiation: 10
+    Temperature: 10
+    
+    UndergroundLayers:
+               - [1, 2]
+               - [0, -1]
+               - [0, 1]
+    
+    Decorations: 
+    Decorations: 
+               - [CoralStone01-03, 0.0001]
+               - [CoralStone01-05, 0.0001]
+               - [CrystalsPyramidBlue, 0.001]
+               - [SkeletonWhalePart, 0.001]
+
+
+# ==============================================================                 
+  - Name: FogEdge
+    IgnoreForcedBiome: true
+    Texture: [1,5,0.7, 5,5,0.5, 0.02]   # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+    SelectionCriteria: 
+    - Height < 38
+    Color: [0.2, 0.9, 0.1]
+    
+    Radiation: 5
+    Temperature: 5
+    
+    UndergroundLayers:
+               - [14, -1]
+               - [15, 1]
+    
+    Decorations: 
+#    Grass: 
+#               - Name: GrassGreen01
+#                 Density: 0.1
+#                 Preset: GrassDense                
+
+
+
+# ==============================================================                 
+  - Name: BarrenRock
+    IgnoreForcedBiome: true
+    Texture: [5,5,0.7, 5,5,0.5, 0.02]   # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+    SelectionCriteria: 
+    - Height < 40
+    Color: [0.1, 0.5, 0.0]
+    
+    Radiation: 1
+    Temperature: 1
+    
+    UndergroundLayers:
+               - [14, -1]
+               - [15, 1]
+    
+    Decorations: 
+#    Grass: 
+#               - Name: GrassGreen01
+#                 Density: 0.1
+#                 Preset: GrassDense           
+
+
+# ==============================================================
+#
+#  - Name: HighMountains
+#    IgnoreForcedBiome: true 
+#    Texture: [3,7,0.7, 2,11,0.6, 0.50]   # ID Top Texture, ID Side Texture, Slope Side: low value, early      
+#    Texture: [3, 11, 0.5]   # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+#    SelectionCriteria: 
+#    - Height > 350
+#    Color: [0.7, 0.7, 0.7]
+
+#    Decorations:  
+#               - [ RealRock2Snow, 0.0001, Free]
+
+
+# ==============================================================
+  - Name: BarrenOpenPlains
+    IgnoreForcedBiome: true  
+
+    
+#    Texture: [6,7,0.5, 4,5,0.5, 0.0002]   # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+    Texture: [6,7,0.5, 3,4,0.5, 0.9002]   # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+    SelectionCriteria:
+    - Height < 105
+    - Humidity > 0.1
+    - Temperature > 10
+    Color: [0.8, 0.8, 0]    
+
+    
+    UndergroundLayers:
+               - [14, -1]
+               - [15, 1]
+    
+       
+    Decorations: 
+               - [BulbShroom, 0.002]
+               - [BulbShroomYoung, 0.002]
+               - [Cactus1, 0.002]
+               - [CoralStone04-03, 0.005]
+               - [DesertPlant20, 0.002]
+               - [DesertRock1, 0.002]
+               - [DesertRock2, 0.002]
+               - [RockGrey01Large, 0.003]
+               - [RockGrey02Large, 0.003]
+               #Harvestables:
+               - [ OpuntiaCactus, 0.002] 
+               
+               
+    Grass:
+               - Name: GrassBrown06
+                 Density: 0.7
+                 Preset: GrassDense
+               - Name: Plant01Brown
+                 Density: 0.05
+                 Preset: GrassDense
+
+# ==============================================================
+  - Name: BarrenPlainsEdge
+    IgnoreForcedBiome: true   
+    
+    Texture: [8,9,0.5, 4,5,0.5, 0.02]   # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+    SelectionCriteria:
+    - Height < 105
+    - Humidity > 0.31
+    - Temperature > 5 
+    Color: [0.7, 0.7, 0]
+    
+    UndergroundLayers:
+               - [14, -1]
+               - [15, 1]
+    
+    StampForcesBiome: true     
+    StampForcesBiomeType: OverlapAll  
+    StampTries: 12  # number of tries to place the stamps for a class 2 planet with 100% land, more tries the more water and the bigger the planet	    
+    Stamps:
+    - Erosion_1, 0.5    
+    - Erosion_1b, 0.5  
+    
+    Decorations: 
+               - [Cactus1, 0.002]
+               - [CoralStone04-03, 0.001]
+               - [DesertPlant20, 0.002]
+               - [DesertRock1, 0.002]
+               - [DesertRock2, 0.002]
+               - [RockGrey01Large, 0.003]
+               - [RockGrey02Large, 0.003]
+               - [EggPlant, 0.001]
+               - [AlienPlantThorn2, 0.001]
+               - [AlienPlantWorm2, 0.002]            
+               #Harvestables:
+               - [OpuntiaCactus, 0.002]   
+               
+               
+    Grass:
+               - Name: GrassBrown06
+                 Density: 0.7
+                 Preset: GrassDense
+
+# ==============================================================               
+               
+  - Name: Mountains
+    IgnoreForcedBiome: true  
+    Texture: [3,2,0.8, 5,5,1, 0.0001]   # ID Top Texture, ID Side Texture, Slope Side: low value, early        
+    
+    SelectionCriteria: 
+    - Height > 200
+    Color: [0.6, 0.6, 0.6]
+
+    
+    UndergroundLayers:
+               - [14, -1]
+               - [15, 1]
+    
+    Decorations:  
+               - [DesertRock1, 0.002]
+               - [DesertRock2, 0.002]
+               - [Boulder1, 0.001]
+               - [Boulder2, 0.001]
+               - [Boulder3, 0.001]
+               - [Boulder4, 0.0015]
+               - [Boulder5, 0.0015]
+               
+#    Grass:
+#               - Name: GrassBrown06
+#                 Density: 0.1
+#                 Preset: GrassDense
+
+
+
+# ==============================================================
+  - Name: LowMountains
+    IgnoreForcedBiome: true  
+
+    Texture: [2,9,0.60, 5,4,0.5, 0.001]   # ID Top Texture, ID Side Texture, Slope Side: low value, early     
+
+  
+    UndergroundLayers:
+               - [14, -1]
+               - [15, 1]
+  
+    SelectionCriteria: 
+    - Height > 130
+    Color: [0.3, 0.3, 0.3]
+
+    Decorations:  
+               - [DesertRock1, 0.002]
+               - [DesertRock2, 0.002]
+               - [Boulder1, 0.001]
+               - [Boulder2, 0.001]
+               - [Boulder3, 0.001]
+               - [Boulder4, 0.0015]
+               - [Boulder5, 0.0015]
+    Grass: 
+               - Name: GrassBrown06
+                 Density: 0.1
+                 Preset: GrassDense    
+                 
+                 
+# ==============================================================
+  - Name: LowMountainsEdge
+    Texture: [6,7,0.2, 4,5,0.5, 0.002]   # ID Top Texture, ID Side Texture, Slope Side: low value, early     
+    SelectionCriteria: 
+    - Height > 100
+    Color: [0.4, 0.4, 0.4]
+    
+    UndergroundLayers:
+#               - [6, 3]
+#               - [5, 70]
+               - [14, -1]
+               - [15, 1]
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOwn
+    StampTries: 18  # number of tries to place the stamps for a class 2 planet with 100% land, more tries the more water and the bigger the planet	
+    Stamps:
+    - Mountain_2, 0.5
+    - Mountain_2b, 0.05
+    - Mountain_3, 0.3
+#    - Mountain_3b, 0.05
+    
+    Decorations:  
+               - [DesertRock1, 0.002]
+               - [DesertRock2, 0.002]
+               - [Boulder1, 0.001]
+               - [Boulder2, 0.001]
+               - [Boulder3, 0.001]
+               - [Boulder4, 0.0015]
+               - [Boulder5, 0.0015]
+    Grass: 
+               - Name: GrassBrown06
+                 Density: 0.3
+                 Preset: GrassDense    
+                 
+# ==============================================================
+  - Name: WindSweptPlains
+    Texture: [10,11,0.65, 4,11,0.5, 0.70]   # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+
+    SelectionCriteria:
+    # - Height < SeaLevel + 20
+    - Humidity > 0.1
+    Color: [0.7, 0.6, 0.0]  
+
+    UndergroundLayers:
+               - [10, 1]
+               - [11, 2]
+               - [14, -1]
+               - [15, 1]
+
+    Decorations:
+               - [Pillar1, 0.001]
+               - [Pillar2, 0.001]
+               - [Pillar3, 0.001]
+               - [RealRock8, 0.001]
+               - [RealRock9, 0.001]
+               #Harvestables:               
+               - [ ClusterShroom, 0.001] 
+               - [ ScalyPods, 0.001]                
+               
+    Grass: 
+               - Name: GrassBrown06
+                 Density: 0.05
+                 Preset: GrassDense   
+
+
+                
+
+             
+                 
+
+# ==============================================================
+# CATCH ALL
+# ==============================================================
+  - Name: Barren  
+    Texture: [6, 3, 0.5]   # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+    
+
+    SelectionCriteria:   
+ 
+    Color: [0.9, 1, 0.1] 
+
+    UndergroundLayers:
+               - [14, -1]
+               - [15, 1]
+    
+    Decorations:  
+
+    Grass:  
+

@@ -24,7 +24,7 @@ Chapters:
     "
     PictureFile: Limayos.jpg
     PlayerLevel: 1 # (default: 1)
-    VisibleOnStartPlayfield: Dentus  
+    VisibleOnStartPlayfields: [ Dentus ]
     Visibility: Always    
     # or ByLevel, WhenRewarded (default: Always)
     # Activatable: Always   # same settings as Visibility (default: Always)
@@ -271,10 +271,9 @@ Chapters:
             Es ist ziemlich lukrativ dort Rohstoffe zu verkaufen.\n
             Studiere die Preise und Mengen.
             "
-            Check: NearUnit
-            Names: [Dentus Industry Complex, "TraderFukura"]
-            Guiding: TempIndoor
-            AllowManualCompletion: true
+            Check: NearPoi
+            Names: [Dentus-Industry-Dock]
+            AllowManualCompletion: false
             CompletedMessage: "Du hast die Haendler gefunden. Viel Erfolg beim Verkauf"
 
 

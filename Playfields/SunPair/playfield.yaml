@@ -1,0 +1,188 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v1.55.0.0, Playfield Version: 8.0.5 [1666] (Alpha EXPERIMENTAL 8.0 - Release Candidate 1)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+Seed: 251364
+PlanetSize: 5
+PlanetAxis: 5
+TemperatureMinMax: [200, 300]
+TemperatureNight: 100
+HumidityMinMax: [0, 0]
+SeaLevel: 90
+TerrainLevel: 20
+BaseLevel: 80
+LandWaterRatio: 0.94999999999999996
+TemperatureHeightRange: [0, 80]
+TemperatureGradientRange: [0, 7]
+TemperatureNoiseFac: 0.5
+HumidityHeightFac: [0, 0]
+Gravity: -49
+AtmosphereDensity: 1
+AtmosphereBreathable: False
+Water: RockLava03
+Music: Helios
+TerrainHeightMapMax: 120
+Biome:
+-  BiomeClusterData:
+   -  Name: BiomeCluster01
+      SpecialBiome:
+         CountMinMax: [10, 30]
+      Weather: PoleFog
+      AmbientSound: OpenPlains
+      Texture: [0, 0, 0]
+      Decorations:
+      - [RockResourceZascosium, 0.3]
+Description: Zwergsonne
+PlanetType: Lava
+PlayfieldType: Planet
+Terrain:
+   Name: Temperate
+   PoleLevel: 30
+   NoiseStrength: 0.29999999999999999
+   ColorChange: {}
+AtmosphereEnabled: False
+Difficulty: 4
+LandClaimZone: Off
+SpecialEffectsLocal:
+-  Name: Grime
+   Biome: [Any]
+   Time: Always
+   MaxHeight: 255
+SpecialEffectsGlobal:
+-  Name: CloudsDark
+   Type: Weather
+   InitialDelay: 10
+   Delay: 40
+   Lifetime: 600
+-  Name: HeatWave
+   Type: Weather
+   InitialDelay: 20
+   Delay: 30
+   Lifetime: 600
+-  Name: MeteorFireRain
+   Type: Weather
+   InitialDelay: 20
+   Delay: 50
+   Lifetime: 600
+AtmosphereColor: 1,0.5,0.31
+SkyColor: 1,0.65,0
+SkyHorizonColor: 1,0.5,0.31
+LightZenithColor: 1,0.27,0
+LightHorizonColor: 1,0.65,0
+DayLightIntensity: 1.5
+NightLightIntensity: 1
+NightLightColor: 1,0.84,0
+SunFlare: EnvironmentalEffects/SunFlareRedSpace
+AtmosphereFog: 0.80000000000000004
+FogColor: 0.94,0.9,0.55
+FogCloudIntensity: 0.80000000000000004
+FogIntensity: 0.80000000000000004
+FogStartDistance: 5000
+GroundFogIntensity: 0.80000000000000004
+GroundFogHeight: 1100
+CloudsDensity: 0.80000000000000004
+CloudsSharpness: 0.80000000000000004
+CloudsBrightness: 1
+CloudsOpacity: 0.80000000000000004
+CloudsZenithColor: 1,1,0
+CloudsHorizonColor: 1,0.84,0
+WindSpeed: 15
+Build: 1666
+Radiation: 25.5
+PvP: True
+UseRandom: True
+AllowBA: False
+AllowCV: True
+AllowSV: True
+AllowHV: False
+AllowBlueprintBA: False
+AllowBlueprintCV: True
+AllowBlueprintSV: True
+AllowBlueprintHV: False
+RandomResources:
+-  Name: IronResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [10, 12]
+   SizeMinMax: [4, 30]
+   DepthMinMax: [0, 1]
+   DroneProb: 0.10000000000000001
+   MaxDroneCount: 1
+-  Name: CopperResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [10, 12]
+   SizeMinMax: [4, 30]
+   DepthMinMax: [0, 1]
+   DroneProb: 0.10000000000000001
+   MaxDroneCount: 1
+-  Name: GoldResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [10, 12]
+   SizeMinMax: [4, 30]
+   DepthMinMax: [0, 1]
+   DroneProb: 0.10000000000000001
+   MaxDroneCount: 1
+-  Name: PromethiumResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [10, 12]
+   SizeMinMax: [4, 30]
+   DepthMinMax: [0, 1]
+   DroneProb: 0.10000000000000001
+   MaxDroneCount: 1
+-  Name: PentaxidResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [10, 12]
+   SizeMinMax: [4, 30]
+   DepthMinMax: [0, 1]
+   DroneProb: 0.10000000000000001
+   MaxDroneCount: 1
+-  Name: SiliconResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [10, 20]
+   SizeMinMax: [4, 30]
+   DepthMinMax: [0, 1]
+   DroneProb: 0.10000000000000001
+   MaxDroneCount: 1
+-  Name: ErestrumResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [3, 5]
+   SizeMinMax: [1, 5]
+   DepthMinMax: [0, 1]
+   DroneProb: 0.10000000000000001
+   MaxDroneCount: 1
+AsteroidResources: []
+POIs:
+   Random:
+   -  GroupName: DroneBaseT1
+      DroneBaseSetup: DroneBaseT1
+      CountMinMax: [1, 1]
+      DroneProb: 0.40000000000000002
+      DronesMinMax: [1, 5]
+      ReserveCount: 10
+      TroopTransport: False
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+DroneBaseSetup:
+   Random:
+   -  GroupName: DroneBaseT1 [Group]
+      DronesMinMax: [2, 3]
+      ReserveCount: 3
+      DroneProb: 1
+      Difficulty: 5
+      PresetStyle: 2
+      Stock:
+      -  Name: DroneLargeSlow01Minigun
+         Amount: 3
+         Extra: 2
+      -  Name: DroneSmallFast01Rocket
+         Amount: 3
+         Extra: 2
+DroneSpawning:
+   Random: []

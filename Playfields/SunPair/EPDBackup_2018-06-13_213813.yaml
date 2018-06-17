@@ -1,0 +1,624 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v1.55.0.0, Playfield Version: 8.0.5 [1666] (Alpha EXPERIMENTAL 8.0 - Release Candidate 1)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+Seed: 10
+PlanetSize: 5
+TemperatureMinMax: [250, 300]
+TemperatureNight: 64
+HumidityMinMax: [0.1261945, 1]
+SeaLevel: 100
+TerrainLevel: 121
+BaseLevel: 17
+LandWaterRatio: 0.951390000000003
+TemperatureHeightRange: [100, 100]
+TemperatureGradientRange: [0.75, 0.1]
+TemperatureNoiseFac: 0.48999999999999999
+HumidityHeightFac: [20, 30]
+HumidityNoiseFac: 0.54000000000000004
+Gravity: -90.969999999999999
+AtmosphereDensity: 8.5999999999999996
+AtmosphereBreathable: False
+Water: RockLava03
+Music: Encryptor
+TerrainHeightMapMax: 190
+Biome:
+-  BiomeClusterData:
+   -  Name: Pole
+      Weather: PoleFog
+      IgnoreForcedBiome: True
+      Texture: [9, 11, 0.2]
+      SelectionCriteria:
+      - +Lat > 0.975
+      Color: [0.2, 0.4, 0.2]
+      StampProb: 1
+   -  Name: MetalVeins
+      AmbientSound: Mountains
+      IgnoreForcedBiome: True
+      Texture: [7, 8, 0.9, 8, 7, 0.9, 0.1]
+      UndergroundLayers:
+      - [11, 2]
+      - [9, 7]
+      - [11, 7]
+      - [12, 1]
+      - [11, 50]
+      - [13, 1]
+      - [15, 5]
+      - [12, 2]
+      - [15, -1]
+      - [15, 1]
+      SelectionCriteria:
+      - Height > 225
+      Color: [1, 1, 1]
+      StampProb: 1
+      Decorations:
+      - [RealRock1Dark, 0.002]
+      - [RealRock2Dark, 0.0005]
+      - [RealRock3Dark, 0.003]
+      - [RealRock4Dark, 0.003]
+      - [RealRock8Dark, 0.003]
+      - [RealRock10Dark, 0.003]
+   -  Name: Mountains
+      AmbientSound: Mountains
+      IgnoreForcedBiome: True
+      Texture: [8, 11, 0.3]
+      UndergroundLayers:
+      - [11, 30]
+      - [9, 2]
+      - [11, 70]
+      - [14, 5]
+      - [15, -1]
+      - [15, 1]
+      SelectionCriteria:
+      - Height > 150
+      Color: [0.4, 0.4, 0.6]
+      StampProb: 1
+      Decorations:
+      - [RockGrey01Large, 0.007]
+      - [RockGrey02Large, 0.007]
+   -  Name: LowMountains
+      AmbientSound: LavaPlains
+      IgnoreForcedBiome: True
+      Texture: [8, 5, 0.5, 11, 11, 0.5, 0.2]
+      UndergroundLayers:
+      - [11, 30]
+      - [9, 2]
+      - [11, 60]
+      - [15, -1]
+      - [15, 1]
+      SelectionCriteria:
+      - Height > 130
+      Color: [0.2, 0.2, 0.3]
+      StampProb: 1
+      StampForcesBiome: True
+      Stamps:
+      - Mountain_10_BM
+      - Mountain_11_BM
+      StampTries: 75
+      Decorations:
+      - [RockGrey01Large, 0.007]
+      - [RockGrey02Large, 0.007]
+   -  Name: CrystallizedRocks
+      AmbientSound: LavaPlains
+      IgnoreForcedBiome: True
+      Texture: [10, 10, 0.2]
+      UndergroundLayers:
+      - [10, 2]
+      - [14, 1]
+      - [10, 1]
+      - [14, 5]
+      - [15, -1]
+      - [15, 1]
+      SelectionCriteria:
+      - Humidity < 0.25
+      - Humidity > 0.17
+      - Temperature > 75
+      - Temperature < 90
+      Color: [0.3, 0.3, 1]
+      StampProb: 0.5
+      Stamps:
+      - HillsLava_1, 0.9
+      Temperature: 5
+      Decorations:
+      - [GasEmitter2Red, 0.001]
+      - [CrystalsPyramidBlue, 0.01]
+   -  Name: LavaLake
+      AmbientSound: Lava
+      IgnoreForcedBiome: True
+      Texture: [0, 0, 0.25]
+      UndergroundLayers:
+      - [15, 1]
+      - [15, -1]
+      - [15, 1]
+      SelectionCriteria:
+      - Height < SeaLevel
+      Color: [1, 0, 0]
+      StampProb: 1
+      Temperature: 140
+   -  Name: LavaEdge
+      AmbientSound: LavaFog
+      IgnoreForcedBiome: True
+      Texture: [1, 0, 0.15]
+      UndergroundLayers:
+      - [15, -1]
+      - [15, 1]
+      SelectionCriteria:
+      - Height < SeaLevel + 3
+      - Humidity > 0.1
+      - Temperature > 0
+      Color: [0.9, 0.9, 0]
+      StampProb: 1
+      StampForcesBiome: True
+      Stamps:
+      - PlainsLava_1, 0.15
+      - PlainsLava_1b, 0.03
+      StampTries: 25
+      Temperature: 70
+   -  Name: Hotspot
+      AmbientSound: LavaFog
+      IgnoreForcedBiome: True
+      Texture: [0, 0, 0.15]
+      UndergroundLayers:
+      - [14, 1]
+      - [15, -1]
+      - [15, 1]
+      SelectionCriteria:
+      - Height > 500
+      Color: [1, 0, 0.3]
+      StampProb: 1
+      StampForcesBiome: True
+      Stamps:
+      - CraterMoon_1, 0.9
+      - CraterMoon_3, 0.4
+      - CraterLava_3, 0.05
+      StampTries: 100
+      Temperature: 90
+   -  Name: LavaFolds
+      AmbientSound: LavaFog
+      Texture: [2, 1, 0.15]
+      UndergroundLayers:
+      - [10, 3]
+      - [15, -1]
+      - [15, 1]
+      SelectionCriteria:
+      - Height < SeaLevel + 5
+      - Height > SeaLevel
+      Color: [0.7, 0.7, 0]
+      StampProb: 1
+      StampForcesBiome: True
+      Stamps:
+      - RiftLava_2, 0.4
+      - RiftLava_1, 0.8
+      - RiftLava_2b, 0.5
+      - RiftLava_1b, 0.5
+      - CraterLava_1, 0.2
+      - CraterLava_2, 0.1
+      StampTries: 40
+      Temperature: 30
+   -  Name: Plains
+      AmbientSound: LavaPlains
+      Texture: [3, 2, 0.01]
+      UndergroundLayers:
+      - [11, 1]
+      - [14, 5]
+      - [15, -1]
+      - [15, 1]
+      SelectionCriteria:
+      - Humidity > 0.32
+      - Height < SeaLevel + 15
+      Color: [0.4, 0.4, 0.015]
+      StampProb: 1
+      Decorations:
+      - [RealRock4Dark, 0.015]
+      - [RealRock3Dark, 0.015]
+      - [RealRock1Dark, 0.015]
+   -  Name: Dunes
+      AmbientSound: LavaPlains
+      Texture: [5, 11, 0.25]
+      UndergroundLayers:
+      - [11, 8]
+      - [14, 5]
+      - [15, -1]
+      - [15, 1]
+      SelectionCriteria:
+      - Humidity < 0.19
+      - Temperature > 30
+      Color: [0.55, 0.45, 0.45]
+      StampProb: 1
+      Temperature: -5
+      Decorations:
+      - [RealRock4Dark, 0.01]
+      - [RealRock3Dark, 0.01]
+      - [RealRock1Dark, 0.01]
+   -  Name: Rocks
+      AmbientSound: LavaPlains
+      Texture: [9, 11, 0.2]
+      UndergroundLayers:
+      - [11, 1]
+      - [10, 8]
+      - [14, 5]
+      - [15, -1]
+      - [15, 1]
+      SelectionCriteria:
+      - Height < SeaLevel + 28
+      - Humidity > 0.25
+      - Temperature > 30
+      Color: [0.2, 0.4, 0.2]
+      StampProb: 1
+      Decorations:
+      - [AridRock01, 0.02]
+      - [AridRock02, 0.015]
+      - [AridRock03, 0.02]
+      - [GasEmitter1, 0.015]
+      - [RealRock1Dark, 0.03]
+      - [RealRock2Dark, 0.01]
+      - [RealRock3Dark, 0.03]
+      - [RealRock4Dark, 0.03]
+      - [RealRock8Dark, 0.03]
+      - [RealRock10Dark, 0.05]
+   -  Name: Flats
+      AmbientSound: LavaPlains
+      Texture: [4, 6, 0.55, 11, 11, 0.5, 0.2]
+      UndergroundLayers:
+      - [11, 12]
+      - [14, 5]
+      - [15, -1]
+      - [15, 1]
+      Color: [0.6, 0.4, 0.4]
+      StampProb: 1
+      Decorations:
+      - [RealRock4Dark, 0.01]
+Description: Dies ist ein Lava Riese. Extreme Schwerkraft und dichte Atmosphaere.
+PlanetType: Lava
+PlayfieldType: Planet
+AtmosphereEnabled: True
+Difficulty: 4
+LandClaimZone: Off
+SpecialEffectsLocal:
+-  Name: Grime
+   MaxHeight: 20
+SpecialEffectsGlobal:
+-  Name: Clear
+   Type: Weather
+   Delay: 2
+   Lifetime: 1200
+-  Name: CloudsDark
+   Type: Weather
+   Delay: 2
+   Lifetime: 1500
+-  Name: CloudsMedium
+   Type: Weather
+   Delay: 2
+   Lifetime: 1200
+-  Name: CloudsLight
+   Type: Weather
+   Delay: 10
+   Lifetime: 600
+-  Name: Fog
+   Type: Weather
+   InitialDelay: 48
+   Delay: 12
+   Lifetime: 1000
+-  Name: Wind
+   Type: Weather
+   InitialDelay: 48
+   Delay: 12
+   Lifetime: 600
+-  Name: HeatWave
+   Type: Weather
+   InitialDelay: 12
+   Delay: 12
+   Lifetime: 1200
+-  Name: Wind
+   Type: Weather
+   Delay: 12
+   Lifetime: 600
+-  Name: MeteorFireRain
+   Type: Weather
+   InitialDelay: 48
+   Delay: 24
+   Lifetime: 300
+-  Name: FireRain
+   Type: Weather
+   InitialDelay: 48
+   Delay: 24
+   Lifetime: 300
+-  Name: MeteorShower
+   Time: Day
+   InitialDelay: 1
+   Delay: 5
+   PlyDist: 200
+   Struct: Avoid
+   Lifetime: 60
+   SpawnY: 100
+-  Name: ThunderAndLightningPurple
+   Time: Night
+   InitialDelay: 1.5
+   Delay: 4
+   PlyDist: 100
+   Struct: Avoid
+   Lifetime: 300
+   SpawnY: 500
+AtmosphereColor: 0.72,0.53,0.04
+SkyColor: 1,0.27,0
+SkyHorizonColor: 0.5, 0.01, 0
+LightZenithColor: 1,0.65,0
+LightHorizonColor: 1, 0.5, 0
+DayLightIntensity: 0.25
+NightLightIntensity: 0.25
+NightLightColor: 1,0.63,0.48
+SunFlare: EnvironmentalEffects/SunFlareYellow
+AtmosphereFog: 0.80000000000000004
+FogColor: 1,0.5,0.31
+FogCloudIntensity: 0.90000000000000002
+FogIntensity: 0.59999999999999998
+GroundFogIntensity: 0.5
+GroundFogHeight: 100
+CloudsDensity: 1
+CloudsSharpness: 0.69999999999999996
+CloudsBrightness: 0.59999999999999998
+CloudsOpacity: 0.69999999999999996
+CloudsZenithColor: 0.55,0,0.55
+CloudsHorizonColor: 0.2, 0.0, 0.4
+WindSpeed: 10
+Build: 1702
+Radiation: 55.26
+PvP: True
+UseRandom: True
+AllowBA: True
+AllowCV: True
+AllowSV: True
+AllowHV: False
+AllowBlueprintBA: False
+AllowBlueprintCV: False
+AllowBlueprintSV: False
+AllowBlueprintHV: False
+RandomResources:
+-  Name: MagnesiumResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [2, 12]
+   SizeMinMax: [6, 16]
+   DepthMinMax: [5, 10]
+   DroneProb: 0.90000000000000002
+-  Name: ErestrumResource
+   Biome: [Barren, CrystallizedRocks]
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [1, 3]
+   SizeMinMax: [1, 3]
+   DepthMinMax: [0, 5]
+   DroneProb: 1
+   MaxDroneCount: 4
+   DistTypeCylinder:
+      MaxRadius: 10
+      YVariance: 15
+-  Name: PromethiumResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [2, 10]
+   SizeMinMax: [7, 20]
+   DepthMinMax: [0, 5]
+   DroneProb: 0.40000000000000002
+   DistTypeCylinder:
+      MaxRadius: 8
+      YVariance: 15
+-  Name: GoldResource
+   Biome: [LavaEdge, LavaFolds]
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [1, 3]
+   SizeMinMax: [7, 11]
+   DepthMinMax: [5, 10]
+   DroneProb: 1
+   MaxDroneCount: 3
+   DistTypeCylinder:
+      MaxRadius: 13
+      YVariance: 10
+-  Name: IronResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [10, 12]
+   SizeMinMax: [4, 30]
+   DepthMinMax: [0, 1]
+   DroneProb: 0.10000000000000001
+   MaxDroneCount: 1
+-  Name: SiliconResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [10, 12]
+   SizeMinMax: [4, 30]
+   DepthMinMax: [0, 1]
+   DroneProb: 0.10000000000000001
+   MaxDroneCount: 1
+-  Name: CopperResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [10, 12]
+   SizeMinMax: [4, 30]
+   DepthMinMax: [0, 1]
+   DroneProb: 0.10000000000000001
+   MaxDroneCount: 1
+-  Name: CobaltResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [10, 12]
+   SizeMinMax: [4, 30]
+   DepthMinMax: [0, 1]
+   DroneProb: 0.10000000000000001
+   MaxDroneCount: 1
+AsteroidResources:
+-  Name: ErestrumResource
+   Threshold: 0.20000000000000001
+   Amount: 100
+-  Name: PromethiumResource
+   Amount: 5000
+   InitialDelay: 50
+   Delay: 30
+   DespawnDelay: 100
+POIs:
+   Random:
+   -  GroupName: CrashedShip
+      CountMinMax: [2, 3]
+      IsScalingCount: True
+      PlaceAt: UnderWater
+      DroneProb: 0.80000000000000004
+      DronesMinMax: [1, 2]
+      ReserveCount: 4
+      TroopTransport: False
+      Properties:
+      -  Key: MapMarker
+         Value: Neutral
+   -  GroupName: Wreckage
+      CountMinMax: [2, 4]
+      IsScalingCount: True
+      DroneProb: 0.5
+      DronesMinMax: [1, 3]
+      ReserveCount: 2
+      TroopTransport: False
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: ArtifactsFloating
+      CountMinMax: [1, 2]
+      IsScalingCount: True
+      PlaceAt: OnWater
+      DronesMinMax: [1, 1]
+      ReserveCount: 1
+      TroopTransport: False
+      Properties:
+      -  Key: MapMarker
+         Value: Neutral
+      -  Key: Music
+         Value: EvilWhispering
+      -  Key: SI
+         Value: Off
+      -  Key: RegenAfter
+         Value: 720
+DroneBaseSetup:
+   Random:
+   -  GroupName: ' City-Mall'
+      Difficulty: 6
+      PresetStyle: 3
+      Stock:
+      -  Name: DroneSmallFast01Plasma
+         Amount: 200
+         Extra: 0
+      -  Name: EnemyDroneV2Plasma
+         Amount: 200
+         Extra: 0
+      -  Name: EnemyDroneV2Minigun
+         Amount: 300
+         Extra: 0
+      -  Name: DroneLargeSlow02Cannon
+         Amount: 200
+         Extra: 0
+      -  Name: DroneSmallFast01Plasma
+         Amount: Infinite
+         Extra: 1
+      -  Name: EnemyDroneV2Plasma
+         Amount: Infinite
+         Extra: 1
+      PlanetVesselBase:
+         Name: Alien-CV
+         Position3D: [0, 102, 0]
+         BaseType: PlanetVesselBase
+         KeyId: 0
+         PlanetVessel:
+         -  Name: Patrol-M-Hard
+            Mission: PlanetPatrol
+            FixedMaxSpeed: 10
+            RespawnDelay: 12
+            RangePatrolTask:
+               Position3D: [1500, 80, 0]
+               Radius: 800
+               DistToGround: 80
+            AttackCVCircleAround:
+               DistToTarget: 220
+   -  GroupName: Patrol-S-Medium [Group]
+      DronesMinMax: [2, 3]
+      ReserveCount: 3
+      DroneProb: 1
+      Difficulty: 5
+      PresetStyle: 2
+      PlanetVesselBase:
+         Name: Alien-CV
+         Position3D: [0, 0, 0]
+         BaseType: PlanetVesselBase
+         KeyId: 0
+DroneSpawning:
+   Random:
+   -  DronesMinMax: [10, 15]
+      CenterX: -2500
+      Radius: 1500
+   -  DronesMinMax: [10, 15]
+      CenterX: 2500
+      Radius: 1500
+SpawnZones:
+-  SpawnAt: [GoldResource]
+   BiomesExcluded: [LowMountains, Mountains]
+   Radius: 500
+   RadiusRandom: 25
+   RateMultiplyerCenter: 1
+   RateMultiplyerEdge: 0.20000000000000001
+   Color: 1.0, 1.0, 1.0, 1.0
+   Entities:
+   -  Names: [Overseers]
+      Biomes: [Any]
+      Amount: 350
+      Period: Always
+      DelayMinMax: [-1, -1]
+-  SpawnAt: [ZascosiumResource, ErestrumResource]
+   BiomesExcluded: [LowMountains, Mountains]
+   Radius: 400
+   RadiusRandom: 25
+   RateMultiplyerCenter: 1
+   RateMultiplyerEdge: 0.5
+   Color: 1.0, 1.0, 1.0, 1.0
+   Entities:
+   -  Names: [AlienBugs02]
+      Biomes: [Any]
+      Amount: 200
+      Period: Always
+      DelayMinMax: [-1, -1]
+-  SpawnAt: [CrashedShip, AbandonedPOI, Wreckage]
+   BiomesExcluded: [LowMountains, Mountains]
+   Radius: 500
+   RadiusRandom: 50
+   RateMultiplyerCenter: 1
+   RateMultiplyerEdge: 0.5
+   Color: 1.0, 1.0, 1.0, 1.0
+   Entities:
+   -  Names: [CaveWormsGrey, Otyughs, Spiders02]
+      Biomes: [Any]
+      Amount: 200
+      Period: Always
+      DelayMinMax: [-1, -1]
+-  SpawnAt: [DroneBaseT1, GhostMain, GhostBunker]
+   BiomesExcluded: [LowMountains, Mountains]
+   Radius: 1000
+   RadiusRandom: 100
+   RateMultiplyerCenter: 1
+   RateMultiplyerEdge: 0.40000000000000002
+   Color: 1.0, 1.0, 1.0, 1.0
+   Entities:
+   -  Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxCrawlerPatrol, ZiraxOverseerPatrol]
+      Biomes: [Any]
+      Amount: 250
+      Period: Always
+      DelayMinMax: [-1, -1]
+CreatureSpawning:
+-  Biomes: [LavaEdge, LavaFolds]
+   Entities:
+   -  Name: GolemsDesert
+      Period: Night
+      Amount: 5
+      DelayMinMax: [10, 50]
+      Color: 0.63,0.32,0.18
+-  Biomes: [LowMountains]
+   Entities:
+   -  Name: GolemsDesert
+      Period: Night
+      Amount: 3
+      DelayMinMax: [11, 22]
+      Color: 0.85, 0.75, 0.85

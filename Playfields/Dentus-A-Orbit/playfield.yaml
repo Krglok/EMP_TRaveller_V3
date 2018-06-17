@@ -1,0 +1,77 @@
+---
+# Space Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html 
+
+# Playfield Characteristics
+Gravity: 0.00
+AtmosphereEnabled: False
+PvP: True
+UseFixed: True
+Radiation: 7.85
+TemperatureDay: -126
+Music: moonstone
+
+# Playfield difficulty (has impact on experience gains)
+Difficulty: 2
+
+PlayfieldType: Space
+
+PlanetType: Space
+
+Description: "The space around Dentus-A is empty."
+
+SunFlare: EnvironmentalEffects/SunFlareWhite3Space
+Stars: SkyboxStarsBlue
+Nebula: PrefabNebulaBlueGlittery
+
+### POIs
+POIs:
+    Fixed:
+
+        - Type: AsteroidVoxel02Cobalt
+          Prefab: AsteroidVoxel02Cobalt
+          Name: Cobalt Asteroid
+          Pos: [-5394, 2457, 864]
+          Rot: [0, 0, 0]
+
+        - Type: AsteroidVoxel01Sathium
+          Prefab: AsteroidVoxel01Sathium
+          Name: Erestrum Asteroid
+          Pos: [12720, -2263, 4376]
+          Rot: [0, 0, 0]
+
+
+# Drones
+DroneBaseSetup:
+    Fixed:
+        - Name: MainDroneBase
+          Pos: [-3883.443, -265, -225.7619]
+          DroneOnDuty:
+            - Name: SpaceDroneLaser
+              Pos: [-222.6577, -375, -570.0593]
+              Radius: 333
+            - Name: SpaceDronePlasma
+              Pos: [-3773.87, -1114, -3549.742]
+              Radius: 709
+          SpaceVessel:
+            - Name: Freighter
+              FixedMaxSpeed: 38
+              Mission: Freighter
+              Freighter:
+                DelayBetweenRespawn: 515
+                PathWayPoint:
+                - [3638, -7711, 4263]
+                - [397, 3896, -1273]
+                - [5802, 246, -518]
+                - [-3453, 2689, -2806]
+                - [4324, 1832, 1890]
+                - [706, -3719, 1144]
+                - [-1084, -350, -3741]
+                - [428, -4097, 471]
+                - [-3358, 4817, 364]
+              Stock:
+                - Name: SpaceDronePlasma
+                  Amount: 3
+                  Extra: 1
+
+Build: 1648

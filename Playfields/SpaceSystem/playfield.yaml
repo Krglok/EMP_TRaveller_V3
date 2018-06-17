@@ -1,0 +1,56 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v1.55.0.0, Playfield Version: 8.0.5 [1666] (Alpha EXPERIMENTAL 8.0 - Release Candidate 1)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+TemperatureDay: -126
+Music: Orbiting
+Description: The space around system center is mostly empty.
+PlanetType: Space
+PlayfieldType: Space
+AtmosphereEnabled: False
+Difficulty: 2
+LandClaimZone: Off
+SunFlare: EnvironmentalEffects/SunFlareWhite3Space
+Stars: SkyboxStarsBlue
+Nebula: PrefabNebulaBlueGlittery
+Build: 1648
+Radiation: 7.8499999999999996
+PvP: True
+UseFixed: True
+UseRandom: True
+AllowBA: True
+AllowCV: True
+AllowSV: True
+AllowHV: False
+AllowBlueprintBA: True
+AllowBlueprintCV: True
+AllowBlueprintSV: True
+AllowBlueprintHV: True
+POIs:
+   Fixed:
+   -  Type: AsteroidVoxel01Promethium
+      Prefab: AsteroidVoxel01Promethium
+      Name: Promethium Asteroid
+      Pos: [12720, 0, 5000]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+   -  Type: AsteroidVoxel01Promethium
+      Prefab: AsteroidVoxel01Promethium
+      Name: Promethium Asteroid
+      Pos: [-12720, 0, -5000]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+   -  Type: AsteroidVoxel01Erestrum
+      Prefab: AsteroidVoxel01Erestrum
+      Name: Erestrum Asteroid
+      Pos: [-31720, 0, -7000]
+      Rot: [0, 0, 0]
+   FixedPlayerStart:
+   -  Spawn: Position
+      Pos: [10000, 0, 10000]
+      Items: [CrushedStone, CrushedStone, CrushedStone]
+DroneBaseSetup: {}

@@ -1,0 +1,40 @@
+# Created by EPD v1.36.1.0, Playfield Version: 7.0.0 [1294] (Alpha 7.0.0)
+TemperatureDay: -130
+Music: space
+Radiation: 2.2000000000000002
+PlanetType: Space
+PvP: True
+UseFixed: True
+UseRandom: True
+AllowCV: True
+Difficulty: 2
+PlayfieldType: Space
+Description: 'Der Orbit ist leer. Die Scans haben keinerlei Aktivitaeten oder Objekte ergeben. '
+SunFlare: EnvironmentalEffects/SunFlareWhite4Space
+Stars: SkyboxStarsCyan
+Nebula: PrefabNebulaBlue2
+AtmosphereEnabled: False
+DroneBaseSetup:
+  Fixed:
+  - Name: MainDroneBase
+    Pos: [5000, 200, 5000]
+    DroneOnDuty:
+    - Name: SpaceDronePlasma
+      Pos: [4000, 200, 4000]
+      Radius: 350
+    - Name: SpaceDronePlasma
+      Pos: [-4000, -200, 4000]
+      Radius: 350
+    - Name: SpaceDronePlasma
+      Pos: [4000, 200, -4000]
+      Radius: 350
+    - Name: SpaceDronePlasma
+      Pos: [-4000, -200, -4000]
+      Radius: 350
+    SpaceVessel: []
+POIs:
+  Fixed: []
+  FixedPlayerStart:
+  - Mode: Debug
+    Pos: [-5000, 0, 5000]
+    Items: [CrushedStone, CrushedStone, CrushedStone]

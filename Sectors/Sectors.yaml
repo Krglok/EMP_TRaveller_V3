@@ -1,314 +1,165 @@
 ---
-#------------------------------------------
-# Traveller V3  fuer Empyrion Update 8.0
-# Traveller Sektor Spinward Marches Subsektor Regina
-#
-# Weiterentwicklung von Stargate Next V3
-# Basierend auf Multiplayer und Voodoo
-#-------------------------------------------
-#Sectors:
-#-------------------------------------------
-#  Sonne / zentrale Lichtquelle
-- Coordinates:
-  - 0
-  - 0
-  - 0
-  Color: 0, 0, 0
-  Icon: No
-  Playfields:
-  - ['0, 0, 0', Sun, Sun]
-  Allow: []
-  Deny: []
-#-------------------------------------------
-#-------------------------------------------
-# Dentus  System #32
-# Starport C  , Temperate
-# liegt am Corewad Rand 
-- Coordinates:
-  - 10000
-  - 0
-  - 4000
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: true
-  Playfields:
-  - ['0, 0, 0', Dentus System, SpaceSystemCenter]
-  Allow: [Kinorb System]
-  Deny: []
-#-------------------------------------------
-# Dentus  Planet
-# Starport C  , Temperate
-# 
-- Coordinates:
-  - 10007
-  - 0
-  - 3992
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: false
-  Playfields:
-  - ['0, 0, 0', Dentus Orbit, DentusSpaceAsteroidFieldRing]
-  - ['0, 0, 0', Dentus, Dentus, 'Human:1']
-  - ['6000, 0, -6567', Dentus Moon, DentusNewMoon2]
-  Allow: []
-  Deny: []
+# Sector configuration file
+Build: 1623
+Sectors:
+# Sun Star
+  - Coordinates: [0, 0, 0]
+    Color: 1, 1, 0
+    Icon: No
+    OrbitLine: false
+    SectorMapType: None
+    Playfields:
+      - ['0, 0, 0', Sun Star, Sun]
+#----------------------------------------------
+#----------------------------------------------
+#  SystemOrbit  
+  - Coordinates: [1000, 0, 1000]
+    Color: 1, 1, 0
+    Icon: No
+    OrbitLine: false
+    SectorMapType: Planet
+    Playfields:
+      - ['0, 0, 0', Dentus Pair, SunPair]
+      - ['0, 0, 0', Dentus System, SpaceSystem]
+#----------------------------------------------
+# Dentus
+  - Coordinates: [1017, 0, 982]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: true
+    SectorMapType: Planet
+    Allow: []
+    Deny: []
+    Playfields:
+      - ['0, 0, 0', Dentus, Dentus, 'Human:0']
+      - ['-12231, 0, 15370', Dentus Moon, DentusMoon]
+      - ['0, 0, 0', Dentus Orbit, DentusOrbit]
 #-------------------------------------------
 # Dentus-A Planet
 # Lava
 # 
-- Coordinates:
-  - 10003
-  - 0
-  - 4003
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: false
-  Playfields:
-  - ['0, 0, 0', Dentus-A Orbit, SpaceEmpty]
-  - ['0, 0, 0', Dentus-A, Dentus-A, '']
-  Allow: []
-  Deny: []
+  - Coordinates: [1013, 0, 1013]
+    Color: 0.37, 0.33, 0.04
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Playfields:
+    - ['0, 0, 0', Dentus-A, Dentus-A, '']
+    - ['0, 0, 0', Dentus-A Orbit, Dentus-A-Orbit]
+    Allow: []
+    Deny: []
 #-------------------------------------------
 # Dentus-B Planet
 # Dessert
 # 
-- Coordinates:
-  - 9995
-  - 0
-  - 4005
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: false
-  Playfields:
-  - ['0, 0, 0', Dentus-B Orbit, SpaceEmpty]
-  - ['0, 0, 0', Dentus-B, Dentus-B, '']
-  Allow: []
-  Deny: []
+  - Coordinates: [985, 0, 1015]
+    Color: 0.37, 0.33, 0.04
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Playfields:
+    - ['0, 0, 0', Dentus-B, Dentus-B, '']
+    - ['0, 0, 0', Dentus-B Orbit, Dentus-B-Orbit]
+    Allow: []
+    Deny: []
 #-------------------------------------------
 # Dentus-D Planet
 # Barren
 # 
-- Coordinates:
-  - 9989
-  - 0
-  - 3989
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: false
-  Playfields:
-  - ['0, 0, 0', Dentus-D Orbit, SpaceEmpty]
-  - ['0, 0, 0', Dentus-D, Dentus-D, '']
-  Allow: []
-  Deny: []
-#-------------------------------------------
-# Dentus-E Planet
-# Snow
-# 
-- Coordinates:
-  - 10020
-  - 0
-  - 4019
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: false
-  Playfields:
-  - ['0, 0, 0', Dentus-E Orbit, SpaceEmpty]
-  - ['0, 0, 0', Dentus-E, Dentus-E, '']
-  Allow: []
-  Deny: []
+  - Coordinates: [979, 0, 979]
+    Color: 0.37, 0.33, 0.04
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Playfields:
+    - ['0, 0, 0', Dentus-D, Dentus-D, '']
+    - ['0, 0, 0', Dentus-D Orbit, Dentus-D-Orbit]
+    Allow: []
+    Deny: []
+
 #-------------------------------------------
 # Dentus-F Asteroid
-# Asteroid
+# Barren
 # 
-- Coordinates:
-  - 9980
-  - 0
-  - 4019
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: false
-  Playfields:
-  - ['0, 0, 0', Dentus-F, Dentus-F, '']
-  Allow: []
-  Deny: []
+  - Coordinates: [970, 0, 1029]
+    Color: 0.37, 0.33, 0.04
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Playfields:
+    - ['0, 0, 0', Asteroid1, Moon2]
+    - ['0, 0, 0', Asteroid1 Orbit, Dentus-F-Orbit]
+    Allow: []
+    Deny: []
+
 #-------------------------------------------
-# Dentus-G Asteroid
-# Asteroid
+# Dentus-F Asteroid
+# Barren
 # 
-- Coordinates:
-  - 9980
-  - 0
-  - 3981
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: false
-  Playfields:
-  - ['0, 0, 0', Dentus-G, Dentus-G, '']
-  Allow: []
-  Deny: []
+  - Coordinates: [970, 0, 971]
+    Color: 0.37, 0.33, 0.04
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Playfields:
+#    - ['0, 0, 0', Asteroid2, Moon2]
+    - ['0, 0, 0', Asteroid2 Orbit, Dentus-F-Orbit]
+    Allow: []
+    Deny: []
+
 #-------------------------------------------
-# Dentus-H Asteroid
-# Asteroid
+# Dentus-F Asteroid
+# Barren
 # 
-- Coordinates:
-  - 10027
-  - 0
-  - 4000
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: false
-  Playfields:
-  - ['0, 0, 0', Dentus-H Orbit, SpaceEmpty]
-  - ['0, 0, 0', Dentus-H, Dentus-H, '']
-  Allow: []
-  Deny: []
+  - Coordinates: [1040, 0, 971]
+    Color: 0.37, 0.33, 0.04
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Playfields:
+ #   - ['0, 0, 0', Asteroid3, Moon2]
+    - ['0, 0, 0', Asteroid3 Orbit, Dentus-F-Orbit]
+    Allow: []
+    Deny: []
+
 #-------------------------------------------
-# Dentus-I Planet
-# Gasriese
+# Dentus-F Asteroid
+# Barren
 # 
-- Coordinates:
-  - 10037
-  - 0
-  - 4037
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: false
-  Playfields:
-  - ['0, 0, 0', Dentus-I Orbit, SpaceEmpty]
-  - ['0, 0, 0', Dentus-I, Dentus-I, '']
-  - ['-4500, 0, 4500', Dentus-I-A, Dentus-I-A, '']
-  - ['7200, 0, -7200', Dentus-I-B, Dentus-I-B, '']
-  Allow: []
-  Deny: []
-#-------------------------------------------
-#-------------------------------------------
-# Kinorb  System #29
-# Starport A  , Temperate
-# liegt am Corewad Rand 
-- Coordinates:
-  - 9000
-  - 0
-  - 4000
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: true
-  Playfields:
-  - ['0, 0, 0', Kinorb System, SpaceSystemCenter]
-  Allow: [Dentus System]
-  Deny: []
-#-------------------------------------------
-# Kinorb  Planet
-# Starport A  , Temperate
-# 
-- Coordinates:
-  - 9007
-  - 0
-  - 3992
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: false
-  Playfields:
-  - ['0, 0, 0', Kinorb Orbit, KinorbSpaceAsteroidFieldRing]
-  - ['0, 0, 0', Kinorb, Kinorb, '']
-  Allow: []
-  Deny: []
-#-------------------------------------------
-# Kinorb-A  Planet
-# Lava 
-# 
-- Coordinates:
-  - 8995
-  - 0
-  - 4005
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: false
-  Playfields:
-  - ['0, 0, 0', Kinorb-A Orbit, Kinorb-SpaceEmpty]
-  - ['0, 0, 0', Kinorb-A, Kinorb-A, '']
-  Allow: []
-  Deny: []
-#-------------------------------------------
-# Kinorb-C  Planet
-# Barren 
-# 
-- Coordinates:
-  - 9020
-  - 0
-  - 4019
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: false
-  Playfields:
-  - ['0, 0, 0', Kinorb-C Orbit, Kinorb-SpaceEmpty]
-  - ['0, 0, 0', Kinorb-C, Kinorb-C, '']
-  Allow: []
-  Deny: []
-#-------------------------------------------
-# Kinorb-D  Asteroid
-# Moon Planet 
-# 
-- Coordinates:
-  - 8980
-  - 0
-  - 4019
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: false
-  Playfields:
-  - ['0, 0, 0', Kinorb-D Orbit, Kinorb-D]
-  Allow: []
-  Deny: []
-#-------------------------------------------
-# Kinorb-E  Asteroid
-# Moon Planet 
-# 
-- Coordinates:
-  - 9020
-  - 0
-  - 3981
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: false
-  Playfields:
-  - ['0, 0, 0', Kinorb-E Orbit, Kinorb-E]
-  Allow: []
-  Deny: []
-#-------------------------------------------
-# Kinorb-F  Gasriese
-# Gasriese 
-# 
-- Coordinates:
-  - 9037
-  - 0
-  - 4037
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: false
-  Playfields:
-  - ['0, 0, 0', Kinorb-F Orbit, Kinorb-SpaceEmpty]
-  - ['0, 0, 0', Kinorb-F, Kinorb-F, '']
-  - ['-6100, 0, 0', Kinorb-F-A, NewMoon2Empty, '']
-  - ['3200, 0, 5100', Kinorb-F-B, NewMoon2Empty, '']
-  - ['-200, 0, -7600', Kinorb-F-C, NewMoonEmpty, '']
-  Allow: []
-  Deny: []
-#-------------------------------------------
-# Kinorb-G  Gasriese
-# Gasriese 
-# 
-- Coordinates:
-  - 8932
-  - 0
-  - 4068
-  Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: false
-  Playfields:
-  - ['0, 0, 0', Kinorb-G Orbit, Kinorb-SpaceEmpty]
-  - ['0, 0, 0', Kinorb-G, Kinorb-G, '']
-  - ['-6100, 0, 0', Kinorb-G-A, NewMoon2Empty, '']
-  - ['3200, 0, 5100', Kinorb-G-B, NewMoon2Empty, '']
-  - ['-200, 0, -8600', Kinorb-G-C, Kinorb-G-C, '']
-  Allow: []
-  Deny: []
+  - Coordinates: [1037, 0, 1000]
+    Color: 0.37, 0.33, 0.04
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Playfields:
+ #   - ['0, 0, 0', Asteroid4, Moon2]
+    - ['0, 0, 0', Asteroid4 Orbit, Dentus-F-Orbit]
+    Allow: []
+    Deny: []
+
+#----------------------------------------------
+#----------------------------------------------
+#  SystemOrbit  Kinorb
+  - Coordinates: [-1000, 0, -1000]
+    Color: 1, 1, 0
+    Icon: No
+    OrbitLine: false
+    SectorMapType: Planet
+    Playfields:
+      - ['0, 0, 0', Kinorb Pair, SunPair]
+      - ['0, 0, 0', Kinorb System, SpaceSystem]
+#----------------------------------------------
+# Kinorb
+  - Coordinates: [-993, 0, -1008]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: true
+    SectorMapType: Planet
+    Allow: []
+    Deny: []
+    Playfields:
+      - ['0, 0, 0', Kinorb, Kinorb, '']
+      - ['-12231, 0, 15370', Kinorb Moon, DentusMoon]
+      - ['0, 0, 0', Kinorb Orbit, KinorbOrbit]
+
+    
