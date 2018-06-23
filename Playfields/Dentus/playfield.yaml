@@ -1,6 +1,8 @@
 # --------------------------------------------------------------------------------------------------------------------------
 # Created by EPD v1.55.0.0, Playfield Version: 8.0.5 [1666] (Alpha EXPERIMENTAL 8.0 - Release Candidate 1)
 # --------------------------------------------------------------------------------------------------------------------------
+# Dentus Planet
+# --------------------------------------------------------------------------------------------------------------------------
 #
 Seed: 250171
 PlanetSize: 4
@@ -949,7 +951,7 @@ POIs:
    -  Mode: Survival
       Spawn: Structure
       Structure: Spaceport-C-Low
-      Items: ['Pistol, 50Caliber:300, WaterBottle:3, Drill, Chainsaw, BioFuel:5, ConstructorSurvival, AutoMinerCore:3, Core, OreScanner, MoneyCard:5000', CrushedStone, CrushedStone]
+      Items: ['Pistol, 50Caliber:300, WaterBottle:3, Drill, Chainsaw, BioFuel:5, ConstructorSurvival, AutoMinerCore:3, Core, OreScanner, MoneyCard:5000']
 #==============================================
 DroneBaseSetup:
    Random:

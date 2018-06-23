@@ -1,0 +1,73 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v1.55.0.0, Playfield Version: 8.0.5 [1666] (Alpha EXPERIMENTAL 8.0 - Release Candidate 1)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+TemperatureDay: -126
+Music: EvilWhispering
+Description: The space is empty
+PlanetType: Space
+PlayfieldType: Space
+AtmosphereEnabled: False
+Difficulty: 2
+LandClaimZone: Off
+SunFlare: EnvironmentalEffects/SunFlareWhite3Space
+Stars: SkyboxStarsBlue
+Nebula: PrefabNebulaBlueGlittery
+Build: 1648
+Radiation: 7.8499999999999996
+PvP: False
+UseFixed: True
+AllowBA: True
+AllowCV: True
+AllowSV: True
+AllowHV: False
+AllowBlueprintBA: True
+AllowBlueprintCV: True
+AllowBlueprintSV: True
+AllowBlueprintHV: False
+POIs:
+   Fixed:
+   -  Type: AsteroidVoxel02Cobalt
+      Prefab: AsteroidVoxel02Cobalt
+      Name: Cobalt Asteroid
+      Pos: [-5394, 2457, 864]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidVoxel01Erestrum
+      Prefab: AsteroidVoxel01Erestrum
+      Name: Erestrum Asteroid
+      Pos: [1720, -2263, 4376]
+      Rot: [0, 0, 0]
+DroneBaseSetup:
+   Fixed:
+   -  Name: MainDroneBase
+      Pos: [-3883.443, -265, -225.7619]
+      DroneOnDuty:
+      -  Name: SpaceDroneLaser
+         Pos: [-222.6577, -375, -570.0593]
+         Radius: 333
+      -  Name: SpaceDronePlasma
+         Pos: [-3773.87, -1114, -3549.742]
+         Radius: 709
+      SpaceVessel:
+      -  Name: Freighter
+         FixedMaxSpeed: 38
+         Mission: Freighter
+         RangePatrol:
+            Position3D: [0, 0, 0]
+         Immobile: {}
+         Freighter:
+            DelayBetweenRespawn: 515
+            PathWayPoint:
+            - [3638, -7711, 4263]
+            - [397, 3896, -1273]
+            - [5802, 246, -518]
+            - [-3453, 2689, -2806]
+            - [4324, 1832, 1890]
+            - [706, -3719, 1144]
+            - [-1084, -350, -3741]
+            - [428, -4097, 471]
+            - [-3358, 4817, 364]
+         Stock:
+         -  Name: SpaceDronePlasma
+            Amount: 3
+            Extra: 1

@@ -18,7 +18,7 @@ PlayfieldType: Space
 
 PlanetType: Space
 
-Description: "The space around Ganakarta features an asteroid belt"
+Description: "This a asteroid field with belt"
 
 SunFlare: EnvironmentalEffects/SunFlareWhite4Space
 Stars: SkyboxStarsCyan
@@ -27,49 +27,17 @@ Nebula: PrefabNebulaBlueYellow
 ### POIs
 POIs:
     Fixed:
-        - Type: BA_Admin
-          Prefab: BA_Spaceport-C-High
-          Mode: Survival
-          Name: Starport C High
-          Pos: [3800, 0, -3800]
-          Rot: [0, -50, 0]
-          InitPower: True
-          Properties:
-          - Key: RegenAfter
-            Value: 720
-          SpawnResource: []
-          
-#  ScoutDepot-Port-High
-        - Type: BA_Admin
-          Prefab: ScoutDepot-Port-High
-          Mode: Survival
-          Name: ScoutDepot Port
-          Pos: [-3800, 0, 3800]
-          Rot: [0, -50, 0]
-          InitPower: True
-          Properties:
-          - Key: RegenAfter
-            Value: 720
-          SpawnResource: []
-          
-#        - Type: BA_Alien
-#          Prefab: BAO_DerelictMiningShip
-#          Mode: Survival
-#          Name: Derelict Ship
-#          Pos: [5445.004, 6490.91, -5013.378]
-#          Rot: [0, 0, 0]
-#          InitPower: True
-#          Properties:
-#            - Key: RegenAfter
-#              Value: 720
 
-        - Type: CV_Player
-          Prefab: UNSF-Loader
-          Name: Wreckage
-          Pos: [-2634, 0, 4980]
-          Rot: [0, -42, 0]
-          Properties: []
-          SpawnResource: []
+        - Type: CV_Alien
+          Prefab: CV_DestroyedRear
+          Mode: Survival
+          Name: Destroyed Vessel
+          Pos: [-3222.633, -1592.479, 8835.735]
+          Rot: [60, 251, 320]
+          InitPower: True
+          Properties:
+            - Key: RegenAfter
+              Value: 720
 
         - Type: CV_Alien
           Prefab: BA_CrashedCV_2
@@ -82,26 +50,21 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - Type: CV_Alien
-          Prefab: BA_CrashedCV_2
-          Mode: Survival
-          Name: Destroyed Vessel
-          Pos: [-3077.985, -1684.716, 8849.287]
-          Rot: [319, 253, 97]
-          InitPower: True
-          Properties:
-            - Key: RegenAfter
-              Value: 720
-
         - Type: AsteroidFieldRing
-          Name: Asteroid Field
+          Name: Asteroid Ring
           Pos: [0, 0, 0]
           Rot: [0, 0, 0]
+
+        - Type: AsteroidFieldRing
+          Name: Asteroid Ring
+          Pos: [0, 0, 0]
+          Rot: [90, 0, 90]
 
         - Type: AsteroidFieldFewBoxExclude
           Name: Asteroid Field
           Pos: [-1164, -1418, 21252]
           Rot: [0, 0, 0]
+
 
         - Type: AsteroidVoxel01Silicon
           Prefab: AsteroidVoxel01Silicon
@@ -139,6 +102,15 @@ POIs:
             - Key: RegenAfter
               Value: 180
 
+        - Type: AsteroidVoxel03Promethium
+          Prefab: AsteroidVoxel03Promethium
+          Name: Promethium Asteroid
+          Pos: [9552, -14610, 481]
+          Rot: [0, 0, 0]
+          Properties:
+            - Key: RegenAfter
+              Value: 180
+
         - Type: AsteroidVoxel01Magnesium
           Prefab: AsteroidVoxel01Magnesium
           Name: Magnesium Asteroid
@@ -148,10 +120,19 @@ POIs:
             - Key: RegenAfter
               Value: 180
 
-        - Type: AsteroidVoxel01Magnesium
-          Prefab: AsteroidVoxel01Magnesium
-          Name: Magnesium Asteroid
-          Pos: [5778, -4070, -6307]
+        - Type: AsteroidVoxel01Iron
+          Prefab: AsteroidVoxel01Iron
+          Name: Iron Asteroid
+          Pos: [-5778, -4070, -16307]
+          Rot: [0, 0, 0]
+          Properties:
+            - Key: RegenAfter
+              Value: 180
+
+        - Type: AsteroidVoxel01Iron
+          Prefab: AsteroidVoxel01Iron
+          Name: Iron Asteroid
+          Pos: [15778, -4070, 16307]
           Rot: [0, 0, 0]
           Properties:
             - Key: RegenAfter
@@ -186,52 +167,5 @@ DroneBaseSetup:
                 - Name: SpaceDronePlasma
                   Amount: 4
                   Extra: 1
-            - Name: Freighter
-              FixedMaxSpeed: 22
-              Mission: Freighter
-              Freighter:
-                DelayBetweenRespawn: 532
-                PathWayPoint:
-                - [9487, -696, 330]
-                - [4598, 2850, 8647]
-                - [-4908, -5149, 7855]
-                - [-7908, -5351, -275]
-                - [-4264, -7707, -8019]
-                - [4872, 2143, -7798]
-              Stock:
-                - Name: SpaceDronePlasma
-                  Amount: 4
-                  Extra: 1
-            - Name: Freighter
-              FixedMaxSpeed: 34
-              Mission: Freighter
-              Freighter:
-                DelayBetweenRespawn: 566
-                PathWayPoint:
-                - [-584, 8503, 6610]
-                - [-8567, -3389, 8552]
-                - [-11864, 7165, 1027]
-                - [-8509, -4014, -5969]
-                - [-2547, -8421, -9541]
-                - [3820, 1190, -8175]
-                - [7275, -7154, -3384]
-                - [7526, -1143, 2023]
-                - [3948, -7965, 5649]
-              Stock:
-                - Name: SpaceDronePlasma
-                  Amount: 3
-                  Extra: 1
-            - Name: BAO_OrbitalSpire
-              FixedMaxSpeed: 20
-              Mission: Immobile
-              Immobile:
-                Position3D: [-6419.024, -3122.134, 5923.203]
-              Stock:
-                - Name: SpaceDronePlasma
-                  Amount: 21
-                  Extra: 1
-              Properties:
-                - Key: RegenAfter
-                  Value: 720
 
 Build: 1648

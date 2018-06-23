@@ -5,7 +5,7 @@
 # Playfield Characteristics
 Gravity: 0.00
 AtmosphereEnabled: False
-PvP: False
+PvP: True
 UseFixed: True
 Radiation: 3.99
 TemperatureDay: -106
@@ -27,80 +27,47 @@ Nebula: PrefabNebulaBlueYellow
 ### POIs
 POIs:
     Fixed:
-        - Type: BA_Admin
-          Prefab: BA_Spaceport-C-High
+          
+        - Type: BA_Alien
+          Prefab: ILMARINEN-WRACK
           Mode: Survival
-          Name: Starport C High
-          Pos: [3800, 0, -3800]
-          Rot: [0, -50, 0]
+          Name: Derelict Ship
+          Pos: [8840.0, -96.91, 3043.38]
+          Rot: [0, 0, 0]
           InitPower: True
           Properties:
-          - Key: RegenAfter
-            Value: 720
-          SpawnResource: []
-          
-#  ScoutDepot-Port-High
-        - Type: BA_Admin
-          Prefab: ScoutDepot-Port-High
-          Mode: Survival
-          Name: ScoutDepot Port
-          Pos: [-3800, 0, 3800]
-          Rot: [0, -50, 0]
-          InitPower: True
-          Properties:
-          - Key: RegenAfter
-            Value: 720
-          SpawnResource: []
-          
-#        - Type: BA_Alien
-#          Prefab: BAO_DerelictMiningShip
-#          Mode: Survival
-#          Name: Derelict Ship
-#          Pos: [5445.004, 6490.91, -5013.378]
-#          Rot: [0, 0, 0]
-#          InitPower: True
-#          Properties:
-#            - Key: RegenAfter
-#              Value: 720
+            - Key: RegenAfter
+              Value: 720
 
         - Type: CV_Player
           Prefab: UNSF-Loader
           Name: Wreckage
-          Pos: [-2634, 0, 4980]
+          Pos: [-8634, 100, 4980]
           Rot: [0, -42, 0]
           Properties: []
           SpawnResource: []
 
-        - Type: CV_Alien
-          Prefab: BA_CrashedCV_2
-          Mode: Survival
-          Name: Destroyed Vessel
-          Pos: [-2887.537, -1735.819, 8868.62]
-          Rot: [342, 176, 188]
-          InitPower: True
-          Properties:
-            - Key: RegenAfter
-              Value: 720
-
-        - Type: CV_Alien
-          Prefab: BA_CrashedCV_2
-          Mode: Survival
-          Name: Destroyed Vessel
-          Pos: [-3077.985, -1684.716, 8849.287]
-          Rot: [319, 253, 97]
-          InitPower: True
-          Properties:
-            - Key: RegenAfter
-              Value: 720
+        - Type: CV_Player
+          Prefab: UNSF-Loader
+          Name: Wreckage
+          Pos: [9634, -100, -4980]
+          Rot: [0, -42, 0]
+          Properties: []
+          SpawnResource: []
 
         - Type: AsteroidFieldRing
           Name: Asteroid Field
           Pos: [0, 0, 0]
           Rot: [0, 0, 0]
 
+
         - Type: AsteroidFieldFewBoxExclude
           Name: Asteroid Field
           Pos: [-1164, -1418, 21252]
+          Rot: [0, 0, 0]
+        - Type: AsteroidFieldFewBoxExclude
+          Name: Asteroid Field
+          Pos: [1164, 1418, 21252]
           Rot: [0, 0, 0]
 
         - Type: AsteroidVoxel01Silicon
@@ -112,14 +79,6 @@ POIs:
             - Key: RegenAfter
               Value: 180
 
-        - Type: AsteroidVoxel01Copper
-          Prefab: AsteroidVoxel01Copper
-          Name: Copper Asteroid
-          Pos: [9269, 2212, 2414]
-          Rot: [0, 0, 0]
-          Properties:
-            - Key: RegenAfter
-              Value: 180
 
         - Type: AsteroidVoxel02Cobalt
           Prefab: AsteroidVoxel02Cobalt
@@ -139,8 +98,8 @@ POIs:
             - Key: RegenAfter
               Value: 180
 
-        - Type: AsteroidVoxel01Magnesium
-          Prefab: AsteroidVoxel01Magnesium
+        - Type: AsteroidVoxel02Promethium
+          Prefab: AsteroidVoxel02Promethium
           Name: Magnesium Asteroid
           Pos: [7457, -3152, -5485]
           Rot: [0, 0, 0]
@@ -148,8 +107,8 @@ POIs:
             - Key: RegenAfter
               Value: 180
 
-        - Type: AsteroidVoxel01Magnesium
-          Prefab: AsteroidVoxel01Magnesium
+        - Type: AsteroidVoxel02Promethium
+          Prefab: AsteroidVoxel02Promethium
           Name: Magnesium Asteroid
           Pos: [5778, -4070, -6307]
           Rot: [0, 0, 0]

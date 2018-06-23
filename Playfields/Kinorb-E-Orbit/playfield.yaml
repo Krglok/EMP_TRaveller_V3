@@ -1,0 +1,138 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v1.55.0.0, Playfield Version: 8.0.5 [1666] (Alpha EXPERIMENTAL 8.0 - Release Candidate 1)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+TemperatureDay: -127
+Music: moonstone
+Description: The space around  features an asteroid belt
+PlanetType: Space
+PlayfieldType: Space
+AtmosphereEnabled: False
+Difficulty: 2
+SunFlare: EnvironmentalEffects/SunFlareWhiteSpace
+Stars: SkyboxStarsCyan
+Nebula: PrefabNebulaBlue2
+Build: 1702
+Radiation: 9.5399999999999991
+PvP: True
+UseFixed: True
+AllowBA: True
+AllowCV: True
+AllowSV: True
+AllowHV: False
+AllowBlueprintBA: True
+AllowBlueprintCV: True
+AllowBlueprintSV: True
+AllowBlueprintHV: False
+POIs:
+   Fixed:
+   -  Type: AsteroidField
+      Name: Asteroid Field
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidFieldFewBoxExclude
+      Prefab: Asteroid_resource01
+      Name: Asteroid Field Few
+      Pos: [-2522.5, 0, 6000]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidVoxel02Iron
+      Prefab: AsteroidVoxel02Iron
+      Name: Asteroid Iron
+      Pos: [-3522.5, 27, -3564]
+      Rot: [0, -42, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  Type: AsteroidVoxel03Promethium
+      Prefab: AsteroidVoxel03Promethium
+      Name: Asteroid Promethium
+      Pos: [3522.5, 0, -856.4]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  Type: AsteroidVoxel03Promethium
+      Prefab: AsteroidVoxel03Promethium
+      Name: Asteroid Promethium
+      Pos: [3522.5, 0, 8564.4]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+DroneBaseSetup:
+   Fixed:
+   -  Name: MainDroneBase
+      Pos: [154.737, 1855, 36.57135]
+      DroneOnDuty:
+      -  Name: SpaceDronePlasma
+         Pos: [-1059.937, -892, -5875.154]
+         Radius: 496
+      -  Name: SpaceDroneLaser
+         Pos: [-5817.257, -2248, -4441.541]
+         Radius: 467
+      -  Name: SpaceDroneLaser
+         Pos: [-607.6262, 1036, -579.9917]
+         Radius: 600
+      -  Name: SpaceDroneLaser
+         Pos: [4257.173, 711, -6728.292]
+         Radius: 703
+      -  Name: SpaceDroneLaser
+         Pos: [-1048.89, -1089, 922.7348]
+         Radius: 543
+      SpaceVessel:
+      -  Name: Freighter
+         FixedMaxSpeed: 37
+         Mission: Freighter
+         RangePatrol:
+            Position3D: [0, 0, 0]
+         Immobile: {}
+         Freighter:
+            DelayBetweenRespawn: 521
+            PathWayPoint:
+            - [6715, 7661, 4110]
+            - [-1546, 2640, 2147]
+            - [743, 3570, 2319]
+            - [4148, 5128, 2431]
+            - [-1903, 1851, 2861]
+         Stock:
+         -  Name: SpaceDronePlasma
+            Amount: 3
+            Extra: 1
+      -  Name: Freighter
+         FixedMaxSpeed: 27
+         Mission: Freighter
+         RangePatrol:
+            Position3D: [0, 0, 0]
+         Immobile: {}
+         Freighter:
+            DelayBetweenRespawn: 372
+            PathWayPoint:
+            - [-7987, -3604, -5162]
+            - [-451, 3905, -48]
+            - [1513, 1532, 3258]
+            - [-6343, 3338, 3409]
+            - [-1336, 1547, -3398]
+            - [57, -917, -5311]
+            - [1791, -3253, 1444]
+            - [4223, -2206, 3363]
+            - [-980, 3338, -2009]
+         Stock:
+         -  Name: SpaceDronePlasma
+            Amount: 4
+            Extra: 1
+      -  Name: OrbitalPatrolVessel
+         FixedMaxSpeed: 24
+         Mission: SpacePatrol
+         RangePatrol:
+            Position3D: [2581.261, -5018.859, 2899.646]
+            Radius: 854
+         Immobile: {}
+         Freighter:
+            PathWayPoint: []
+         Stock:
+         -  Name: SpaceDronePlasma
+            Amount: 3
+            Extra: 1
+         -  Name: SpaceDronePlasma
+            Amount: 15
+            Extra: 1

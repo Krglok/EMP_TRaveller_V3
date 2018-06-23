@@ -1,8 +1,7 @@
----
+#---
 # Sector configuration file
-Build: 1623
 Sectors:
-# Sun Star
+# Sun Statr
   - Coordinates: [0, 0, 0]
     Color: 1, 1, 0
     Icon: No
@@ -18,6 +17,8 @@ Sectors:
     Icon: No
     OrbitLine: false
     SectorMapType: Planet
+    Allow: [Kinorb System]
+    Deny: []
     Playfields:
       - ['0, 0, 0', Dentus Pair, SunPair]
       - ['0, 0, 0', Dentus System, SpaceSystem]
@@ -26,7 +27,7 @@ Sectors:
   - Coordinates: [1017, 0, 982]
     Color: 0, 0.8, 0.1
     Icon: Circle
-    OrbitLine: true
+    OrbitLine: false
     SectorMapType: Planet
     Allow: []
     Deny: []
@@ -85,7 +86,7 @@ Sectors:
     Color: 0.37, 0.33, 0.04
     Icon: Circle
     OrbitLine: false
-    SectorMapType: Planet
+    SectorMapType: AsteroidField
     Playfields:
     - ['0, 0, 0', Asteroid1, Moon2]
     - ['0, 0, 0', Asteroid1 Orbit, Dentus-F-Orbit]
@@ -100,10 +101,10 @@ Sectors:
     Color: 0.37, 0.33, 0.04
     Icon: Circle
     OrbitLine: false
-    SectorMapType: Planet
+    SectorMapType: AsteroidField
     Playfields:
-#    - ['0, 0, 0', Asteroid2, Moon2]
-    - ['0, 0, 0', Asteroid2 Orbit, Dentus-F-Orbit]
+    - ['0, 0, 0', Asteroid2, MoonIce]
+    - ['0, 0, 0', Asteroid2 Orbit, Dentus-F1-Orbit]
     Allow: []
     Deny: []
 
@@ -115,10 +116,11 @@ Sectors:
     Color: 0.37, 0.33, 0.04
     Icon: Circle
     OrbitLine: false
-    SectorMapType: Planet
+    SectorMapType: AsteroidField
     Playfields:
- #   - ['0, 0, 0', Asteroid3, Moon2]
-    - ['0, 0, 0', Asteroid3 Orbit, Dentus-F-Orbit]
+    #MoonDesert
+    - ['0, 0, 0', Asteroid3, MoonIce]
+    - ['0, 0, 0', Asteroid3 Orbit, Dentus-F2-Orbit]
     Allow: []
     Deny: []
 
@@ -130,10 +132,10 @@ Sectors:
     Color: 0.37, 0.33, 0.04
     Icon: Circle
     OrbitLine: false
-    SectorMapType: Planet
+    SectorMapType: AsteroidField
     Playfields:
- #   - ['0, 0, 0', Asteroid4, Moon2]
-    - ['0, 0, 0', Asteroid4 Orbit, Dentus-F-Orbit]
+    - ['0, 0, 0', Asteroid4, MoonIce]
+    - ['1000, 1000, 0', Asteroid4 Orbit, Dentus-F3-Orbit]
     Allow: []
     Deny: []
 
@@ -145,6 +147,8 @@ Sectors:
     Icon: No
     OrbitLine: false
     SectorMapType: Planet
+    Allow: [Dentus System]
+    Deny: []
     Playfields:
       - ['0, 0, 0', Kinorb Pair, SunPair]
       - ['0, 0, 0', Kinorb System, SpaceSystem]
@@ -153,7 +157,7 @@ Sectors:
   - Coordinates: [-993, 0, -1008]
     Color: 0, 0.8, 0.1
     Icon: Circle
-    OrbitLine: true
+    OrbitLine: false
     SectorMapType: Planet
     Allow: []
     Deny: []
@@ -162,4 +166,72 @@ Sectors:
       - ['-12231, 0, 15370', Kinorb Moon, DentusMoon]
       - ['0, 0, 0', Kinorb Orbit, KinorbOrbit]
 
+#----------------------------------------------
+# Kinorb-A
+  - Coordinates: [-1005, 0, -995]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: []
+    Deny: []
+    Playfields:
+      - ['0, 0, 0', Kinorb-A, Kinorb-A, '']
+      - ['0, 0, 0', Kinorb-A Orbit, Kinorb-A-Orbit]
+
+#----------------------------------------------
+# Kinorb-C
+  - Coordinates: [-980, 0, -981]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: []
+    Deny: []
+    Playfields:
+      - ['0, 0, 0', Kinorb-C, Kinorb-C, '']
+      - ['0, 0, 0', Kinorb-C Orbit, Kinorb-C-Orbit]
+
+#----------------------------------------------
+# Kinorb-D Asteroid
+  - Coordinates: [-1020, 0, -981]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: AsteroidField
+    Allow: []
+    Deny: []
+    Playfields:
+    - ['0, 0, 0',  Kinorb-D, MoonIce]
+    - ['0, 0, 0', Kinorb-D Orbit, Kinorb-D-Orbit]
+
+#----------------------------------------------
+# Kinorb-E  Asteroid
+  - Coordinates: [-980, 0, -1019]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: AsteroidField
+    Allow: []
+    Deny: []
+    Playfields:
+    - ['0, 0, 0', Kinorb-E, MoonIce]
+    - ['0, 0, 0', Kinorb-E Orbit, Kinorb-E-Orbit]
+
+#----------------------------------------------
+# Kinorb-F
+  - Coordinates: [-963, 0, -963]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: None
+    Allow: []
+    Deny: []
+    Playfields:
+      - ['0, 0, 0', Kinorb-F, Kinorb-F, '']
+      - ['11000, 0,-11000', Kinorb-F1, Kinorb-F1, '']
+      - ['-16000, 0, -16000', Kinorb-F2, Kinorb-F2, '']
+      - ['0, 0, 0', Kinorb-F Orbit, Kinorb-F-Orbit]
+
+    
     

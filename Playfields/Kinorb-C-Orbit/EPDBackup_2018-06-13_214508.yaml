@@ -5,7 +5,7 @@
 # Playfield Characteristics
 Gravity: 0.00
 AtmosphereEnabled: False
-PvP: True
+PvP: False
 UseFixed: True
 Radiation: 7.85
 TemperatureDay: -126
@@ -18,7 +18,7 @@ PlayfieldType: Space
 
 PlanetType: Space
 
-Description: "The space around Dentus-A is empty."
+Description: "The space around Vyti Mu Station features an asteroid belt"
 
 SunFlare: EnvironmentalEffects/SunFlareWhite3Space
 Stars: SkyboxStarsBlue
@@ -27,6 +27,16 @@ Nebula: PrefabNebulaBlueGlittery
 ### POIs
 POIs:
     Fixed:
+        - Type: BA_Admin
+          Prefab: TSO_Variant1
+          Mode: Survival
+          Name: Trading Station
+          Pos: [-1316.494, 735, -1148.413]
+          Rot: [0, 0, 0]
+          InitPower: True
+          Properties:
+            - Key: Music
+              Value: NebularClouds
 
         - Type: AsteroidVoxel02Cobalt
           Prefab: AsteroidVoxel02Cobalt
@@ -34,23 +44,12 @@ POIs:
           Pos: [-5394, 2457, 864]
           Rot: [0, 0, 0]
 
-        - Type: AsteroidVoxel01Sathium
-          Prefab: AsteroidVoxel01Sathium
-          Name: Sathium Asteroid
-          Pos: [12720, -2263, 4376]
+        - Type: AsteroidVoxel01Erestrum
+          Prefab: AsteroidVoxel01Erestrum
+          Name: Erestrum Asteroid
+          Pos: [1720, -2263, 4376]
           Rot: [0, 0, 0]
 
-        - Type: AsteroidVoxel01Iron
-          Prefab: AsteroidVoxel01Iron
-          Name: Iron Asteroid
-          Pos: [-12720, -2263, 4376]
-          Rot: [0, 0, 0]
-
-        - Type: AsteroidVoxel01Iron
-          Prefab: AsteroidVoxel01Iron
-          Name: Iron Asteroid
-          Pos: [-12720, -2263, -4976]
-          Rot: [0, 0, 0]
 
 # Drones
 DroneBaseSetup:
@@ -84,5 +83,29 @@ DroneBaseSetup:
                 - Name: SpaceDronePlasma
                   Amount: 3
                   Extra: 1
+            - Name: BAO_XenuSupplyStation
+              FixedMaxSpeed: 20
+              Mission: Immobile
+              Immobile:
+                Position3D: [-3166.904, -3146.093, -3925.497]
+              Stock:
+                - Name: SpaceDroneLaser
+                  Amount: 22
+                  Extra: 1
+              Properties:
+                - Key: RegenAfter
+                  Value: 720
+            - Name: BAO_XenuSupplyStation
+              FixedMaxSpeed: 20
+              Mission: Immobile
+              Immobile:
+                Position3D: [426.6129, -7220.828, 6469.221]
+              Stock:
+                - Name: SpaceDronePlasma
+                  Amount: 16
+                  Extra: 1
+              Properties:
+                - Key: RegenAfter
+                  Value: 720
 
 Build: 1648

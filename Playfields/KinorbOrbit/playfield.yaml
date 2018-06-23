@@ -52,16 +52,16 @@ POIs:
             Value: 720
           SpawnResource: []
           
-        - Type: BA_Alien
-          Prefab: BAO_DerelictMiningShip
-          Mode: Survival
-          Name: Derelict Ship
-          Pos: [5445.004, 6490.91, -5013.378]
-          Rot: [0, 0, 0]
-          InitPower: True
-          Properties:
-            - Key: RegenAfter
-              Value: 720
+#        - Type: BA_Alien
+#          Prefab: BAO_DerelictMiningShip
+#          Mode: Survival
+#          Name: Derelict Ship
+#          Pos: [5445.004, 6490.91, -5013.378]
+#          Rot: [0, 0, 0]
+#          InitPower: True
+#          Properties:
+#            - Key: RegenAfter
+#              Value: 720
 
         - Type: CV_Player
           Prefab: UNSF-Loader
