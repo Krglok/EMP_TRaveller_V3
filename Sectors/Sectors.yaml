@@ -1,7 +1,6 @@
-#---
-# Sector configuration file
+---
 Sectors:
-# Sun Statr
+# Sun Star
   - Coordinates: [0, 0, 0]
     Color: 1, 1, 0
     Icon: No
@@ -11,7 +10,7 @@ Sectors:
       - ['0, 0, 0', Sun Star, Sun]
 #----------------------------------------------
 #----------------------------------------------
-#  SystemOrbit  
+#  Dentus SystemOrbit  
   - Coordinates: [1000, 0, 1000]
     Color: 1, 1, 0
     Icon: No
@@ -20,7 +19,7 @@ Sectors:
     Allow: [Kinorb System]
     Deny: []
     Playfields:
-      - ['0, 0, 0', Dentus Pair, SunPair]
+      - ['-5000, 0, 0', Dentus Pair, SunPair]
       - ['0, 0, 0', Dentus System, SpaceSystem]
 #----------------------------------------------
 # Dentus
@@ -147,10 +146,10 @@ Sectors:
     Icon: No
     OrbitLine: false
     SectorMapType: Planet
-    Allow: [Dentus System]
+    Allow: [Dentus System, Yorbund System]
     Deny: []
     Playfields:
-      - ['0, 0, 0', Kinorb Pair, SunPair]
+      - ['-5000, 0, 0', Kinorb Pair, SunPair]
       - ['0, 0, 0', Kinorb System, SpaceSystem]
 #----------------------------------------------
 # Kinorb
@@ -228,10 +227,208 @@ Sectors:
     Allow: []
     Deny: []
     Playfields:
-      - ['0, 0, 0', Kinorb-F, Kinorb-F, '']
-      - ['11000, 0,-11000', Kinorb-F1, Kinorb-F1, '']
-      - ['-16000, 0, -16000', Kinorb-F2, Kinorb-F2, '']
-      - ['0, 0, 0', Kinorb-F Orbit, Kinorb-F-Orbit]
+      - ['-3000, 0, 5000', Kinorb-F, Kinorb-F, '']
+      - ['14000, 0,-11000', Kinorb-F1, Kinorb-F1, '']
+      - ['-19000, 0, -11000', Kinorb-F2, Kinorb-F2, '']
+      - ['-3000, 0, 5000', Kinorb-F Orbit, Kinorb-F-Orbit]
+#----------------------------------------------
+#----------------------------------------------
+#  SystemOrbit  Yorbund
+  - Coordinates: [-2000, 0, 2000]
+    Color: 1, 1, 0
+    Icon: No
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: [Kinorb System, Becks World System]
+    Deny: []
+    Playfields:
+      - ['-5000, 0, 0', Yorbund Pair, SunPair]
+      - ['0, 0, 0', Yorbund System, SpaceSystem]
+#----------------------------------------------
+# Yorbund
+  - Coordinates: [-1993, 0, 2003]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: []
+    Deny: []
+    Playfields:
+     - ['0, 0, 0', Yorbund, Yorbund, '']
+     - ['0, 0, 0', Yorbund Orbit, YorbundOrbit]
+#----------------------------------------------
+# Yorbund-B
+  - Coordinates: [-2011, 0, 1989]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: []
+    Deny: []
+    Playfields:
+     - ['0, 0, 0', Yorbund-B, Yorbund-B, '']
+     - ['0, 0, 0', Yorbund-B Orbit, SpaceAsteroidField]
+#----------------------------------------------
+# Yorbund-D1
+  - Coordinates: [-2020, 0, 1981]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: []
+    Deny: []
+    Playfields:
+     - ['0, 0, 0', Yorbund-D1, Yorbund-D-Ice, '']
+     - ['0, 0, 0', Yorbund-D1 Orbit, YorbundAsteroidField]
+#----------------------------------------------
+# Yorbund-D2
+  - Coordinates: [-1980, 0, 1981]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: []
+    Deny: []
+    Playfields:
+     - ['0, 0, 0', Yorbund-D2, Yorbund-D-Ice, '']
+     - ['0, 0, 0', Yorbund-D2 Orbit, YorbundAsteroidField]
+#----------------------------------------------
+# Yorbund-D3
+  - Coordinates: [-2000, 0, 2027]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: []
+    Deny: []
+    Playfields:
+     - ['0, 0, 0', Yorbund-D3, Yorbund-D-Ice, '']
+     - ['0, 0, 0', Yorbund-D3 Orbit, YorbundAsteroidField]
+#----------------------------------------------
+# Yorbund-E
+  - Coordinates: [-2131, 0, 1869]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: []
+    Deny: []
+    Playfields:
+     - ['0, 0, 0', Yorbund-E, Yorbund-D-Ice, '']
+     - ['0, 0, 0', Yorbund-E Orbit, Yorbund-E-Asteroid]
+#----------------------------------------------
+#----------------------------------------------
+#  SystemOrbit  Becks
+  - Coordinates: [7000, 0, 4000]
+    Color: 1, 1, 0
+    Icon: No
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: [Yorbund System]
+    Deny: []
+    Playfields:
+      - ['-5000, 0, 0', Becks World Pair, SunPair]
+      - ['0, 0, 0', Becks World System, SpaceSystem]
+#----------------------------------------------
+# Becks World
+  - Coordinates: [7007, 0, 3992]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: []
+    Deny: []
+    Playfields:
+     - ['0, 0, 0', Becks World, Becks, '']
+     - ['0, 0, 0', Becks World Orbit, BecksOrbit]
+     
+#----------------------------------------------
+# Becks-B
+#  - Coordinates: [6889, 0, 3889]
+#    Color: 0, 0.8, 0.1
+#    Icon: Circle
+#    OrbitLine: false
+#    SectorMapType: Planet
+#    Allow: []
+#    Deny: []
+#    Playfields:
+#     - ['0, 0, 0', Becks-B, Becks-B, '']
+#     - ['0, 0, 0', Becks-B Orbit, Becks-B-Orbit]
+     
+#----------------------------------------------
+# Becks-C1
+  - Coordinates: [7020, 0, 4019]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: []
+    Deny: []
+    Playfields:
+     - ['0, 0, 0', Becks-C1 Orbit, Becks-C1-Orbit]
+     
+#----------------------------------------------
+# Becks-C2
+  - Coordinates: [6980, 0, 4019]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: []
+    Deny: []
+    Playfields:
+     - ['0, 0, 0', Becks-C2 Orbit, Becks-C2-Orbit]
+     
+#----------------------------------------------
+# Becks-C3
+  - Coordinates: [7020, 0, 3981]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: []
+    Deny: []
+    Playfields:
+     - ['0, 0, 0', Becks-C3 Orbit, Becks-C3-Orbit]
+     
+#----------------------------------------------
+# Becks-D
+  - Coordinates: [7037, 0, 4037]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: []
+    Deny: []
+    Playfields:
+     - ['0, 0, 0', Becks-D, Becks-D, '']
+     - ['0, 0, 0', Becks-D Orbit, Becks-D-Orbit]
+     
+#----------------------------------------------
+# Becks-E
+  - Coordinates: [6869, 0, 4068]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: [Becks-F Orbit]
+    Deny: []
+    Playfields:
+     - ['0, 0, 0', Becks-E, Becks-E, '']
+     - ['0, 0, 0', Becks-E Orbit, Becks-E-Orbit]
+     
+#----------------------------------------------
+# Becks - F
+  - Coordinates: [6869, 0, 3869]
+    Color: 0, 0.8, 0.1
+    Icon: Circle
+    OrbitLine: false
+    SectorMapType: Planet
+    Allow: [Becks-E Orbit]
+    Deny: []
+    Playfields:
+     #MoonNascent
+     - ['10000, 0, 10000', Becks-F, Becks-F, '']
+     - ['0, 0, 0', Becks-F Orbit, Becks-F-Orbit]
+#----------------------------------------------
 
-    
-    

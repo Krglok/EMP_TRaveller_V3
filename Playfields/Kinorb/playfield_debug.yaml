@@ -20,7 +20,7 @@ Radiation: 0.00
 AtmosphereDensity: 0.9
 AtmosphereO2: 0.2
 AtmosphereBreathable: True
-PvP: False
+PvP: True
 
 Water: WaterBlue
 Music: temperate
@@ -1024,16 +1024,16 @@ RandomResources:
         MaxRadius: 15
         YVariance: 10
 
-    - Name: ZascosiumResource #rich
-      IsScalingCount: True
-      CountMinMax: [ 3, 4 ]
-      SizeMinMax: [ 7, 11 ]
-      DepthMinMax: [ 5, 15 ]
-      DroneProb: 0.3
-      MaxDroneCount: 5
-      DistTypeCylinder:
-        MaxRadius: 13
-        YVariance: 10
+#    - Name: ZascosiumResource #rich
+#      IsScalingCount: True
+#      CountMinMax: [ 3, 4 ]
+#      SizeMinMax: [ 7, 11 ]
+#      DepthMinMax: [ 5, 15 ]
+#      DroneProb: 0.3
+#      MaxDroneCount: 5
+#      DistTypeCylinder:
+#        MaxRadius: 13
+#        YVariance: 10
 
     - Name: PromethiumResource
       IsScalingCount: True

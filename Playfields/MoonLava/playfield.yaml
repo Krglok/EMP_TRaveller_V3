@@ -20,7 +20,7 @@ Radiation: 7.92
 AtmosphereDensity: 0.0
 AtmosphereO2: 0.0
 AtmosphereBreathable: False
-PvP: False
+PvP: True
 
 Water: RockLava03
 Music: BarrenMoon

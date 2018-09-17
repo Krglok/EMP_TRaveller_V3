@@ -20,7 +20,7 @@ Radiation: 2.52
 AtmosphereDensity: 0.0
 AtmosphereO2: 0.0
 AtmosphereBreathable: False
-PvP: False
+PvP: True
 
 Water: WaterBlue
 Music: BarrenMoon
@@ -326,7 +326,7 @@ RandomResources:
     - Name: PentaxidResource
       IsScalingCount: True 
       CountMinMax: [ 4, 5 ]
-      SizeMinMax: [ 2, 5 ]
+      SizeMinMax: [ 2, 9 ]
       DepthMinMax: [ 5, 10 ]
       DroneProb: 0.6
       MaxDroneCount: 2

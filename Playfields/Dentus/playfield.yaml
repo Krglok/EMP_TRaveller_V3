@@ -639,7 +639,7 @@ CloudsZenithColor: 0.87, 0.92, 1
 CloudsHorizonColor: 1, 0.76, 0.56
 WindSpeed: 3
 Build: 1648
-PvP: False
+PvP: True
 UseFixed: True                    # If set to True uses fixed POIs + resources in Survival mode (per default set to False). Can be used together with UseRandom
 UseRandom: True                   # If set to True uses random POIs + resources in Survival mode (per default set to True). Can be used together with UseFixed
 AllowBA: True

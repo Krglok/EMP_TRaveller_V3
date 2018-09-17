@@ -15,7 +15,7 @@ Stars: SkyboxStarsBlue
 Nebula: PrefabNebulaBlueGlittery
 Build: 1648
 Radiation: 7.8499999999999996
-PvP: False
+PvP: True
 UseFixed: True
 AllowBA: True
 AllowCV: True
@@ -32,11 +32,11 @@ POIs:
       Name: Cobalt Asteroid
       Pos: [-5394, 2457, 864]
       Rot: [0, 0, 0]
-   -  Type: AsteroidVoxel01Erestrum
-      Prefab: AsteroidVoxel01Erestrum
-      Name: Erestrum Asteroid
-      Pos: [1720, -2263, 4376]
-      Rot: [0, 0, 0]
+#   -  Type: AsteroidVoxel01Erestrum
+#      Prefab: AsteroidVoxel01Erestrum
+#      Name: Erestrum Asteroid
+#      Pos: [1720, -2263, 4376]
+#      Rot: [0, 0, 0]
 DroneBaseSetup:
    Fixed:
    -  Name: MainDroneBase

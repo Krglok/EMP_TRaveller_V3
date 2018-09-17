@@ -1,0 +1,111 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v1.55.0.0, Playfield Version: 8.0.5 [1666] (Alpha EXPERIMENTAL 8.0 - Release Candidate 1)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+TemperatureDay: -113
+Music: Orbiting
+Description: 'The space is filled with a Asteroid Field '
+PlanetType: Space
+PlayfieldType: Space
+AtmosphereEnabled: False
+Difficulty: 2
+SunFlare: EnvironmentalEffects/SunFlareBlue
+Stars: SkyboxStarsBlue
+Nebula: PrefabNebulaBlueOrange
+Build: 1648
+Radiation: 2.8000000000000007
+PvP: True
+UseFixed: True
+AllowBA: True
+AllowCV: True
+AllowSV: True
+AllowHV: False
+AllowBlueprintBA: True
+AllowBlueprintCV: True
+AllowBlueprintSV: True
+AllowBlueprintHV: False
+POIs:
+   Fixed:
+   -  Type: AsteroidField
+      Name: Asteroid Field
+      Pos: [0, 0, 0]
+      Rot: [0, 500, 0]
+   - Type: AsteroidFieldRing
+     Name: Asteroid Field
+     Pos: [0, 0, 0]
+     Rot: [0, 0, 0]
+   - Type: AsteroidFieldRing
+     Name: Asteroid Field
+     Pos: [0, -500, 0]
+     Rot: [0, 90, 0]
+
+   -  Type: AsteroidVoxel02Silicon
+      Prefab: AsteroidVoxel02Silicon
+      Name: Silicon Asteroid
+      Pos: [1595, -1310, -5311]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+   -  Type: AsteroidVoxel01Silicon
+      Prefab: AsteroidVoxel01Silicon
+      Name: Silicon Asteroid
+      Pos: [3984, -4280, 943]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+   - Type: AsteroidVoxel02Cobalt
+     Prefab: AsteroidVoxel02Cobalt
+     Name: Cobalt Asteroid
+     Pos: [1654, 4598, 8535]
+     Rot: [0, 0, 0]
+     Properties:
+       - Key: RegenAfter
+         Value: 180
+
+   - Type: AsteroidVoxel02Promethium
+     Prefab: AsteroidVoxel02Promethium
+     Name:  Promethium Asteroid
+     Pos: [7457, -3152, -5485]
+     Rot: [0, 0, 0]
+     Properties:
+       - Key: RegenAfter
+         Value: 180
+
+   - Type: AsteroidVoxel02Promethium
+     Prefab: AsteroidVoxel02Promethium
+     Name: Promethium Asteroid
+     Pos: [5778, -4070, -6307]
+     Rot: [0, 0, 0]
+     Properties:
+       - Key: RegenAfter
+         Value: 180
+DroneBaseSetup:
+   Fixed:
+   -  Name: MainDroneBase
+      Pos: [-5494.659, 601, -4554.722]
+      DroneOnDuty:
+      -  Name: SpaceDroneLaser
+         Pos: [3940.176, -1928, 6211.743]
+         Radius: 513
+      -  Name: SpaceDronePlasma
+         Pos: [-3772.635, -2348, 5924.847]
+         Radius: 598
+      SpaceVessel:
+      -  Name: Freighter
+         FixedMaxSpeed: 24
+         Mission: Freighter
+         RangePatrol:
+            Position3D: [0, 0, 0]
+         Immobile: {}
+         Freighter:
+            DelayBetweenRespawn: 392
+            PathWayPoint:
+            - [-2420, -4667, -7986]
+            - [-3191, 1620, -7236]
+            - [-12170, -5802, -1400]
+         Stock:
+         -  Name: SpaceDronePlasma
+            Amount: 4
+            Extra: 1

@@ -248,7 +248,7 @@ Difficulty: 2                        # WE HAVE TO GIVE IT A NEW MEANING
 # ==============================================================
 # ==============================================================
 # # Special parameters:
-# PvP: False                         # Bool var [true, false] - Set to True to allow PvP in this playfield, default is False
+PvP: True                         # Bool var [true, false] - Set to True to allow PvP in this playfield, default is False
 # AllowSV: True                      # Set to False to dis-allow SVs in this playfield, default is True
 # AllowCV: True                      # Set to False to dis-allow CVs in this playfield, default is True
 # #Seed: 123456                      # Integer [1, 999999] If set overwrites main Seed 

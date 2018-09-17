@@ -15,7 +15,7 @@ TemperatureNoiseFac: 0.49
 HumidityHeightFac: [20, 325]
 HumidityNoiseFac: 0.54
 
-Gravity: -05.64
+Gravity: -20.0
 Radiation: 190.70
 AtmosphereDensity: 0.0
 AtmosphereO2: 0.0
@@ -311,26 +311,14 @@ Biome:
 
 # ==============================================================
 # Playfield Characteristics
-
-# # ==============================================================
-# # DELETE 
-# # ==============================================================
-# RealRadius: 1303.797294            # DELETE
-# ScaledRadius: 1300                 # DELETE
-# DayLength: 24                      # DELETE
-# Moons: 1                           # DELETE
-
-# # ==============================================================
-
 PlanetType: Lava               
 Emissive: True
 PlayfieldType: Planet               
-# AtmosphereEnabled: True              # WILL BE SET BY SSG dependent on AtmoBreathableProb
 Difficulty: 2                        # WE HAVE TO GIVE IT A NEW MEANING
 
 # # ==============================================================
 # # WHAT TO DO?
-Description: "Dentus-A is a Laveplanet. Mit grossen Lavaseen. Haesslich, Heiss und gefaehrlich.\n Ohne die Rohstoffe wuerde sich niemand fuer den Planeten interessieren.\n Die vielen Wracks und zerstoerten Basen sprechen eine deutliche Sprache."
+Description: "This is the center mass of of a planetsystem"
 
 # ==============================================================
 # ==============================================================
@@ -488,8 +476,8 @@ RandomResources:
 
     - Name: PromethiumResource
       IsScalingCount: True 
-      CountMinMax: [ 2, 3 ]
-      SizeMinMax: [ 7, 11 ]
+      CountMinMax: [ 20, 30 ]
+      SizeMinMax: [ 7, 15 ]
       DepthMinMax: [ 0, 5 ]
       DroneProb: 0.4
       DistTypeCylinder:

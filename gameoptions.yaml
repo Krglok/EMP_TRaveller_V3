@@ -1,16 +1,16 @@
 # For more details, see gameoptions_example.yaml in Content\Scenarios\Default Random
 Options:
-  - ValidFor: [ SP ]
-    DecayTime: 24
+  - ValidFor: [ SP, Survival ]
+    DecayTime: 0
     WipeTime: 0
-    ProtectTime: 48
+    ProtectTime: 0
     ProtectDelay: 0
     MaxStructures: 255
     AntiGriefDistancePvE: 0
     AntiGriefDistancePvP: 0
     AntiGriefOresDistance: 0   
     # AntiGriefOresZone: PvE      
-    EnableTrading: Player2System   
+    EnableTrading: Player2System        
     EnableMaxBlockCount: False
     # AutoMinerDepletion: True          # default value
     GroundedStructureSpawn: False
@@ -25,18 +25,18 @@ Options:
     # RegeneratePOIs: False             # default value
     # FOWTransparency: 0                # default value
 
-  - ValidFor: [ MP ]
+  - ValidFor: [ MP, Survival ]
     # DecayTime: 24                     # default value
     # WipeTime: 0                       # default value
     # ProtectTime: 48                   # default value
     # ProtectDelay: 300                 # default value
     # MaxStructures: 200                # default value
-    AntiGriefDistancePvE: 30          # default value
-    AntiGriefDistancePvP: 50         # default value 300
-    AntiGriefOresDistance: 30         # default value
-    AntiGriefOresZone: PvE            # default value  
-    EnableTrading: All                # default value
-    EnableMaxBlockCount: True         # default value
+    # AntiGriefDistancePvE: 30          # default value
+    # AntiGriefDistancePvP: 300         # default value
+    # AntiGriefOresDistance: 30         # default value
+    # AntiGriefOresZone: PvE            # default value
+    # EnableTrading: All                # default value
+    # EnableMaxBlockCount: True         # default value
     AutoMinerDepletion: False    
     # GroundedStructureSpawn: True      # default value
     TurretUndergroundCheck: True   
@@ -45,8 +45,8 @@ Options:
     # OriginAutoAlliance: True          # default value
     # PlayerSafeZoneHours: 24           # default value
     # MaxSpawnedEnemies: 60             # default value
-    DespawnEscapePod: True 
-    RegeneratePOIs: True               
+    DespawnEscapePod: True            
+    RegeneratePOIs: True              
     # FOWTransparency: 0                # default value
 
     ### In local Coop, following parameter are ignored since they are taken from Difficulty Settings window ###

@@ -15,7 +15,7 @@ Stars: SkyboxStarsBlue
 Nebula: PrefabNebulaBlueGlittery
 Build: 1648
 Radiation: 7.8499999999999996
-PvP: False
+PvP: True
 UseFixed: True
 AllowBA: True
 AllowCV: True

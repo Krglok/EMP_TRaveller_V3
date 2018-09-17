@@ -18,7 +18,7 @@ PlayfieldType: Space
 
 PlanetType: Space
 
-Description: "The space around Dentus-A is empty."
+Description: "The space is shatterd with asteroids."
 
 SunFlare: EnvironmentalEffects/SunFlareWhite3Space
 Stars: SkyboxStarsBlue
@@ -27,6 +27,20 @@ Nebula: PrefabNebulaBlueGlittery
 ### POIs
 POIs:
     Fixed:
+        - Type: AsteroidFieldRing
+          Name: Asteroid Ring
+          Pos: [5000, 0, 0]
+          Rot: [0, 0, 0]
+
+        - Type: AsteroidFieldRing
+          Name: Asteroid Ring
+          Pos: [-5000, 0, 0]
+          Rot: [90, 0, 90]
+
+        - Type: AsteroidFieldFewBoxExclude
+          Name: Asteroid Field
+          Pos: [0, 0, 0]
+          Rot: [0, 0, 0]
 
         - Type: AsteroidVoxel02Sathium
           Prefab: AsteroidVoxel02Sathium
@@ -35,25 +49,25 @@ POIs:
           Rot: [0, 0, 0]
           Properties:
             - Key: RegenAfter
-              Value: 180
+              Value: 380
 
         - Type: AsteroidVoxel01Promethium
           Prefab: AsteroidVoxel01Promethium
-          Name: Erestrum Asteroid
+          Name: Promethium Asteroid
           Pos: [12720, 0, 5000]
           Rot: [0, 0, 0]
           Properties:
             - Key: RegenAfter
-              Value: 180
+              Value: 380
 
         - Type: AsteroidVoxel01Promethium
           Prefab: AsteroidVoxel01Promethium
-          Name: Erestrum Asteroid
+          Name: Promethium Asteroid
           Pos: [-12720, 0, -5000]
           Rot: [0, 0, 0]
           Properties:
             - Key: RegenAfter
-              Value: 180
+              Value: 380
 
 
 # Drones

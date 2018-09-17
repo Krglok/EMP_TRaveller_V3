@@ -159,16 +159,16 @@ RandomResources:
       DepthMinMax: [ 4, 9 ]
       DroneProb: 0.2
 
-    - Name: ErestrumResource #rich
-      IsScalingCount: True
-      CountMinMax: [ 5, 7 ]
-      SizeMinMax: [ 8, 10 ]
-      DepthMinMax: [ 5, 10 ]
-      DroneProb: 0.3
-      MaxDroneCount: 5
-      DistTypeCylinder:
-        MaxRadius: 15
-        YVariance: 10
+#    - Name: ErestrumResource #rich
+#      IsScalingCount: True
+#      CountMinMax: [ 5, 7 ]
+#      SizeMinMax: [ 8, 10 ]
+#      DepthMinMax: [ 5, 10 ]
+#      DroneProb: 0.3
+#      MaxDroneCount: 5
+#      DistTypeCylinder:
+#        MaxRadius: 15
+#        YVariance: 10
 
     - Name: ZascosiumResource #rich
       IsScalingCount: True

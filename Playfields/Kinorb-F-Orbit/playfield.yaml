@@ -28,11 +28,11 @@ Nebula: PrefabNebulaBlueYellow
 POIs:
     Fixed:
           
-        - Type: BA_Alien
+        - Type: CV_Alien
           Prefab: ILMARINEN-WRACK
           Mode: Survival
           Name: Derelict Ship
-          Pos: [8840.0, -96.91, 3043.38]
+          Pos: [13050.0, -106, 2900.38]
           Rot: [0, 0, 0]
           InitPower: True
           Properties:

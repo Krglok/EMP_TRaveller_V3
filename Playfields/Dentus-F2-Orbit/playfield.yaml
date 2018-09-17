@@ -5,7 +5,7 @@
 # Playfield Characteristics
 Gravity: 0.00
 AtmosphereEnabled: False
-PvP: False
+PvP: True
 UseFixed: True
 Radiation: 3.99
 TemperatureDay: -106

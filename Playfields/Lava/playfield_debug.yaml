@@ -471,17 +471,17 @@ RandomResources:
         MaxRadius: 8
         YVariance: 15
 
-    - Name: ZascosiumResource
-      Biome: [ Plains, Dunes, Rocks ]
-      IsScalingCount: True 
-      CountMinMax: [ 2, 3 ]
-      SizeMinMax: [ 5, 6 ]
-      DepthMinMax: [ 0, 5 ]
-      DroneProb: 0.9
-      MaxDroneCount: 4
-      DistTypeCylinder:
-        MaxRadius: 15
-        YVariance: 10
+#    - Name: ZascosiumResource
+#      Biome: [ Plains, Dunes, Rocks ]
+#      IsScalingCount: True 
+#      CountMinMax: [ 2, 3 ]
+#      SizeMinMax: [ 5, 6 ]
+#      DepthMinMax: [ 0, 5 ]
+#      DroneProb: 0.9
+#      MaxDroneCount: 4
+#      DistTypeCylinder:
+#        MaxRadius: 15
+#        YVariance: 10
 
     - Name: GoldResource
       Biome: [ LavaEdge, LavaFolds ]

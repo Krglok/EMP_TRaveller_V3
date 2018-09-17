@@ -22,10 +22,10 @@ AllowBA: True
 AllowCV: True
 AllowSV: True
 AllowHV: False
-AllowBlueprintBA: True
-AllowBlueprintCV: True
-AllowBlueprintSV: True
-AllowBlueprintHV: True
+AllowBlueprintBA: False
+AllowBlueprintCV: False
+AllowBlueprintSV: False
+AllowBlueprintHV: False
 POIs:
    Fixed:
    -  Type: AsteroidVoxel01Promethium
@@ -35,7 +35,7 @@ POIs:
       Rot: [0, 0, 0]
       Properties:
       -  Key: RegenAfter
-         Value: 180
+         Value: 580
    -  Type: AsteroidVoxel01Promethium
       Prefab: AsteroidVoxel01Promethium
       Name: Promethium Asteroid
@@ -43,12 +43,15 @@ POIs:
       Rot: [0, 0, 0]
       Properties:
       -  Key: RegenAfter
-         Value: 180
-   -  Type: AsteroidVoxel01Erestrum
-      Prefab: AsteroidVoxel01Erestrum
-      Name: Erestrum Asteroid
-      Pos: [-31720, 0, -7000]
-      Rot: [0, 0, 0]
+         Value: 580
+#   -  Type: AsteroidVoxel01Erestrum
+#      Prefab: AsteroidVoxel01Erestrum
+#      Name: Erestrum Asteroid
+#      Pos: [-31720, 0, -7000]
+#      Rot: [0, 0, 0]
+#      Properties:
+#      -  Key: RegenAfter
+#         Value: 580
    FixedPlayerStart:
    -  Spawn: Position
       Pos: [10000, 0, 10000]
