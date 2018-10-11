@@ -32,7 +32,7 @@ AllowCV: False
 AllowSV: True
 AllowHV: True
 AllowBlueprintSV: False         # Dis-allow to spawn SV Blueprint in this playfield, default is True
-AllowBlueprintCV: False         # Dis-allow to spawn CV Blueprint in this playfield, default is True
+AllowBlueprintCV: True         # Dis-allow to spawn CV Blueprint in this playfield, default is True
 AllowBlueprintBA: False         # Dis-allow to spawn BA Blueprint in this playfield, default is True
 AllowBlueprintHV: False         # Dis-allow to spawn HV Blueprint in this playfield, default is True
 
@@ -1630,3 +1630,5 @@ CreatureSpawning:
           Amount: 10
           DelayMinMax: [10, 24]
 
+
+Build: 1875

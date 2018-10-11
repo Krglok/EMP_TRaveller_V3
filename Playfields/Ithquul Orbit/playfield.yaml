@@ -1,0 +1,283 @@
+---
+# Space Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html 
+
+# Playfield Characteristics
+Gravity: 0.00
+AtmosphereEnabled: False
+PvP: True
+UseFixed: True
+Radiation: 3.4
+TemperatureDay: -124
+Music: moonstone
+
+# Playfield difficulty (has impact on experience gains)
+Difficulty: 2
+
+PlayfieldType: Space
+
+PlanetType: Space
+
+Description: "The space around Ithquul features an asteroid belt"
+
+SunFlare: EnvironmentalEffects/SunFlareWhite4Space
+Stars: SkyboxStarsCyan
+Nebula: PrefabNebulaBlueYellow
+
+### POIs
+POIs:
+    Fixed:
+        - Type: AsteroidFieldRing
+          Name: Asteroid Field
+          Pos: [0, 0, 0]
+          Rot: [70, 51, -98]
+
+        - Type: BA_Admin
+          Prefab: TSO_AkuaOrbit
+          Mode: Survival
+          Name: Trading Station
+          Pos: [-3727.023, -1451.207, 3883.428]
+          Rot: [0, 0, 0]
+          InitPower: True
+          Properties:
+            - Key: Music
+              Value: NebularClouds
+
+        - Type: BA_Alien
+          Prefab: BAO_DerelictMiningShip
+          Mode: Survival
+          Name: Derelict Ship
+          Pos: [-4289.325, 2762.682, 1132.031]
+          Rot: [0, 0, 0]
+          InitPower: True
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+            - Key: Music
+              Value: EvilWhispering
+
+        - Type: BA_Alien
+          Prefab: BAO_DestroyedOrbitalDefence
+          Mode: Survival
+          Name: Control Station
+          Pos: [-271.3474, -2651.724, -5016.817]
+          Rot: [0, 0, 0]
+          InitPower: True
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+            - Key: Music
+              Value: EvilWhispering
+
+        - Type: BA_Alien
+          Prefab: BAO_Minefield
+          Mode: Survival
+          Name: Minefield
+          Pos: [-265.0315, -2601.535, -4884.132]
+          Rot: [272, 36, 79]
+          InitPower: True
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - Type: SV_Player
+          Prefab: SV_Destroyed_withWarp
+          Mode: Survival
+          Name: Destroyed Small Vessel
+          Pos: [-213.3471, -2479.632, -5082.158]
+          Rot: [101, 51, 154]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - Type: CV_Alien
+          Prefab: CV_Destroyed3
+          Mode: Survival
+          Name: Destroyed Vessel
+          Pos: [-459.3782, -2597.391, -5190.99]
+          Rot: [229, 172, 26]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - Type: CV_Alien
+          Prefab: CV_Destroyed3
+          Mode: Survival
+          Name: Destroyed Vessel
+          Pos: [-333.7242, -2617.313, -4929.102]
+          Rot: [115, 180, 39]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - Type: AsteroidVoxel02Iron
+          Prefab: AsteroidVoxel02Iron
+          Name: Iron Asteroid
+          Pos: [4410, 1861, 3346]
+          Rot: [0, 0, 0]
+          Properties:
+            - Key: RegenAfter
+              Value: 180
+
+        - Type: AsteroidVoxel01Silicon
+          Prefab: AsteroidVoxel01Silicon
+          Name: Silicon Asteroid
+          Pos: [1797, 2439, -4782]
+          Rot: [0, 0, 0]
+          Properties:
+            - Key: RegenAfter
+              Value: 180
+
+        - Type: AsteroidVoxel02Copper
+          Prefab: AsteroidVoxel02Copper
+          Name: Copper Asteroid
+          Pos: [-3229, -3326, 2606]
+          Rot: [0, 0, 0]
+          Properties:
+            - Key: RegenAfter
+              Value: 180
+
+        - Type: AsteroidVoxel01Copper
+          Prefab: AsteroidVoxel01Copper
+          Name: Copper Asteroid
+          Pos: [-3680, 1735, 3306]
+          Rot: [0, 0, 0]
+          Properties:
+            - Key: RegenAfter
+              Value: 180
+
+        - Type: AsteroidVoxel02Cobalt
+          Prefab: AsteroidVoxel02Cobalt
+          Name: Cobalt Asteroid
+          Pos: [-4106, -1642, -2524]
+          Rot: [0, 0, 0]
+          Properties:
+            - Key: RegenAfter
+              Value: 180
+
+        - Type: AsteroidVoxel01Promethium
+          Prefab: AsteroidVoxel01Promethium
+          Name: Promethium Asteroid
+          Pos: [5425, 2312, 243]
+          Rot: [0, 0, 0]
+          Properties:
+            - Key: RegenAfter
+              Value: 180
+
+
+    FixedPlayerStart:
+        - Mode: Creative
+          SubMode: Empty
+          Armor: ArmorMedium
+          Pos: [61, -1996, -6805]
+          RotY: 14
+
+        - Mode: Creative
+          SubMode: Normal
+          Armor: ArmorMedium
+          Pos: [89, -1932, -6795]
+          RotY: -90
+
+        - Mode: Debug
+          Pos: [65, -1900, -6800]
+          RotY: 160
+
+# Drones
+DroneBaseSetup:
+    Fixed:
+        - Name: MainDroneBase
+          Pos: [-5233.616, -1812.031, 7159.221]
+          DroneOnDuty:
+            - Name: SpaceDronePlasma
+              Pos: [741.0204, -3559.981, 8487.728]
+              Radius: 653
+            - Name: SpaceDronePlasma
+              Pos: [5270.344, 219.3456, 8839.6]
+              Radius: 747
+            - Name: SpaceDronePlasma
+              Pos: [-1732.9, 2779.658, -9206.123]
+              Radius: 763
+          SpaceVessel:
+            - Name: Freighter
+              FixedMaxSpeed: 24
+              Mission: Freighter
+              Freighter:
+                DelayBetweenRespawn: 435
+                PathWayPoint:
+                - [-4633, 1846, 1489]
+                - [-1116, 756, 5172]
+                - [4127, 97, 3740]
+                - [5368, 4833, -1725]
+                - [1229, -3515, -5697]
+                - [-4787, 7376, -4337]
+              Stock:
+                - Name: SpaceDronePlasma
+                  Amount: 4
+                  Extra: 1
+            - Name: Freighter
+              FixedMaxSpeed: 22
+              Mission: Freighter
+              Freighter:
+                DelayBetweenRespawn: 465
+                PathWayPoint:
+                - [-1662, -203, -4702]
+                - [3425, -6345, -4006]
+                - [5207, -194, 968]
+                - [1708, -6928, 4833]
+                - [-3628, -7147, 4243]
+                - [-5164, -3068, -960]
+              Stock:
+                - Name: SpaceDronePlasma
+                  Amount: 4
+                  Extra: 1
+            - Name: Freighter
+              FixedMaxSpeed: 38
+              Mission: Freighter
+              Freighter:
+                DelayBetweenRespawn: 553
+                PathWayPoint:
+                - [-4663, -3483, -3077]
+                - [-1152, 4449, -5625]
+                - [3170, 192, -4803]
+                - [5200, 2649, -1065]
+                - [4684, 6964, 3091]
+                - [1267, -6467, 6185]
+                - [-3821, -5744, 5791]
+                - [-7762, 5825, 1590]
+              Stock:
+                - Name: SpaceDronePlasma
+                  Amount: 4
+                  Extra: 1
+            - Name: Freighter
+              FixedMaxSpeed: 32
+              Mission: Freighter
+              Freighter:
+                DelayBetweenRespawn: 511
+                PathWayPoint:
+                - [-4387, -1084, -4547]
+                - [-7175, 4172, -757]
+                - [-6202, -6922, 4179]
+                - [-2373, 4242, 8264]
+                - [3696, -6174, 8313]
+                - [8438, 6204, 4120]
+                - [8632, 1044, -2147]
+                - [4609, 1919, -6338]
+                - [-588, 3783, -8480]
+              Stock:
+                - Name: SpaceDronePlasma
+                  Amount: 3
+                  Extra: 1
+            - Name: BAO_PF2
+              FixedMaxSpeed: 20
+              Mission: Immobile
+              Immobile:
+                Position3D: [4039.366, 598.9615, -3531.198]
+              Stock:
+                - Name: SpaceDronePlasma
+                  Amount: 15
+                  Extra: 1
+              Properties:
+                - Key: RegenAfter
+                  Value: 720
+
+Build: 1875
