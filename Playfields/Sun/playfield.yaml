@@ -9,8 +9,8 @@ Gravity: -50
 AtmosphereDensity: 0                # Please don't change
 AtmosphereBreathable: False
 Temperature: 5500                    # No functionality yet
-TemperatureDay: 6000                  # No functionality yet
-TemperatureNight: 5000              # No functionality yet
+TemperatureDay: 600                  # No functionality yet
+TemperatureNight: 600              # No functionality yet
 DayLength: 24                       # No functionality yet
 PlanetType: Sun                     # No functionality yet
 Moons: 0                            # No functionality yet

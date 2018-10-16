@@ -1,0 +1,142 @@
+---
+# Space Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html 
+
+# Playfield Characteristics
+Gravity: 0.00
+AtmosphereEnabled: False
+PvP: True
+UseFixed: True
+Radiation: 9.6
+TemperatureDay: -190
+Music: space
+
+# Playfield difficulty (has impact on experience gains)
+Difficulty: 2
+
+PlayfieldType: Space
+
+PlanetType: Space
+
+Description: "The space around Kohvail Asteroid Field features an asteroid belt"
+
+SunFlare: EnvironmentalEffects/SunFlareWhite4Space
+Stars: SkyboxStarsPurple
+Nebula: PrefabNebulaBluePinkPurple
+
+### POIs
+POIs:
+    Fixed:
+        - Type: AsteroidFieldRectangle2
+          Name: Asteroid Field
+          Pos: [0, 0, 0]
+          Rot: [36, 95, 52]
+
+
+        - Type: AsteroidVoxel02Sathium
+          Prefab: AsteroidVoxel02Sathium
+          Name: Sathium Asteroid
+          Pos: [24401, 1391, -12672]
+          Rot: [0, 0, 0]
+          Properties:
+            - Key: RegenAfter
+              Value: 380
+
+        - Type: AsteroidVoxel02Sathium
+          Prefab: AsteroidVoxel02Sathium
+          Name: Sathium Asteroid
+          Pos: [25260, 4872, -30200]
+          Rot: [0, 0, 0]
+          Properties:
+            - Key: RegenAfter
+              Value: 280
+
+        - Type: AsteroidVoxel02Sathium
+          Prefab: AsteroidVoxel02Sathium
+          Name: Sathium Asteroid
+          Pos: [26294, -4970, 23442]
+          Rot: [0, 0, 0]
+          Properties:
+            - Key: RegenAfter
+              Value: 480
+
+
+# Drones
+DroneBaseSetup:
+    Fixed:
+        - Name: MainDroneBase
+          Pos: [3035.667, 1375, 1785.836]
+          DroneOnDuty:
+            - Name: SpaceDroneLaser
+              Pos: [46.70343, 939, 43.75832]
+              Radius: 453
+            - Name: SpaceDronePlasma
+              Pos: [-1601.195, -1742, -2056.067]
+              Radius: 615
+            - Name: SpaceDronePlasma
+              Pos: [-7244.176, -463, 612.2192]
+              Radius: 417
+          SpaceVessel:
+            - Name: Freighter
+              FixedMaxSpeed: 34
+              Mission: Freighter
+              Freighter:
+                DelayBetweenRespawn: 555
+                PathWayPoint:
+                - [2785, -6413, 7145]
+                - [-3159, -4260, 1859]
+                - [-5179, 769, 5041]
+                - [2581, -5382, -283]
+                - [-323, 5457, -297]
+                - [3262, 4076, 3507]
+                - [-2412, -813, 3299]
+                - [-3854, -4899, -5668]
+                - [-4552, 6397, -2642]
+              Stock:
+                - Name: SpaceDronePlasma
+                  Amount: 4
+                  Extra: 1
+            - Name: Freighter
+              FixedMaxSpeed: 35
+              Mission: Freighter
+              Freighter:
+                DelayBetweenRespawn: 575
+                PathWayPoint:
+                - [-6877, -5542, 2970]
+                - [370, -337, -3859]
+                - [-2550, 2062, 2373]
+                - [-1181, -2471, 2766]
+                - [-3192, 6491, -2595]
+                - [-990, 4436, 255]
+                - [-295, 6650, -671]
+                - [60, 6253, 52]
+              Stock:
+                - Name: SpaceDronePlasma
+                  Amount: 4
+                  Extra: 1
+            - Name: BAO_XenuSupplyStation
+              FixedMaxSpeed: 20
+              Mission: Immobile
+              Immobile:
+                Position3D: [-3633.485, 5233.271, -3160.191]
+              Stock:
+                - Name: SpaceDroneLaser
+                  Amount: 23
+                  Extra: 1
+              Properties:
+                - Key: RegenAfter
+                  Value: 720
+            - Name: BAO_XenuSupplyStation
+              FixedMaxSpeed: 20
+              Mission: Immobile
+              Immobile:
+                Position3D: [4604.276, -4136.271, -2436.423]
+              Stock:
+                - Name: SpaceDronePlasma
+                  Amount: 20
+                  Extra: 1
+              Properties:
+                - Key: RegenAfter
+                  Value: 720
+
+Build: 1875

@@ -221,6 +221,8 @@
   Item18: "OreScanner, 1167-1750, 1-5, 933-1167, 5-10"
   Item19: "PlasticMaterial, 1-2, 50-100, 1-1, 100-500"
   Item20: "NCPowder, 1-2, 50-100, 1-1, 100-500"
+  Item21: "ErestrumIngot, 450, 10-20, 250,20-50"
+  Item22: "ZascosiumIngot, 650, 10-20, 250,20-50"
 }
 
 { Trader Name: MarketCafe
@@ -306,6 +308,8 @@
   Item8: "PlasticMaterial, 1-2, 50-100, 1-1, 100-500"
   Item9: "GoldIngot, 0-0, 0-0, 640-800, 100-500 "
   Item10: "CrystalWarp, 269-403, 50-100, 215-269, 100-500 "
+  Item11: "ErestrumIngot, 450, 10-20, 250,20-50"
+  Item12: "ZascosiumIngot, 650, 10-20, 250,20-50"
 }
 
 { Trader Name: Medic
@@ -641,7 +645,7 @@
   Item14: "TurretGVDrillWeapon,39800-60860,1,12000-16800,1-2"
   Item15: "TurretMSDrillWeapon,26162-26162,1,8324-10703,1-2"
   Item16: "AutoMinerCore, 12000-18000, 1-5, 9600-12000, 5-10"
-  Item17: "Hydrogen, 3-8, 100-500, 1-3, 50-500"
+  Item17: "HydrogenBottle, 3-8, 100-500, 1-3, 50-500"
   Item18: "MultiCharge, 25-37, 50-100, 20-25, 100-500"
   Item19: "RadarSuitT1, 1200-1500, 1-3"
   Item20: "ContainerHarvest, 200-300, 1-3"
@@ -789,6 +793,28 @@
   Item24: "PlayerBikeKit, 136-204, 1-10, 109-136, 10-20"
   Item25: "OreScanner, 1100-1250, 1-15, 933-1000, 5-20"
 }
-
+{ Trader Name: Local Farm
+  SellingText: "Welcome to Local Farm Products."
+  SellingGoods: "trwFood"
+  Item1: "Steak, 62-93, 0-10, 50-62, 10-20"
+  Item2: "Ham, 68-102, 0-10, 54-68, 10-20"
+  Item3: "EmergencyRations, 400-600, 50-60, 180-600, 30-60"
+  Item4: "MeatBurger, 86-129, 0-10, 69-86, 10-20"
+  Item5: "Cheese, 52-78, 0-10, 42-52,10-20"
+  Item6: "FriedVegetables, 58-87, 0-10, 46-58, 10-20"
+  Item7: "WaterBottle, 2-4, 0-10, 1-2, 10-20"
+  Item8: "PumpkinCookie, 64-96, 0-10, 51-64, 10-20"
+  Item9: "Waffles, 64-96, 0-10, 51-64, 10-20"
+  Item10: "Cereals, 50-75, 0-10, 40-50, 10-20"
+  Item11: "FruitJuice, 16-24, 0-10, 13-16, 10-20"
+  Item12: "VegetableJuice, 16-24, 0-10, 13-16, 10-20"  
+}
+{ Trader Name: Local Bio-Fuel
+  SellingText: "Welcome to Local Farm Products."
+  SellingGoods: "trwFood"
+  Item1: "BioFuel, 22-38, 400-600, 11-15, 100-800" 
+  Item2: "WaterJug, 5-15, 400-400, 1-2, 100-500"
+  Item3: "HydrogenBottle, 3-6, 500-800, 1-3, 500-900"
+}
 
 

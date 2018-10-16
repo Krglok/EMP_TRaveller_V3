@@ -51,6 +51,18 @@ POIs:
           - Key: RegenAfter
             Value: 720
           SpawnResource: []
+#  X-Boot mit Teleport
+        - Type: BA_Admin
+          Prefab: T-JumpBoot-2202
+          Mode: Survival
+          Name: X-Boot Pixie
+          Pos: [-4000, 0, 3900]
+          Rot: [0, -50, 0]
+          InitPower: True
+          Properties:
+          - Key: RegenAfter
+            Value: 720
+          SpawnResource: []
           
 #        - Type: BA_Alien
 #          Prefab: BAO_DerelictMiningShip

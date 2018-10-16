@@ -1,5 +1,90 @@
 Creator: Eleon Game Studios
 Chapters:
+  - ChapterTitle: Traveller Protocol Keng
+    Category: SoloMission
+    Preamble: "Willkommen im Traveller Universum!\n
+    Dies ist ein spezielles Szenarion auf dem Hintergrund des Traveller RPG.\n
+    Dieses PROTOKOLL soll den Spieler in das Szenario einfuehren. Es liefert Zusatzinformationen.\n
+    Du solltest es nicht ueberspringen.\n
+    1. [ffff00]Du startest in einer Rettungskapsel im Anflug auf den abgelegenen Planeten Keng in den Spinward Marches.\n
+    2. Du must den Planeten sowieso verlassen. Nichts hat hier Bestand ! (Wipe).\n
+    3. Erkunde den Planeten und die vorhandenen Siedlungen. \n
+    4. Nur im Orbit kannst du ein grosses Raumschiff (CV) bauen.[-]\n
+    5. Du kannst die Resourcen im Raumhafen kaufen!\n
+    6. [ffff00]Handeln[-] [ff4444] Nicht alle Resourcen sind abbaubar. Du brauchst Geld um seltene Resourcen zu kaufen.[-]\n
+    7. [ff4444]Auf dem Planeten ist ein Trainingslager des IISS , Imperial Interstellar Scout Service.\n
+    8. Die allgemeine Verkehrssprache ist Denglisch\n
+    "
+    Description: "[fff400]Handling Tips[-]\n
+    1. Wird eine wichtige Information vermisst. Bitte an den [fff400]Admin[-] oder [fff400]Spieler Lucius[-] wenden?\n
+    2. Oeffne das PDA mit [ff2400]F1[-], und lese das entsprechende Kapitel der aktuellen Mission in der Liste und wechsle mit dem linken Button in das [ff2400]PDA LOG[-] mit dem oberen rechten Button.\n\n
+    3. [fff400]Wenn du nicht sicher bist was als naechstes zu tun ist[-] checke die TASK Liste auf dem rechten Fenster oder suche nach [fff400]gelben Marker[-] auf dem Bildschirm. Sie zeigen eventuell eine interessante Position!\n\n
+    4. Lies das PDA!\n 
+    5. Lies das PDA!\n
+    "
+    PictureFile: Human.jpg
+    PlayerLevel: 1 # (default: 1)
+    VisibleOnStartPlayfield: Keng
+    Visibility: Always    
+    NoSkip: True
+    AutoActivateOnGameStart: True
+    CompletedSound: Sounds/Misc/DroneSignalBad
+    CompletedMessage: "Scout Protocol completed!\n
+    * * *\n\n
+    Was ist als naechstes zu tun?\n\n
+    1. Lies das PDA! Lies das PDA!\n\n
+    2. Du musst die Trainingsstation erreichen. Dies ist dein urspruengliches Ziel.\n\n
+    3. Du must ein kleines Raumschiff bauen um in den Orbit zu kommen. Nur dort kannst du ein grosses Raumschiff (CV) bauen.[-]\n\n
+    4. Du kannst die Raumschiffkomponenten im Raumhafen kaufen!\n\n
+    5. Du bist Mitglied des IISS, des Scout Service. \n
+    6. Der IISS hat eigene Einrichtungen und Basen. Der Zugangscode ist meistens 42.\n
+    Du bist hier gestrandet. Dein Raumschiff ist verunglueckt. Du must dich allein durchschlagen .\n\n
+    Das toeten von Einheimischen gilt als Straftat.\n\n
+    Versuche Rollenspiel zu machen. Der Admin hat sich viel Muehe mit den Auftraegen gemacht.\n\n
+    Viel Glueck, Scout!
+    "
+    Rewards:
+      - Item: MoneyCard
+        Count: 1200
+      - Item: AssaultRifle
+        Count: 1
+      - Item: 5.8mmBullet
+        Count: 500
+    Tasks:
+      - TaskTitle: "Training Station auf Keng"
+        PictureFile: Explorer.jpg
+        StartMessage: "norm;35|Suche die [ffff00]Trainingsstaion des Scout Service. Dort erwartet man dich.[-]."
+        Rewards:
+          - Item: EmergencyRations
+            Count: 5 
+        Actions:            
+          - ActionTitle: "Suche die Trainingsstation von Keng"
+            Description: "Du solltest dein Motorrad verwenden. Es ist ziemlich weit zu Fuss."
+            Check: NearPOI
+            Names: [ "Training Station" ]  
+            Guiding: Destination
+            AllowManualCompletion: true
+            CompletedMessage: "Die Station ist verlassen. Es ist nicht ersichtlich was passiert ist. Offensichtlich ist nichts zerstört.\n
+            Suche den Personal Container.
+            "
+
+          - ActionTitle: "Gehe zum Personal Container"
+            Description: "Du kannst alles herausnehmen. Du kannst es auch liegen lassen. Aber bedenke das es verschwindet bei einem Reset."
+            Check: InventoryOpened
+            Names: [ "ContainerPersonal" ]  # Typename
+            Guiding: Destination
+            AllowManualCompletion: true
+            CompletedMessage: "Nimm alles heraus und verlasse den Container."
+
+          - ActionTitle: "Exit Personal Container"
+            Description: ===
+            Check: InventoryEmptied
+            Names: [ "ContainerPersonal" ]  # Typename
+            AllowManualCompletion: true
+            CompletedMessage: "Zum Glueck ist die Ausruestung noch da.\n
+            Du solltest nun den Raumhafen suchen. Vielleicht hast du Glueck und du findest ein Fahrzeug.
+            "
+
   - ChapterTitle: Traveller Protocol Dentus
     Category: SoloMission
     Preamble: "Willkommen im Traveller Universum!\n
@@ -24,7 +109,7 @@ Chapters:
     "
     PictureFile: Limayos.jpg
     PlayerLevel: 1 # (default: 1)
-    VisibleOnStartPlayfields: [ Dentus ]
+    VisibleOnStartPlayfield: Dentus 
     Visibility: Always    
     # or ByLevel, WhenRewarded (default: Always)
     # Activatable: Always   # same settings as Visibility (default: Always)
@@ -71,6 +156,7 @@ Chapters:
             AllowManualCompletion: true
             CompletedMessage: "Zum Glueck ist deine Ausruestung noch da."
 
+
 #-----------------------------------------------------------------
 #-----------------------------------------------------------------
 #  Eigene Missionen
@@ -100,7 +186,8 @@ Chapters:
             Fliege es an!
             "
             Check: NearPoi
-            Names: [Spaceport-C-Low]
+            Names: [Spaceport-C-High]
+            Guiding: Destination
             AllowManualCompletion: true
             CompletedMessage: "Du hast den High Port erreicht."
 
@@ -131,14 +218,16 @@ Chapters:
             "
             Check: NearPoi
             Names: [UNSF-Loader]
+            Guiding: Destination
+            AllowManualCompletion: true
             CompletedMessage: "Du hast das Wrack gefunden. Von dem Prisengeld kannst du dein eigenes Raumschiff finanzieren."
 #----------------------------------------------------------------
   - ChapterTitle: "Der erste Sprung"   
     Category: SoloMission
     Description: "[ff2400]NUR fuer Human. Planet Dentus[-]\n
-    Springe zum System Orbit von Dentus.
-    Denke an ausreichend Sauerstoff, Nahrung und Energie und Sprungkristalle.
+    Springe zum System Orbit von Dentus. Von dort geht es weiter zu anderen Systemen.
     Vom System Orbit aus kannst du zu anderen Sternen fliegen.\n
+    Denke an ausreichend Sauerstoff, Nahrung und Energie und Sprungkristalle.
     Im System Orbit kann man nichts bauen. Manchmal findet man Promethium Asteroiden.\n
     "
     PictureFile: DangerousSpace.jpg
@@ -155,10 +244,11 @@ Chapters:
             Description: "Der naechste Stern ist Kinorb.\n
             Das System ist 1 Parsec entfernt. Diese Entfernung schaffst du auf jeden Fall mit einem Sprungtriebwerk.\n
             Von Kinorb System aus kannst du die Umlaufbahnen der Planeten anspringen.\n
-            Der Planet Kinorb hat ein Starport-A. Den groessten Standardraumhafen.\n 
+            Der Planet Kinorb hat ein Spaceport-A. Den groessten Standardraumhafen.\n 
             "
             Check: PlayfieldEntered
             Names: ["Kinorb System" ]
+            AllowManualCompletion: true
             CompletedMessage: "Du hast das Kinorb System erreicht.\n
             Achtung: Die Systemorbits sind gefaehrlich. Sehr hohe Radioaktitaet!
             "
@@ -201,7 +291,7 @@ Chapters:
             Amount: 500
             CompletedMessage: $
 
-          - ActionTitle: "500 Pentaxid Erz"
+          - ActionTitle: "50 Pentaxid Erz"
             Description: "Abbau von 50 Pentaxid.
             Kaufen vom Markt oder nur im Inventory haben erledigt die Mission nicht !
             "
@@ -243,10 +333,13 @@ Chapters:
           - ActionTitle: Besuche die Promotion
             Description: "Suche die Promotion Veranstaltung auf dem Gelande der Industrieanlage neben dem Raumhafen.\n
             Es koennte sein, das dies etwas schwieriug zu finden ist. Da man bei Fukura Products wenig Erfahrung in diesen Dingen hat.\n
-            Aber irgendwo neben der Zentrale (Core) solltest du erfolgreich sein.
+            Aber irgendwo neben dem Haupteingang der Zentrale solltest du erfolgreich sein.
             "
-            Check: NearPoi
-            Names: [Dentus Industry Complex]
+            Check: NearPoi  ##  PrefabName
+            Names: 
+              - "Dentus-Industry-Complex"
+            Guiding: Destination
+            AllowManualCompletion: true
             CompletedMessage: "Du hast die Promotion Veranstaltung gefunden. Es gibt eine neue Quest fuer dich"
 #-----------------------------------------------------------------------
   - ChapterTitle: "Konzernhandel"   
@@ -272,9 +365,114 @@ Chapters:
             Studiere die Preise und Mengen.
             "
             Check: NearPoi
-            Names: [Dentus-Industry-Dock]
-            AllowManualCompletion: false
+            Names:
+              - "Dentus Industry Complex"
+              - "Dentus-Industry-Complex"
+              - "BA_Dentus-Industry"
+            Guiding: Destination
+            AllowManualCompletion: true
             CompletedMessage: "Du hast die Haendler gefunden. Viel Erfolg beim Verkauf"
+
+#----------------------------------------------------------------
+  - ChapterTitle: "Passagier nach Becks World"   
+    Category: SoloMission
+    Description: "[ff2400]Planet Becks World[-]\n
+    Jemand sucht eine Passage zum Planet Becks World. Fliege Das Highport im Orbit von Becks World an.
+    Du startest im Orbit von Kinorb. Springe zum System Orbit von Kinorb. \n
+    Springe zum System Orbit von Yorbund und dann zum System Orbit von Becks World. \n
+    Der Planet Becks World hat einen Raumhafen der Klasse-D. Nimm also ausreichend Ausrüstung und Versorgunsmaterial mit.\n
+    Du wirst ein kleines Raumschiff brauchen um auf dem Planeten zu landen.
+    Denke an ausreichend Sauerstoff, Nahrung, Energie und Sprungkristalle.\n
+    In den System Orbits findet man manchmal Promethium Asteroiden. Sprungkristalle koennen in jedem Spaceport gekauft werden.\n
+    "
+    PictureFile: DangerousSpace.jpg
+    PlayerLevel: 1
+    Visibility: Always    # or ByLevel, WhenRewarded
+    Rewards:
+      - Item: MoneyCard
+        Count: 7500
+    Tasks:
+      - TaskTitle: "Naechster Stop Becks World"
+        PictureFile: DangerousSpace.jpg
+        Actions:
+          - ActionTitle: "Springe nach Becks World"
+            Description: "Springe in den System Orbit von Becks World.\n
+            Von dort ist es nur ein Katzensprung in den Orbit von Becks World.\n
+            Fliege den Highport an.\n
+            Der Planet Becks World hat ein Spaceport-D. Dies ist unterhalb des Standards und bietet wahrscheinlich keine Reparatureinheit.\n 
+            "
+            Check: PlayfieldEntered
+            Names: ["Becks World System" ]
+            AllowManualCompletion: true
+            CompletedMessage: "Du hast das Becks World System erreicht.\n
+            Fliege den Highport an!
+            "
+          - ActionTitle: "Springe den Orbit von Becks World an"
+            Description: "Fliege den Highport an.\n
+            Der Passagier verlaesst das Schiff automatisch sobald du nahe genug bist.\n
+            "
+            Check: NearPOI
+            Names: [Spaceport-D-High]
+            AllowManualCompletion: true
+            CompletedMessage: "Der Passagier hat das Raumschiff verlassen. Du erhaelst deine Bezahlung.\n
+            "
+  - ChapterTitle: "Passagier zum Planet Becks World"   
+    Category: SoloMission
+    Description: "[ff2400]Planet Becks World[-]\n
+            Der Passagier hat seinen Transfer zum Lowport verpasst und fragt nun an, ob du ihn dorthin bringen kannst.\n
+            Mit einem kleinen Raumschiff ist es nur ein Katzensprung vom Orbit auf den Planeten Becks World.\n
+            Fliege den Lowport an.\n
+            "
+    PictureFile: Spaceport-D-Low.jpg
+    PlayerLevel: 1
+    Visibility: WhenRewarded    # or ByLevel, WhenRewarded
+    Rewards:
+      - Item: MoneyCard
+        Count: 500
+    Tasks:
+      - TaskTitle: "Landung Becks World"
+        PictureFile: Spaceport-D-Low.jpg
+        Actions:
+          - ActionTitle: "Lande auf dem Lowport von Becks World"
+            Description: "Der Passagier fragt nun an, ob du ihn dorthin bringen kannst.\n
+            Der Planet Becks World hat ein Spaceport-D. Dies ist unterhalb des Standards und bietet wahrscheinlich keine Reparatureinheit.\n 
+            "
+            Check: NearPOI
+            Names: [Spaceport-D-Low]
+            AllowManualCompletion: true
+            CompletedMessage: "Du hast den Spaceport von Becks World erreicht.\n
+            Der Passagier hat das Raumschiff verlassen. Du erhaelst deine Bezahlung.\n
+            "
+            
+  - ChapterTitle: "Erforschung der Ancient Cave"   
+    Category: SoloMission
+    Preamble: "Seit mehreren Jahren erforscht die Universitaet of Regina, eine Hoehle mit Artefakten 
+    "
+    Description: "Die Universitaet sucht einen Vertrauensmann um den Stand der Forschungsarbeiten zu begutachten, 
+    ohne die lokale Regierung oder die offiziellen Vertreter des Imperiums einzuschalten.\n 
+    Besondere Kenntnisse sind nicht erforderlich, da nur Informationen gesammelt werden muessen oder Unrelagen 
+    "
+    PictureFile: stargate1.jpg
+    PlayerLevel: 1
+    Visibility: WhenRewarded    # or ByLevel, WhenRewarded
+    Rewards:
+      - Item: MoneyCard
+        Count: 50000
+    Tasks:
+      - TaskTitle: "Das Buero der Universitaet"
+#       PictureFile: Spaceport-D-Low.jpg
+        Actions:
+          - ActionTitle: "Reise zur Hauptstadt Becks Town"
+            Description: "Die Hauptstadt Becks Town wird von militanten Gruppen beherrscht. FRemde sind hier nicht willkommen.\n
+            Suche das Buero der Universitaet, es liegt im Stadtteil Becks Village.\n
+            Du erkennst das Haus von aussen an einem Schild.\n
+            "
+            Check: NearUnit
+            Names: ["LCD_University_Info"]
+            AllowManualCompletion: true
+            CompletedMessage: " Du hast das Buero der Universitaet gefunden.
+            "
+      
 
 
 #-----------------------------------------------------------------
@@ -347,7 +545,7 @@ Chapters:
                           \n
                          "
           - ActionTitle: "[ffff00]X-Boot Verbindung"
-            Description: "Die X-Boote verbinden zwei Planetensystem die 4 Parsec voneinander entfernt sind. Dies ist die normale Nachrictenverbindung.\n
+            Description: "Die X-Boote verbinden zwei Planetensystem die 4 Parsec voneinander entfernt sind. Dies ist die normale Nachrichtenverbindung.\n
                           Jedes X-Boot Verbindung hat eine kleine Basis an der es anlegt. Die Basis enthaelt einfache Supporteinrichtungen.\n
                           In wichtigen Systemen sind auch grosse Scoutbasen um die Schiffe zu warten und zu bauen.\n
                           Auf wichtigen Strecken sind Verbindungen mit Entfernungen von 5 oder 6 Parsec verfuegbar!\n
@@ -366,7 +564,7 @@ Chapters:
       - TaskTitle: Human
         PictureFile: stargate1.jpg 
         Actions:
-          - ActionTitle: "[ffff00]Human"
+          - ActionTitle: "[ffff00]Human[-]"
             Description: "Der Begriff Human ist nicht mit Menschen im engeren Sinne zu verwechseln.\n 
                           Die Nachkommen der Menschen von Terra nennen sich Solomani und haben ein Imperium am anderen Ende des Spiralarmes der Galaxis.\n
                           Dies ist mehrere tausend Parsec entfernt!\n\n
@@ -376,19 +574,29 @@ Chapters:
                           
                          "
 #
-          - ActionTitle: "[ffff00]Explorer"
+          - ActionTitle: "[ffff00]Explorer[-]"
             Description: "Die Explorer sind eine Gruppe von Menschen, die auf eigene Faust die Planeten und die Galaxis erforschen.\n
                           Einige gehoeren auch zum Scoutdienst und sind im Auftrag des Imperiums unterwegs.\n
                           Es geht das Geruecht der Scoutdienst hat sich Archduke Norris angeschlossen.\n\n
                           
                          "
 #
-          - ActionTitle: "[ffff00]Humanoide"
+          - ActionTitle: "[ffff00]Humanoide[-]"
             Description: "Die Humanoiden sind die Nachkommen von Nichtmenschen Siedlern.\n
                           In einigen Bereichen des Imperriums werden sie diskreminiert.\n
                           Sicher ist, dass im Humanoiden den groessten Anteil an Einwohnern des Imperiums stellen.\n
                           \n
                          "
+#----------------------------------
+      - TaskTitle: Die Ancient
+        PictureFile: stargate1.jpg 
+        Actions:
+          - ActionTitle: "[ffff00]Ancient[-]"
+            Description: "Der Begriff Ancient bezieht sich auf eine alte Rasse.\n 
+                          Ueber die Wesen selbst ist wenig bekannt. Ihre Bauten und Artefakte findet man ueberall in der Galaxis verteilt.
+                         "
+#
+#
 #----------------------------------
 #
       - TaskTitle: Astrophysik
@@ -441,7 +649,7 @@ Chapters:
           - ActionTitle: "[ffff00]Regina System"
             Description: "Das Regina System ist eines der ersten Planetensystem, dass in diesem Bereich der Galaxis besiedelt wurde.\n
                           Es umfasst 8 Umlaufbahnen. Davon sind 3 Gasriesen\n
-                          Auf dem Planeten ist Starport Typ A. Der Planet hat eine Navybase und eine Scoutbase.\n
+                          Auf dem Planeten ist Spaceport Typ A. Der Planet hat eine Navybase und eine Scoutbase.\n
                           Der Planet hat ca. 1 Millionen Einwohner unterschiedlicher Rassen.\n
                           Der Planet ist der Sitz von mehreren Adligen (Noble) und der Sitz des Archduke der Spinward Marches.
                           Das System ist Teil der X-Boot Verbindungen.
@@ -451,32 +659,32 @@ Chapters:
                           Es umfasst 10 Umlaufbahnen. Davon sind 3 Gasriesen und 2 Asteroidenfelder\n
                           Das System gehoert zu den X-Boot Verbindungen.\n
                           Dies ist eine Wasserwelt.\n
-                          Es gibt ein Starport Typ C und eine Scout Base.\n
+                          Es gibt ein Spaceport Typ C und eine Scout Base.\n
                           Das System gehoert z
                           "
           - ActionTitle: "Boughene System"
             Description: "Das Boughene System ist ein Nachbarsystem von Efate.\n
                           Es umfasst 13 Umlaufbahnen. Davon ist 1 ein Gasriese.\n
-                          Auf dem Planeten ist ein Starport Typ A. Es gibt eine Navybase.\n
+                          Auf dem Planeten ist ein Spaceport Typ A. Es gibt eine Navybase.\n
                           Das System ist Teil der X-Boot Verbindungen.
                           "
           - ActionTitle: "Efate System"
             Description: "Das Efate System ist ein Nachbarsystem von Akua.\n
                           Es umfasst 8 Umlaufbahnen. \n
-                          Auf dem Planeten ist ein Starport Typ A. Es gibt eine Scoutbase.\n
+                          Auf dem Planeten ist ein Spaceport Typ A. Es gibt eine Scoutbase.\n
                           Das System ist Teil der X-Boot Verbindungen.
                           "
           - ActionTitle: "Pixie System"
             Description: "Das Pixie System ist ein Nachbarsystem von Boughene.\n
                           Es umfasst 15 Umlaufbahnen. Davon ist 1 ein Gasriese\n
                           Der Hauptplanet Pixie ist eine Vakuum Welt !\n
-                          Auf dem Planeten ist ein Starport Typ A. Es gibt eine Scoutbase.\n
+                          Auf dem Planeten ist ein Spaceport Typ A. Es gibt eine Scoutbase.\n
                           Das System ist Teil der X-Boot Verbindungen.
                           "
           - ActionTitle: "Kinorb System"
             Description: "Das Kinorb System ist ein Nachbarsystem von Dentus.\n
                           Es umfasst 7 Umlaufbahnen. Davon ist 1 ein Gasriese\n
-                          Auf dem Planeten ist ein Starport Typ A. \n
+                          Auf dem Planeten ist ein Spaceport Typ A. \n
                           Das System ist Teil der X-Boot Verbindungen.
                           "
           - ActionTitle: "[ffff00]Planet Dentus"
@@ -485,26 +693,64 @@ Chapters:
                           Die Ureinwohner sind friedlich und neutral gegenueber den Buegern des Imperiums.\n
                           Dies gilt nicht unbedingt fuer die Mitglieder anderer Konzerne oder MegaKonzerne .\n
                           Es gibt keine einheitliche Regierung, sondern einzelne Clans, die auf ihrer Unabhaengigkeit basieren.\n
-                          Der Planet wird auf TL 10 eingestuft. Die Industrie reicht nicht fuer eine komplette Selbstversorgung. Daher sind auch die KOnzerne und Megakonzerne hier stark engagiert.\n
+                          Der Planet wird auf TL 10 eingestuft. Die Industrie reicht nicht fuer eine komplette Selbstversorgung. Daher sind auch die Konzerne und Megakonzerne hier stark engagiert.\n
                           \n
                           In frueheren Zeiten gab es hier einen Vargr Stuetzpunkt. Dieser wurde aber zertsoert.\n\n
+                         "
+          - ActionTitle: "[ffff00]Planet Becks World "
+            Description: "Der Planet Becks World ist ein unbedeutender Planet am Rande der Spinward Marches.\n
+                          Der Planet war im 5th Frontier War von den Vargr besetzt.\n
+                          Die Bewohner bestehen sehr auf ihrer Selbstaendigkeit und sind misstrauisch gegenueber den Buegern des Imperiums.\n
+                          Die Regierung hat eine militanten Miliz eingesetzt um den Planeten zu kontrollieren.\n
+                          Der Planet ist als Amber Zone deklariert und gilt als riskant und nicht sicher.
+                          Es gibt nur wenige Siedlungen und eine grosse Stadt , Becks Town.\n
+                          Der Planet wird auf TL 4 eingestuft. Die Industrie reicht nicht fuer eine komplette Selbstversorgung. Daher sind auch die Konzerne und Megakonzerne hier stark engagiert.\n
+                          \n
+                          Es gibt eine Ancient Cave, die von der Universitaet von Regina erforscht wird.\n\n
+                         "
+          - ActionTitle: "[ffff00]Planet Keng "
+            Description: "Der Planet Keng ist ein Low Tech Planet am Rande der Spinward Marches.\n
+                          Der Planet ist hat eine Reisewarnung (Amber Zone) und ist nur schwierig ueber gesperrte Systeme (Red Zone) zu erreichen.\n
+                          Die Bewohner bestehen sehr auf ihrer Selbstaendigkeit und sind misstrauisch gegenueber den Buegern des Imperiums.\n
+                          Die Fauna und Flora besteht zum Teil aus importierten (offworld) Lebensformen. Es gibt gefaehrliche Jaeger auf dem Planeten, die durchaus Menschen angreifen und toeten koennen.\n
+                          Es gibt nur viele einfache Siedlungen und eine typische Portcity.\n
+                          Der Planet wird auf TL 5 eingestuft. Die Industrie reicht nicht fuer eine komplette Selbstversorgung.\n
+                          Der IISS (Imperial Interstellar Scout Service) betreibt hier eine Ausbildungsstation.
+                          \n
+                          Es gibt eine unabhaengige Handelsstation (Freeport) in den aeusseren Bereichen des Planetensystems (Orthwolke).\n\n
+                         "
+          - ActionTitle: "[ffff00]Planet Shionty "
+            Description: "Der Planet Shionty ist eine Besonderheit. Die Wissenschaftler nehmen an, das er gesprengt wurde. Daher die verschiedenen Asteroiden Gürtel auf der habitablen Umlaufbahn.\n
+                          Der Planet ist gesperrt (Red Zone). Es ist schwierig und gefaehrlich dort zu fliegen und zu navigieren.\n
+                          Die Bewohner bestehen sehr auf ihrer Selbstaendigkeit und bestehen im wesentlichen aus Bergbauarbeitern, die in den Asteroiden nach Antimaterie suchen.\n
+                          Alle Planeten haben kein atembare Atmosphaere und es gibt kein flüssiges Wasser oder Eis.\n
+                          Es gibt ein Spaceport auf dem Mond eines Gasriesen und einige .\n
+                          Das Planetensystem wird auf TL 8 eingestuft. Insbesondere die Agrarproduktion reicht nicht fuer eine komplette Selbstversorgung.\n
+                          Der IISS (Imperial Interstellar Scout Service) hat einen Wachkreuzer im System stationiert.
+                          \n
+                          Es gibt einen Starport (Socrates Station) im Orbit um den aeusseren Gasriesen (Sokrates).\n\n
                          "
       - TaskTitle: Space Technology
         PictureFile: Vessel2.jpg 
         Actions:
-          - ActionTitle: "[ffff00]Starport"
-            Description: "Ein Starport ist nicht einfach ein Raumhafen auf einem Planeten. Es ist ein System, das aus einer Planeten und einer Orbit Komponente besteht.\n
+          - ActionTitle: "[ffff00]Spaceport"
+            Description: "Ein Spaceport ist nicht einfach ein Raumhafen auf einem Planeten. Es ist ein System, das aus einer Planeten und einer Orbit Komponente besteht.\n
                           Der Planetenraumhafen wird als Lowport bezeichnet. Die Orbitstation als Highport.\n
-                          Die Starports sind in Klassen eingeteilt, von A-E. Ein X heisst kein Raumhafen.\n
+                          Die Spaceports sind in Klassen eingeteilt, von A-E. Ein X heisst kein Raumhafen.\n
                           A = Raumhafen Qualitaet Excellent.\n
                           B = Raumhafen Qualitaet Gut.\n
                           C = Raumhafen Qualitaet Routine \n
                           D = Raumhafen Qualitaet Schlecht \n
                           E = Raumhafen Qualitaet Grenzland \n\n
-                          Als Spaceport wird ein Raumhafen fuer Innersystem Verkehr bezeichnet.\n
-                          Ein Starport unterliegt immer der Authoritaet des Imperiums. Die Authoritaet endet an der Grenze des Raumhafens !\n
+                          Als Starport wird ein Raumhafen fuer Innersystem Verkehr bezeichnet.\n
+                          Ein Spaceport unterliegt immer der Authoritaet des Imperiums. Die Authoritaet endet an der Grenze des Raumhafens !\n
                           Soldaten und Wachmannschaften sind nur fuer die Sicherheit innerhalb des Starport verantwortlich.\n
-                          Innerhalb des Starport gelten die Gesetze des Imperiums!\n
+                          Innerhalb des Spaceport gelten die Gesetze des Imperiums!\n
+                          "
+          - ActionTitle: "[ffff00]Starport"
+            Description: "Als Starport wird ein Raumhafen fuer Innersystem Verkehr bezeichnet.\n
+                          Ein Starport unterliegt NICHT der Authoritaet des Imperiums.\n
+                          Ein Starport wird von einer lokalen Regierung oder einem Konzern betrieben und orientiert sich an deren Interessen.
                           "
 #-------------------------------------
 #-------------------------------------

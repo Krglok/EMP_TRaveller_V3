@@ -1043,13 +1043,13 @@ RandomResources:
 
 ### Resource Asteroids
 AsteroidResources:
-    - Name: ErestrumResource
-      Threshold: 0.2
-      Amount: 0.2
+#    - Name: ErestrumResource
+#      Threshold: 0.2
+#      Amount: 0.2
 
-    - Name: ZascosiumResource
-      Threshold: 0.2
-      Amount: 0.2
+#    - Name: ZascosiumResource
+#      Threshold: 0.2
+#      Amount: 0.2
 
 
 ### POIs

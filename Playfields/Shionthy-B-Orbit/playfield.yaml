@@ -1,0 +1,119 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v1.57.3.0, Playfield Version: 8.2.3 [1787] (Alpha 8.2.3)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+TemperatureDay: -130
+Music: moonstone
+Description: "The space aroundShionty-B features an asteroid ring.  Out of the ring are a moon with a belter City. The Class-C-High-Port is in the lower orbit of the gasgiant. There is no fkuid water on the planets and moons.\n The planetsystem is a red zone and marked as dangerous place by the scout service. "
+PlanetType: Space
+PlayfieldType: Space
+AtmosphereEnabled: False
+Difficulty: 3
+SunFlare: EnvironmentalEffects/SunFlareWhite4Space
+Stars: SkyboxStarsCyan
+Nebula: PrefabNebulaBlueYellow
+Build: 1787
+Radiation: 1.2
+PvP: True
+UseFixed: True
+AllowBA: True
+AllowCV: True
+AllowSV: True
+AllowHV: True
+AllowBlueprintBA: True
+AllowBlueprintCV: True
+AllowBlueprintSV: True
+AllowBlueprintHV: True
+POIs:
+   Fixed:
+   -  Type: BA_Admin
+      Prefab: BA_Spaceport-C-High
+      Mode: Survival
+      Name: Starport C High
+      Pos: [10560, 841, 744]
+      Rot: [0, -50, 0]
+      InitPower: True
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  Type: AsteroidVoxel01Sathium
+      Prefab: AsteroidVoxel01Sathium
+      Name: Sathium Asteroid
+      Pos: [-6302, 73, -2486]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidVoxel02Neodymium
+      Prefab: AsteroidVoxel02Neodymium
+      Name: Neodymium Asteroid
+      Pos: [-6038, -225, 2595]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidVoxel03Sathium
+      Prefab: AsteroidVoxel03Sathium
+      Name: Sathium Asteroid
+      Pos: [4270, -1, 2671]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidVoxel01Promethium
+      Prefab: AsteroidVoxel01Promethium
+      Name: Promethium Asteroid
+      Pos: [318, 51, 6607]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidVoxel03Sathium
+      Prefab: AsteroidVoxel03Sathium
+      Name: Sathium Asteroid
+      Pos: [-3718, -11, 4086]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidFieldRing
+      Name: Asteroid Field
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+   FixedPlayerStart:
+   -  Mode: Debug
+      Pos: [-7000, 0, 7000]
+      Items: [CrushedStone, CrushedStone, CrushedStone]
+DroneBaseSetup:
+   Fixed:
+   -  Name: MainDroneBase
+      Pos: [5000, 200, 5000]
+      DroneOnDuty:
+      -  Name: SpaceDronePlasma
+         Pos: [4000, 200, 4000]
+         Radius: 350
+      -  Name: SpaceDronePlasma
+         Pos: [-4000, -200, 4000]
+         Radius: 350
+      -  Name: SpaceDronePlasma
+         Pos: [4000, 200, -4000]
+         Radius: 350
+      -  Name: SpaceDronePlasma
+         Pos: [-4000, -200, -4000]
+         Radius: 350
+      SpaceVessel:
+      -  Name: Freighter
+         FixedMaxSpeed: 20
+         Mission: Freighter
+         RangePatrol:
+            Position3D: [0, 0, 0]
+         Immobile: {}
+         Freighter:
+            DelayBetweenRespawn: 600
+            PathWayPoint:
+            - [-8000, 2000, 0]
+            - [8000, 2000, 8000]
+         Stock:
+         -  Name: SpaceDronePlasma
+            Amount: 5
+            Extra: 0
+      -  Name: Freighter
+         FixedMaxSpeed: 20
+         Mission: Freighter
+         RangePatrol:
+            Position3D: [0, 0, 0]
+         Immobile: {}
+         Freighter:
+            DelayBetweenRespawn: 1000
+            PathWayPoint:
+            - [-5500, 2000, 8000]
+            - [-3000, 2000, -8000]
+         Stock:
+         -  Name: SpaceDronePlasma
+            Amount: 5
+            Extra: 0

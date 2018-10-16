@@ -1,0 +1,111 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v1.57.3.0, Playfield Version: 8.2.3 [1787] (Alpha 8.2.3)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+TemperatureDay: -106
+Seed: 0
+PlanetSize: 0
+TemperatureMinMax: [0, 0]
+HumidityMinMax: [0, 0]
+TerrainLevel: 0
+BaseLevel: 0
+TemperatureHeightRange: [0, 0]
+TemperatureGradientRange: [0, 0]
+HumidityHeightFac: [0, 0]
+Music: space
+TerrainHeightMapMax: 0
+Description: The space around Kengfeatures an asteroid belt
+PlanetType: Space
+PlayfieldType: Space
+Terrain:
+   Name: Temperate
+   PoleLevel: 30
+   NoiseStrength: 0.29999999999999999
+   ColorChange: {}
+AtmosphereEnabled: False
+Difficulty: 2
+SunFlare: EnvironmentalEffects/SunFlareWhite4Space
+Stars: SkyboxStarsCyan
+Nebula: PrefabNebulaBlueYellow
+Build: 1648
+Radiation: 3.9900000000000002
+PvP: False
+UseFixed: True
+AllowBA: True
+AllowCV: True
+AllowSV: True
+AllowHV: True
+AllowBlueprintBA: True
+AllowBlueprintCV: True
+AllowBlueprintSV: True
+AllowBlueprintHV: True
+POIs:
+   Fixed:
+   -  Type: AsteroidFieldRing
+      Name: Asteroid Field
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidFieldFewBoxExclude
+      Name: Asteroid Field
+      Pos: [-1164, -1418, 21252]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidVoxel01Silicon
+      Prefab: AsteroidVoxel01Silicon
+      Name: Silicon Asteroid
+      Pos: [-4863, -3001, -7310]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+   -  Type: AsteroidVoxel01Copper
+      Prefab: AsteroidVoxel01Copper
+      Name: Copper Asteroid
+      Pos: [9269, 2212, 2414]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+   -  Type: AsteroidVoxel02Cobalt
+      Prefab: AsteroidVoxel02Cobalt
+      Name: Cobalt Asteroid
+      Pos: [1654, 4598, 8535]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+   -  Type: AsteroidVoxel02Promethium
+      Prefab: AsteroidVoxel02Promethium
+      Name: Promethium Asteroid
+      Pos: [9552, -1461, 481]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+   -  Type: AsteroidVoxel01Neodymium
+      Prefab: AsteroidVoxel01Magnesium
+      Name: Neodymium Asteroid
+      Pos: [7457, -52, -7485]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+   -  Type: AsteroidVoxel01Magnesium
+      Prefab: AsteroidVoxel01Magnesium
+      Name: Magnesium Asteroid
+      Pos: [5778, -4070, -6307]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+DroneBaseSetup:
+   Fixed:
+   -  Name: MainDroneBase
+      Pos: [-2740.287, -5182.29, 12893.35]
+      DroneOnDuty:
+      -  Name: SpaceDronePlasma
+         Pos: [-13897.16, -2095.672, -5173.261]
+         Radius: 984
+      -  Name: SpaceDronePlasma
+         Pos: [-11902.81, -388.9918, -3872.811]
+         Radius: 926
+DroneSpawning: {}

@@ -27,18 +27,17 @@ Nebula: PrefabNebulaBlueYellow
 ### POIs 
 POIs:
     Fixed:
-#        - Type: BA_Admin
-#          Prefab: BA_Spaceport-C-High
-#          Mode: Survival
-#          Name: Starport C High
-#          Pos: [5800, 0, -5800]
-#          Rot: [0, -50, 0]
-#          InitPower: True
-#          Properties:
-#          - Key: RegenAfter
-#            Value: 720
-#          SpawnResource: []
-#          
+        - Type: BA_Admin
+          Prefab: BA_Spaceport-C-High
+          Mode: Survival
+          Name: Starport C High
+          Pos: [5800, 0, -5800]
+          Rot: [0, -50, 0]
+          InitPower: True
+          Properties:
+          - Key: RegenAfter
+            Value: 720
+          SpawnResource: []
 
         - Type: CV_Player
           Prefab: UNSF-Loader

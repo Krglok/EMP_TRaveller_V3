@@ -251,8 +251,8 @@ Difficulty: 2                        # WE HAVE TO GIVE IT A NEW MEANING
 # AllowSV: True                      # Set to False to dis-allow SVs in this playfield, default is True
 # AllowCV: True                      # Set to False to dis-allow CVs in this playfield, default is True
 # #Seed: 123456                      # Integer [1, 999999] If set overwrites main Seed 
-# #UseFixed: True  			   	     # If set to True uses fixed POIs + resources in Survival mode (per default set to False). Can be used together with UseRandom
-# #UseRandom: True				     # If set to True uses random POIs + resources in Survival mode (per default set to True). Can be used together with UseFixed
+# #UseFixed: True                    # If set to True uses fixed POIs + resources in Survival mode (per default set to False). Can be used together with UseRandom
+# #UseRandom: True                   # If set to True uses random POIs + resources in Survival mode (per default set to True). Can be used together with UseFixed
 # # IndestructibleTerrain: True      # If set to True terrain on this playfield will be indestructible
 # # Instance:
   # # Time: 120                        # Minutes until this instance has to be completed and players are kicked

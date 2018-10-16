@@ -1,0 +1,64 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v1.57.3.0, Playfield Version: 8.2.3 [1787] (Alpha 8.2.3)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+TemperatureDay: -130
+Music: space
+Description: 'The space around Pscias-E features an asteroid ring. '
+PlanetType: Space
+PlayfieldType: Space
+AtmosphereEnabled: False
+Difficulty: 3
+SunFlare: EnvironmentalEffects/SunFlareWhite4Space
+Stars: SkyboxStarsCyan
+Nebula: PrefabNebulaBlue
+Build: 1787
+Radiation: 1.2
+PvP: True
+UseFixed: True
+AllowBA: True
+AllowCV: True
+AllowSV: True
+AllowHV: False
+AllowBlueprintBA: True
+AllowBlueprintCV: True
+AllowBlueprintSV: True
+AllowBlueprintHV: False
+POIs:
+   Fixed:
+   -  Type: AsteroidFieldRing
+      Name: Asteroid Field
+      Pos: [0, -45, 0]
+      Rot: [0, -45, 0]
+   -  Type: AsteroidFieldRing
+      Name: Asteroid Field
+      Pos: [0,45, 0]
+      Rot: [0, 45, 0]
+   -  Type: AsteroidVoxel03Iron
+      Prefab: AsteroidVoxel03Iron
+      Name: Iron Asteroid
+      Pos: [4270, -1, 2671]
+      Rot: [0, 0, 0]
+#------------------------------------------
+   FixedPlayerStart:
+   -  Mode: Debug
+      Pos: [-7000, 0, 7000]
+      Items: [CrushedStone, CrushedStone, CrushedStone]
+#------------------------------------------
+DroneBaseSetup:
+   Fixed:
+   -  Name: MainDroneBase
+      Pos: [5000, 200, 5000]
+      DroneOnDuty:
+      -  Name: SpaceDronePlasma
+         Pos: [4000, 200, 4000]
+         Radius: 750
+      -  Name: SpaceDronePlasma
+         Pos: [-4000, -200, 4000]
+         Radius: 750
+      -  Name: SpaceDronePlasma
+         Pos: [4000, 200, -4000]
+         Radius: 750
+      -  Name: SpaceDronePlasma
+         Pos: [-4000, -200, -4000]
+         Radius: 850

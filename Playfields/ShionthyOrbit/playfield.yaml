@@ -1,0 +1,135 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v1.57.3.0, Playfield Version: 8.2.3 [1787] (Alpha 8.2.3)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+TemperatureDay: -130
+Music: StellarGrasp
+Description: The space around this orbit is a dangarous zone with planetoid debris. There are some antimatter particle that make it extreme dangerous to fly around.
+PlanetType: Space
+PlayfieldType: Space
+AtmosphereEnabled: False
+Gravity: -2.00
+Difficulty: 3
+LandClaimZone: Off
+SunFlare: EnvironmentalEffects/SunFlareRed
+Stars: SkyboxStarsCyan
+Nebula: PrefabNebulaBlueYellow
+Build: 1787
+Radiation: 16.199999999999999
+PvP: True
+UseFixed: True
+AllowBA: False
+AllowCV: False
+AllowSV: True
+AllowHV: False
+AllowBlueprintBA: False
+AllowBlueprintCV: False
+AllowBlueprintSV: False
+AllowBlueprintHV: False
+POIs:
+   Fixed:
+   -  Type: AsteroidFieldRing
+      Name: Asteroid Field
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidFieldRing
+      Name: Asteroid Field
+      Pos: [0, 0, 0]
+      Rot: [45, 0, 0]
+   -  Type: AsteroidFieldRing
+      Name: Asteroid Field
+      Pos: [0, 0, 0]
+      Rot: [135, 0, 0]
+   -  Type: AsteroidFieldRing
+      Name: Asteroid Field
+      Pos: [0, 5000, 0]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidFieldRing
+      Name: Asteroid Field
+      Pos: [0, 5000, 0]
+      Rot: [45, 0, 0]
+   -  Type: AsteroidFieldRing
+      Name: Asteroid Field
+      Pos: [0, 5000, 0]
+      Rot: [135, 0, 0]
+   -  Type: AsteroidFieldRing
+      Name: Asteroid Field
+      Pos: [0, -5000, 0]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidFieldRing
+      Name: Asteroid Field
+      Pos: [0, -5000, 0]
+      Rot: [45, 0, 0]
+   -  Type: AsteroidFieldRing
+      Name: Asteroid Field
+      Pos: [0, -5000, 0]
+      Rot: [135, 0, 0]
+
+   -  Type: AsteroidVoxel03Pentaxid
+      Prefab: AsteroidVoxel03Pentaxid
+      Name: Pentaxid Asteroid
+      Pos: [-6302, 73, -2486]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidVoxel02Neodymium
+      Prefab: AsteroidVoxel02Neodymium
+      Name: Neodymium Asteroid
+      Pos: [-6038, -225, 2595]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidVoxel03Pentaxid
+      Prefab: AsteroidVoxel03Pentaxid
+      Name: Pentaxid Asteroid
+      Pos: [4270, -1, 2671]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidVoxel01Promethium
+      Prefab: AsteroidVoxel01Promethium
+      Name: Promethium Asteroid
+      Pos: [318, 51, 6607]
+      Rot: [0, 0, 0]
+
+   -  Type: AsteroidVoxel03Zascosium
+      Prefab: AsteroidVoxel03Zascosium
+      Name: Antimatter Particle
+      Pos: [-522.5, 27, -356.4]
+      Rot: [0, -42, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 1200
+      -  Key: Music
+         Value: EnergyMatrix
+#------------         
+   FixedPlayerStart:
+   -  Mode: Debug
+      Pos: [-7000, 0, 7000]
+      Items: [CrushedStone, CrushedStone, CrushedStone]
+DroneBaseSetup:
+   Fixed:
+   -  Name: MainDroneBase
+      Pos: [5000, 200, 5000]
+      DroneOnDuty:
+      -  Name: SpaceDronePlasma
+         Pos: [4000, 200, 4000]
+         Radius: 850
+      -  Name: SpaceDronePlasma
+         Pos: [-4000, -200, 4000]
+         Radius: 850
+      -  Name: SpaceDroneLaser
+         Pos: [4000, 200, -4000]
+         Radius: 850
+      -  Name: SpaceDroneLaser
+         Pos: [-4000, -200, -4000]
+         Radius: 850
+   -  Name: SentinelDrohnen
+      Pos: [-500, 0, -300]
+      DroneOnDuty:
+      -  Name: SpaceDroneLaser
+         Pos: [-600, 0, -500]
+         Radius: 1500
+      -  Name: SpaceDronePlasma
+         Pos: [-500, 0, -500]
+         Radius: 1500
+      -  Name: SpaceDronePlasma
+         Pos: [-300, 0, -300]
+         Radius: 500
+      -  Name: SpaceDronePlasma
+         Pos: [-800, 0, -800]
+         Radius: 1100

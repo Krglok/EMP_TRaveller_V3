@@ -1,5 +1,5 @@
 # --------------------------------------------------------------------------------------------------------------------------
-# Created by EPD v1.55.0.0, Playfield Version: 8.0.5 [1666] (Alpha EXPERIMENTAL 8.0 - Release Candidate 1)
+# Created by EPD v1.57.3.0, Playfield Version: 8.2.3 [1787] (Alpha 8.2.3)
 # --------------------------------------------------------------------------------------------------------------------------
 #
 TemperatureDay: -126
@@ -14,7 +14,7 @@ SunFlare: EnvironmentalEffects/SunFlareWhite3Space
 Stars: SkyboxStarsBlue
 Nebula: PrefabNebulaBlueGlittery
 Build: 1648
-Radiation: 27.8499999999999996
+Radiation: 27.849999999999998
 PvP: True
 UseFixed: True
 UseRandom: True
@@ -44,16 +44,7 @@ POIs:
       Properties:
       -  Key: RegenAfter
          Value: 580
-#   -  Type: AsteroidVoxel01Erestrum
-#      Prefab: AsteroidVoxel01Erestrum
-#      Name: Erestrum Asteroid
-#      Pos: [-31720, 0, -7000]
-#      Rot: [0, 0, 0]
-#      Properties:
-#      -  Key: RegenAfter
-#         Value: 580
    FixedPlayerStart:
-   -  Spawn: Position
-      Pos: [10000, 0, 10000]
+   -  Pos: [10000, 0, 10000]
       Items: [CrushedStone, CrushedStone, CrushedStone]
 DroneBaseSetup: {}

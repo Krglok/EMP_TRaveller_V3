@@ -51,7 +51,7 @@ POIs:
     - Type: BA_Admin
       Prefab: BA_Spaceport-D-High
       Mode: Survival
-      Name: Starport D High
+      Name: Spaceport-D-High
       Pos: [3800, 0, -3800]
       Rot: [0, -50, 0]
       InitPower: True
